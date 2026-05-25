@@ -1,146 +1,338 @@
-# KrioMetrics - Pipeline ETL & Ecosistema Analítico de Refrigeración
+# KrioMetrics — Pipeline ETL & Ecosistema Analítico de Refrigeración
 
-Este proyecto es una plataforma completa de analítica e ingeniería de datos termodinámicos enfocada en el estudio de **55 gases refrigerantes** clasificados en refrigeración **Básica**, **Intermedia** e **Industrial**.
+<div align="center">
 
-Integra una tubería de procesamiento de datos (ETL) escrita en Python bajo principios **SOLID** y patrones de diseño orientados a objetos, un **Modelo Estrella (Star Schema)** relacional analítico en **SQLite**, un **Cuaderno Jupyter** de modelado científico con **Machine Learning (K-Means)** y **dos Dashboards Interactivos Premium**: una aplicación analítica en **HTML5/Vanilla CSS/JS** y un panel científico interactivo modularizado en **Streamlit (Python & Plotly)**.
+[![CI Tests](https://github.com/dodysalim/refrigerant-gas-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/dodysalim/refrigerant-gas-dashboard/actions/workflows/ci.yml)
+[![Deploy](https://github.com/dodysalim/refrigerant-gas-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/dodysalim/refrigerant-gas-dashboard/actions/workflows/deploy.yml)
+![Python](https://img.shields.io/badge/Python-3.10%20|%203.11%20|%203.12-3776AB?logo=python&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-54%20passed-brightgreen?logo=pytest)
+![Coverage](https://img.shields.io/badge/Coverage-src%2F-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Notebooks](https://img.shields.io/badge/Notebooks-4-orange?logo=jupyter)
+![Gases](https://img.shields.io/badge/Refrigerantes-55-teal)
+
+</div>
+
+---
+
+Una plataforma completa de **analítica e ingeniería de datos termodinámicos** enfocada en el estudio de **55 gases refrigerantes** clasificados en refrigeración **Básica**, **Intermedia** e **Industrial**.
+
+Integra una tubería de procesamiento de datos (**ETL**) en Python bajo principios **SOLID** y patrones de diseño, un **Modelo Estrella** en **SQLite**, **4 notebooks Jupyter** de análisis científico con **ML Pipeline completo**, validación de datos con **54 tests unitarios**, y dos **Dashboards Interactivos Premium** (HTML5 + Streamlit).
+
+---
+
+## 📑 Tabla de Contenidos
+
+1. [Stack Tecnológico](#stack-tecnológico)
+2. [Estructura del Proyecto](#estructura-del-proyecto)
+3. [Arquitectura Clean (SOLID)](#arquitectura-clean-solid)
+4. [Notebooks de Análisis](#notebooks-de-análisis)
+5. [Tests Unitarios](#tests-unitarios)
+6. [CI/CD con GitHub Actions](#cicd-con-github-actions)
+7. [Módulos del Dominio](#módulos-del-dominio)
+8. [Instalación y Ejecución](#instalación-y-ejecución)
+9. [Dashboards](#dashboards)
+10. [Marco Regulatorio](#marco-regulatorio)
+
+---
+
+## 🛠️ Stack Tecnológico
+
+| Capa | Tecnología | Uso |
+| --- | --- | --- |
+| **Lenguaje** | Python 3.10+ | ETL, análisis, ML, dashboards |
+| **Base de Datos** | SQLite (Star Schema) | Almacén OLAP de 55 gases × 7700+ hechos P-T |
+| **Data Science** | Pandas, NumPy, SciPy | EDA, estadísticas descriptivas, hipótesis |
+| **Machine Learning** | Scikit-learn | Pipeline ML, clustering, clasificación, PCA |
+| **Visualización** | Matplotlib, Seaborn, Plotly | Curvas P-T, heatmaps, clustering, radarcharts |
+| **Dashboard Web** | Streamlit + Plotly | Panel científico modularizado con 5 vistas |
+| **Dashboard HTML** | HTML5 / CSS / JS | SPA premium con animaciones y fotorrealismo |
+| **Testing** | Pytest + Coverage | 54 tests unitarios en dominio y sostenibilidad |
+| **CI/CD** | GitHub Actions | Test automáticos en 3 versiones Python + deploy |
+| **Contenedores** | — | Compatible con Docker (sin dependencias nativas) |
 
 ---
 
 ## 1. Estructura del Proyecto
 
-El proyecto está diseñado bajo una arquitectura de software limpia, desacoplada y dividida en capas lógicas:
-
 ```text
 proyectodegasesrefrigerante/
 │
-├── src/                          # Código fuente en Python (Clean Architecture & SOLID)
+├── src/                                # Código fuente Clean Architecture
 │   ├── domain/
-│   │   └── entities.py           # Modelos/Clases puras del dominio (OOP)
+│   │   ├── entities.py                 # Entidades de dominio (OOP puro)
+│   │   ├── validators.py               # [NEW] Validadores de negocio (Strategy Pattern)
+│   │   └── sustainability.py           # [NEW] Analizador de sostenibilidad ambiental
 │   ├── infrastructure/
-│   │   ├── readers.py            # Lectores de datos (Factory Pattern, Ecuaciones P-T)
-│   │   └── exporters.py          # Exportadores a SQLite y formatos JS/JSON para dashboards
+│   │   ├── readers.py                  # Lectores de datos (Factory Pattern + Antoine Eq.)
+│   │   └── exporters.py                # Exportadores SQLite/CSV/JSON/JS
 │   ├── application/
-│   │   └── pipeline.py           # Orquestador del ETL (Template Method Pattern)
-│   └── presentation/             # Capa de Presentación Modular
-│       └── dashboard/            # Submódulos del Dashboard de Streamlit
-│           ├── __init__.py       # Inicialización del paquete
-│           ├── loader.py         # Cargador con caché de base relacional e imágenes reales
-│           ├── pt_solver.py      # Motor termodinámico Clausius-Clapeyron e interpolación
-│           ├── view_control.py   # Vista: Dashboard de Control, filtros y gráficos Plotly
-│           ├── view_calculator.py# Vista: Calculadora P-T y fotorrealismo de tanques
-│           ├── view_comparator.py# Vista: Comparación P-T lado a lado de 3 gases
-│           ├── view_cycle.py     # Vista: Simulador termodinámico de ciclo de compresión
-│           └── view_sql.py       # Vista: Consola interactiva de consultas SQL SQLite
+│   │   ├── pipeline.py                 # Orquestador ETL (Template Method Pattern)
+│   │   └── reporter.py                 # [NEW] Reporter automático (Builder Pattern)
+│   └── presentation/
+│       └── dashboard/                  # Submódulos del Dashboard Streamlit
+│           ├── loader.py               # Cargador con caché y mappings de imágenes
+│           ├── pt_solver.py            # Motor termodinámico Clausius-Clapeyron
+│           ├── view_control.py         # Vista: Control y filtros con Plotly
+│           ├── view_calculator.py      # Vista: Calculadora P-T + fotorrealismo
+│           ├── view_comparator.py      # Vista: Comparación de 3 gases
+│           ├── view_cycle.py           # Vista: Simulador de ciclo termodinámico
+│           └── view_sql.py             # Vista: Consola SQL interactiva
 │
-├── data/                         # Almacenamiento físico de datos (Esquema Estrella)
-│   └── processed/
-│       ├── dim_refrigerant.csv   # Dimensión: Detalles de gases y métricas GWP/ODP
-│       ├── dim_temperature.csv   # Dimensión: Rango de temperaturas C/F (-50°C a +70°C)
-│       ├── dim_state.csv         # Dimensión: Fases físicas (Burbuja y Rocío)
-│       ├── fact_pressure_temperature.csv # Hechos: Presiones de saturación en bar/psi
-│       ├── eda_report.md         # Reporte analítico del Análisis Exploratorio de Datos
-│       └── refrigerants.db       # BASE DE DATOS SQLITE RELACIONAL (Almacén OLAP físico)
+├── tests/                              # [NEW] Suite de 54 tests unitarios
+│   ├── __init__.py
+│   ├── test_domain.py                  # 31 tests: entidades + validadores
+│   └── test_sustainability.py          # 23 tests: scoring + regulatorio
 │
-├── notebooks/                    # Modelado y Ciencia de Datos Científica
-│   └── eda_and_modeling.ipynb    # Jupyter Notebook: SQL Queries, Plots Seaborn y ML K-Means
+├── notebooks/                          # 4 Jupyter Notebooks científicos
+│   ├── eda_and_modeling.ipynb          # EDA + K-Means básico (original)
+│   ├── 02_statistical_analysis.ipynb   # [NEW] PCA + Kruskal-Wallis + Shapiro-Wilk
+│   ├── 03_ml_pipeline.ipynb            # [NEW] Pipeline ML: clustering + clasificación
+│   └── 04_advanced_viz.ipynb           # [NEW] Visualizaciones avanzadas premium
 │
-├── images/                       # Álbum de fotos reales de tanques clasificadas por uso
-│   └── Gases_Refrigerantes/      # 55 subcarpetas de cilindros fotorrealistas reales
+├── data/processed/                     # Salida del ETL pipeline
+│   ├── dim_refrigerant.csv             # Dimensión: 55 refrigerantes
+│   ├── dim_temperature.csv             # Dimensión: Temperatura -50°C a +70°C
+│   ├── dim_state.csv                   # Dimensión: Fases (líquido/vapor)
+│   ├── fact_pressure_temperature.csv   # Hechos: ~7700 puntos P-T
+│   ├── refrigerants_star_schema.db     # SQLite Star Schema completo
+│   ├── eda_report.md                   # Reporte EDA en Markdown
+│   └── full_analysis_report.md         # [NEW] Reporte integral auto-generado
 │
-├── web/                          # Dashboard 1: Interfaz SPA Premium (HTML/CSS/JS)
-│   ├── index.html                # Maquetado semántico, glassmorphism y conectores SVG
-│   ├── styles.css                # Estilos oscuros "Deep Space" y flujos de cañerías dinámicos
-│   ├── app.js                    # Front-end core, simulador de ciclo Kosner y buscador O(1)
-│   ├── images/                   # Copia de recursos gráficos y catálogo de fotos reales
-│   └── data/
-│       ├── refrigerants_dashboard_data.js # Pre-carga local de base de datos relacional
-│       └── refrigerants_images_map.js     # Pre-carga local de fotos reales de catálogo
+├── .github/workflows/                  # [NEW] CI/CD GitHub Actions
+│   ├── ci.yml                          # Tests en Python 3.10, 3.11, 3.12
+│   └── deploy.yml                      # Pre-deploy validation + Streamlit Cloud
 │
-├── dashboard.py                  # Dashboard 2: Orquestador y enrutador principal en Streamlit
-├── run_etl.py                    # Script de entrada para ejecutar la tubería ETL relacional
-├── generate_gas_images_mapping.py# Generador utilitario de mapas de imágenes de catálogo
-├── requirements.txt              # Requerimientos y dependencias de Python
-└── README.md                     # Documentación general del proyecto (este archivo)
+├── .streamlit/config.toml              # Configuración tema oscuro KrioMetrics
+├── pytest.ini                          # [NEW] Configuración pytest
+├── dashboard.py                        # Entry point Streamlit (5 vistas)
+├── main.py                             # Entry point ETL Pipeline
+├── requirements.txt                    # Dependencias Python
+└── README.md                           # Este archivo
 ```
 
 ---
 
-## 2. Principios SOLID & Arquitectura de Presentación
+## 2. Arquitectura Clean (SOLID)
 
-### Principios SOLID Aplicados en Python
-Para garantizar la mantenibilidad y extensibilidad industrial del software, aplicamos los siguientes principios:
-*   **Single Responsibility Principle (SRP):** Cada módulo tiene una única razón para cambiar. Los archivos de vistas en `presentation/` renderizan UI, `entities.py` define modelos, `readers.py` calcula curvas, `exporters.py` persiste en SQLite y `pipeline.py` orquesta los flujos.
-*   **Open/Closed Principle (OCP):** El motor termodinámico y las interfaces permiten agregar nuevos orígenes de datos (como APIs remotas o parsers web) extendiendo código base mediante herencia sin alterar la tubería core.
-*   **Liskov Substitution Principle (LSP):** Cualquier cargador hereda de la clase base abstracta `IDataReader`, pudiendo sustituirse de forma transparente sin romper la aplicación.
-*   **Interface Segregation Principle (ISP):** Las interfaces base están segregadas para que los módulos solo implementen los contratos específicos que requieren.
-*   **Dependency Inversion Principle (DIP):** El pipeline del ETL no depende directamente de cargadores estáticos concretos, sino de la abstracción `IDataReader`.
+El proyecto implementa **Clean Architecture** con separación estricta de responsabilidades:
 
-### Arquitectura de Presentación Modular
-Para evitar tener un archivo gigante y desordenado en Streamlit, modularizamos la interfaz en submódulos independientes:
-*   **Desacoplamiento Visual:** Cada vista de la barra lateral se encuentra aislada en un archivo `view_*.py` autónomo.
-*   **Mantenimiento Sencillo:** La adición o modificación de un gráfico en Plotly, cálculo de relación de compresión o cambios estéticos se realizan en su módulo específico, reduciendo el riesgo de romper otras pestañas.
-*   **Rendimiento con Caching:** El módulo `loader.py` encapsula la carga física mediante `@st.cache_data`, compartiendo la memoria caché del motor de datos de manera óptima entre todas las vistas.
+```
+┌─────────────────────────────────────────────────────────┐
+│                  PRESENTATION LAYER                      │
+│        (Streamlit Dashboard · HTML/JS SPA)              │
+└──────────────────────┬──────────────────────────────────┘
+                       │ (depende de)
+┌──────────────────────▼──────────────────────────────────┐
+│                 APPLICATION LAYER                        │
+│   ETLPipeline (Template Method) · Reporter (Builder)    │
+└──────────────────────┬──────────────────────────────────┘
+                       │ (depende de)
+┌──────────────────────▼──────────────────────────────────┐
+│                   DOMAIN LAYER                           │
+│  Entities · Validators (Strategy) · Sustainability      │
+└──────────────────────┬──────────────────────────────────┘
+                       │ (depende de)
+┌──────────────────────▼──────────────────────────────────┐
+│               INFRASTRUCTURE LAYER                       │
+│        Readers (Factory) · Exporters (SQLite/CSV)       │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Patrones de Diseño Implementados
+
+| Patrón | Módulo | Propósito |
+| --- | --- | --- |
+| **Template Method** | `pipeline.py` | Estructura del ETL con pasos intercambiables |
+| **Factory Method** | `readers.py` | Creación de lectores de datos sin acoplar tipos |
+| **Strategy** | `validators.py` | Intercambio de algoritmos de validación |
+| **Builder** | `reporter.py` | Composición incremental de reportes |
+| **Repository** | `exporters.py` | Abstracción del almacenamiento (SQLite/CSV) |
 
 ---
 
-## 3. Modelo Estrella (Star Schema) en SQLite
+## 3. Notebooks de Análisis
 
-Para optimizar las búsquedas y visualizaciones analíticas de los Dashboards, los datos se estructuran en un **Modelo Estrella relacional** clásico de Business Intelligence y se graban en la base de datos física `refrigerants.db`:
+| # | Notebook | Técnicas | Outputs |
+| --- | --- | --- | --- |
+| 01 | `eda_and_modeling.ipynb` | EDA, K-Means, visualizaciones Seaborn | Gráficos básicos |
+| 02 | `02_statistical_analysis.ipynb` | Shapiro-Wilk, Kruskal-Wallis, Spearman, PCA | 4 gráficos avanzados |
+| 03 | `03_ml_pipeline.ipynb` | Pipeline scikit-learn, RF, SVM, DBSCAN, dendrograma | 5 gráficos ML |
+| 04 | `04_advanced_viz.ipynb` | Heatmaps, curvas P-T, burbujas, timeline regulatorio | 4 visualizaciones premium |
 
-*   **Tabla de Hechos (`fact_pressure_temperature`):** Contiene las métricas numéricas variables (Presión en bar absoluto y psi absoluto) asociadas a llaves surrogadas (FK). Suma un total de **2,750 registros**.
-*   **Dimensión Refrigerante (`dim_refrigerant`):** Contiene las propiedades descriptivas de los 55 refrigerantes (nombre, fórmula, tipo químico, grupo seguridad, ODP, GWP, lubricante, sustituto ecológico recomendado, estatus).
-*   **Dimensión Temperatura (`dim_temperature`):** Contiene la dimensión escalar de temperaturas en incrementos de 5°C (de -50°C a +70°C).
-*   **Dimensión Estado (`dim_state`):** Diferencia las fases termodinámicas críticas de saturación: Líquido Saturado (Punto de Burbuja) y Vapor Saturado (Punto de Rocío).
+### Técnicas ML implementadas
+
+- **Clustering**: K-Means, DBSCAN, Agglomerative (Ward/Complete)
+- **Evaluación de clustering**: Silhouette, Davies-Bouldin, Calinski-Harabász, Elbow
+- **Clasificación**: Random Forest, Gradient Boosting, SVM, Logistic Regression, KNN
+- **Validación**: StratifiedKFold, cross_val_score, GridSearchCV
+- **Reducción de dimensionalidad**: PCA (análisis de varianza explicada + biplot)
+- **Estadísticas**: Shapiro-Wilk (normalidad), Kruskal-Wallis (no paramétrico), correlaciones Spearman/Pearson
 
 ---
 
-## 4. Instrucciones de Uso y Despliegue
+## 4. Tests Unitarios
 
-### Requisitos Previos
-Instala las librerías necesarias ejecutando en tu consola:
 ```bash
-pip install -r requirements.txt streamlit scikit-learn
+# Ejecutar todos los tests
+python -m pytest tests/ -v
+
+# Con reporte de cobertura
+python -m pytest tests/ -v --cov=src --cov-report=term-missing
 ```
 
-### Paso 1: Ejecutar la Tubería ETL Relacional
-Para regenerar las tablas del Modelo Estrella, realizar la limpieza y cargar la base SQLite física junto con las pre-cargas del front-end, corre:
-```bash
-python run_etl.py
+**Resultado**: ✅ **54 tests pasando** en < 2 segundos
+
+| Módulo de Tests | Tests | Cobertura |
+| --- | --- | --- |
+| `test_domain.py` | 31 tests | Entidades, Validadores, Dataset Validator |
+| `test_sustainability.py` | 23 tests | Scoring GWP/ODP, EU F-Gas, Kigali, Montreal |
+
+---
+
+## 5. CI/CD con GitHub Actions
+
+Dos workflows automatizados:
+
+**`ci.yml`** — Se ejecuta en cada push/PR:
+- ✅ Tests en Python 3.10, 3.11 y 3.12 (matrix)
+- ✅ Lint con flake8 y Black
+- ✅ Integración del pipeline ETL completo
+- ✅ Upload de artefactos generados
+
+**`deploy.yml`** — Se ejecuta al hacer push a `main`:
+- ✅ Validación de tests antes del deploy
+- ✅ Verificación de sintaxis de Streamlit app
+- ✅ Notificación de deployment para Streamlit Cloud
+
+---
+
+## 6. Módulos del Dominio
+
+### `validators.py` — Validación de Negocio
+
+```python
+from src.domain.validators import DatasetValidator
+
+validator = DatasetValidator()
+valid, invalid, issues = validator.validate_refrigerants(refrigerants)
+validator.generate_quality_report(refrigerants, facts)
 ```
 
-### Paso 2: Ejecutar el Mapa de Imágenes de Catálogo
-Si agregas nuevas fotos fotorrealistas de cilindros y deseas recalcular de forma automatizada los mapas de conexión de los dashboards:
-```bash
-python generate_gas_images_mapping.py
+Reglas validadas: tipo de compuesto (ASHRAE), grupo de seguridad, GWP/ODP en rangos físicos,
+temperatura crítica > punto de ebullición, color hexadecimal, unicidad de nombres, etc.
+
+### `sustainability.py` — Scoring Ecológico
+
+```python
+from src.domain.sustainability import SustainabilityAnalyzer
+
+analyzer = SustainabilityAnalyzer()
+scores = analyzer.score_all(refrigerants)  # Ordenado de más a menos ecológico
+summary = analyzer.get_ranking_summary(scores)
 ```
 
-### Paso 3: Levantar el Dashboard 1 (HTML Premium SPA)
-¡Máxima portabilidad! El dashboard web tiene implementado un **Bypass CORS**. 
-*   **Método Directo:** Haz **doble clic** directamente sobre el archivo [web/index.html](web/index.html) desde tu explorador de archivos para ejecutarlo localmente sin restricciones.
-*   **Método Servidor Local (Opcional):**
-    ```bash
-    cd web
-    python -m http.server 8000
-    ```
-    *Abre tu navegador en: `http://localhost:8000`*
+Puntuación 0-100 con sub-scores de GWP (0-40), ODP (0-30), seguridad (0-20) y regulación (0-10).
+Verifica cumplimiento EU F-Gas, restricciones Kigali y prohibiciones Montreal.
 
-### Paso 4: Levantar el Dashboard 2 (Streamlit & Plotly en Python)
-Para visualizar el panel científico con gráficos de Plotly dinámicos, simuladores de ciclo y consultas SQL directas sobre SQLite:
+### `reporter.py` — Reportes Automáticos
+
+```python
+from src.application.reporter import generate_full_report
+
+paths = generate_full_report(refrigerants, facts)
+# → data/processed/full_analysis_report.md
+# → data/processed/full_analysis_report.json
+```
+
+---
+
+## 7. Instalación y Ejecución
+
+### Prerrequisitos
+
+- Python 3.10 o superior
+- pip
+
+### Instalación
+
+```bash
+git clone https://github.com/dodysalim/refrigerant-gas-dashboard.git
+cd refrigerant-gas-dashboard
+pip install -r requirements.txt
+```
+
+### Ejecutar el Pipeline ETL
+
+```bash
+python main.py
+```
+
+Genera automáticamente:
+- Archivos CSV del Esquema Estrella en `data/processed/`
+- Base de datos SQLite `refrigerants_star_schema.db`
+- Reporte EDA en `data/processed/eda_report.md`
+
+### Ejecutar los Tests
+
+```bash
+python -m pytest tests/ -v
+```
+
+### Iniciar el Dashboard Streamlit
+
 ```bash
 streamlit run dashboard.py
 ```
-*Abre tu navegador en: `http://localhost:8501` (o en la URL indicada en tu terminal)*
 
 ---
 
-## 5. Características de los Dashboards
+## 8. Dashboards
 
-### Dashboard 1 (HTML/JS/CSS SPA):
-*   **Calculadora Termodinámica P-T:** Slider interactivo con conversiones automáticas manométricas (`barg`/`psig`) y absolutas, con alerta de estado súper crítico.
-*   **Ciclo de Refrigeración Kosner:** Animación en CSS del flujo de refrigerante en sentido horario. Sincroniza compresión, condensación, expansión y evaporación con su sustituto oficial.
-*   **Visualizador del Modelo Estrella:** Líneas de curvas de Bézier dinámicas en SVG que representan físicamente las relaciones de la base SQLite.
+### 🌐 Dashboard HTML (SPA Premium)
 
-### Dashboard 2 (Streamlit/Python Modular):
-*   **Explorador Científico:** Gráficos dinámicos interactivos en Plotly Express de dispersión (ebullición vs temperatura crítica) y torta.
-*   **Calculadora y Diagrama P-h:** Estimador de curva termodinámica con glide y dibujo dinámico del ciclo sobre el domo saturado en escala logarítmica.
-*   **Terminal SQL OLAP:** Permite redactar sentencias SQL crudas interactivas directamente contra `refrigerants.db` para analizar cruzamientos complejos al instante.
+Archivo: `web/index.html`
+
+- Visualizador de cilindros fotorrealistas con colores reales por normativa
+- Gráficos interactivos con Canvas y Chart.js
+- Filtros dinámicos por categoría, tipo y seguridad
+- Tabla de propiedades completa con búsqueda
+
+### 🐍 Dashboard Streamlit (5 vistas científicas)
+
+Comando: `streamlit run dashboard.py`
+
+| Vista | Descripción |
+| --- | --- |
+| 🎛️ **Control** | Filtros interactivos, KPIs, distribución por tipo y seguridad |
+| 🧮 **Calculadora P-T** | Consulta de presión a temperatura dada + fotorrealismo del cilindro |
+| ⚖️ **Comparador** | Análisis lado a lado de 3 gases con curvas P-T superpuestas |
+| 🔄 **Ciclo Termodinámico** | Simulador del ciclo de compresión de vapor simple |
+| 🗄️ **Consola SQL** | Consultas SQL directas a la base de datos SQLite |
+
+---
+
+## 9. Marco Regulatorio
+
+| Marco | Organismo | Impacto |
+| --- | --- | --- |
+| **Protocolo de Montreal (1987)** | UNEP | Eliminación total de CFCs (ODP > 0) |
+| **Enmienda de Kigali (2016)** | UNEP | Reducción 85% de HFCs para 2047 |
+| **EU F-Gas 517/2014** | Unión Europea | GWP < 150 para refrigeración doméstica |
+| **ASHRAE 34** | ASHRAE | Clasificación de seguridad A1-B3 |
+
+---
+
+## 📄 Licencia
+
+MIT License — Ver [LICENSE](LICENSE) para detalles.
+
+---
+
+<div align="center">
+
+**KrioMetrics** · Desarrollado con ❄️ por [dodysalim](https://github.com/dodysalim)
+
+*Pipeline ETL · Clean Architecture · Machine Learning · Streamlit · 55 Gases Refrigerantes*
+
+</div>
