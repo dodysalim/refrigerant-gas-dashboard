@@ -31,17 +31,12 @@ Diferenciación de impacto ambiental y cantidad según el segmento de aplicació
 | Tipo de Compuesto | Cantidad | Descripción Termodinámica | Estado de Regulación |
 | --- | --- | --- | --- |
 | HFC | 21 | Hidrofluorocarbonos. Cero daño a ozono pero alto calentamiento global. | Reducción gradual regulada (Enmienda de Kigali). |
-| HFO/HFC | 7 | Mezclas complejas de múltiples tipos. | Regulado según su GWP ponderado. |
+| Blend | 12 | Mezclas complejas de múltiples tipos. | Regulado según su GWP ponderado. |
 | Natural | 7 | Compuestos de la propia naturaleza (CO2, Amoníaco, Agua, Aire). | Uso fuertemente incentivado por sostenibilidad. |
 | HCFC | 6 | Hidroclorofluorocarbonos. Menor daño, usados en transición. | Eliminación casi total completándose. |
 | HC | 3 | Hidrocarburos naturales. Rendimiento termodinámico altísimo, inflamables. | Uso libre con límites de carga de seguridad. |
 | CFC | 3 | Clorofluorocarbonos. Excelentes fluidos pero destructores del ozono. | Prohibición Total (Protocolo de Montreal). |
 | HFO | 3 | Hidrofluoroolefinas de 4ta generación. Descomposición rápida, bajo GWP. | Uso libre promovido. |
-| HCFC/HFC | 1 | Mezclas complejas de múltiples tipos. | Regulado según su GWP ponderado. |
-| CFC/HCFC | 1 | Mezclas complejas de múltiples tipos. | Regulado según su GWP ponderado. |
-| HFC/CF3I | 1 | Mezclas complejas de múltiples tipos. | Regulado según su GWP ponderado. |
-| HFC/PFC | 1 | Mezclas complejas de múltiples tipos. | Regulado según su GWP ponderado. |
-| CFC/PFC | 1 | Mezclas complejas de múltiples tipos. | Regulado según su GWP ponderado. |
 
 ## 4. Clasificación de Seguridad ASHRAE (Toxidad e Inflamabilidad)
 

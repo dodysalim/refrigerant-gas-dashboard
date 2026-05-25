@@ -3892,7 +3892,7 @@
     "ashrae_name": "R-415B",
     "chemical_name": "Mezcla de R-22 e R-152a",
     "chemical_formula": "Mezcla zeotrópica",
-    "compound_type": "HCFC/HFC",
+    "compound_type": "Blend",
     "safety_group": "A2",
     "odp": 0.01,
     "gwp": 1500.0,
@@ -3912,50 +3912,50 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.3849,
-        "p_psi": 5.58
+        "p_bar": 0.3954,
+        "p_psi": 5.73
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.346,
-        "p_psi": 5.02
+        "p_bar": 0.3565,
+        "p_psi": 5.17
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.5029,
-        "p_psi": 7.29
+        "p_bar": 0.5129,
+        "p_psi": 7.44
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.4514,
-        "p_psi": 6.55
+        "p_bar": 0.4617,
+        "p_psi": 6.7
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.6537,
-        "p_psi": 9.48
+        "p_bar": 0.6621,
+        "p_psi": 9.6
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.5894,
-        "p_psi": 8.55
+        "p_bar": 0.5986,
+        "p_psi": 8.68
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.8404,
-        "p_psi": 12.19
+        "p_bar": 0.8457,
+        "p_psi": 12.27
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.761,
-        "p_psi": 11.04
+        "p_bar": 0.7678,
+        "p_psi": 11.14
       },
       {
         "temp_c": -30.0,
@@ -3966,248 +3966,248 @@
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.9723,
-        "p_psi": 14.1
+        "p_bar": 0.9747,
+        "p_psi": 14.14
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.3473,
-        "p_psi": 19.54
+        "p_bar": 1.3392,
+        "p_psi": 19.42
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.2298,
-        "p_psi": 17.84
+        "p_bar": 1.2253,
+        "p_psi": 17.77
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.6814,
-        "p_psi": 24.39
+        "p_bar": 1.6616,
+        "p_psi": 24.1
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.5405,
-        "p_psi": 22.34
+        "p_bar": 1.5259,
+        "p_psi": 22.13
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.0795,
-        "p_psi": 30.16
+        "p_bar": 2.0436,
+        "p_psi": 29.64
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.9121,
-        "p_psi": 27.73
+        "p_bar": 1.8832,
+        "p_psi": 27.31
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.5495,
-        "p_psi": 36.98
+        "p_bar": 2.492,
+        "p_psi": 36.14
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.3523,
-        "p_psi": 34.12
+        "p_bar": 2.3042,
+        "p_psi": 33.42
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.0996,
-        "p_psi": 44.96
+        "p_bar": 3.0141,
+        "p_psi": 43.72
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.8694,
-        "p_psi": 41.62
+        "p_bar": 2.796,
+        "p_psi": 40.55
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.7383,
-        "p_psi": 54.22
+        "p_bar": 3.6171,
+        "p_psi": 52.46
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.4717,
-        "p_psi": 50.35
+        "p_bar": 3.3658,
+        "p_psi": 48.82
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.4739,
-        "p_psi": 64.89
+        "p_bar": 4.3081,
+        "p_psi": 62.48
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.1675,
-        "p_psi": 60.44
+        "p_bar": 4.0207,
+        "p_psi": 58.32
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.3145,
-        "p_psi": 77.08
+        "p_bar": 5.094,
+        "p_psi": 73.88
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.9651,
-        "p_psi": 72.01
+        "p_bar": 4.7678,
+        "p_psi": 69.15
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.268,
-        "p_psi": 90.91
+        "p_bar": 5.9812,
+        "p_psi": 86.75
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.8726,
-        "p_psi": 85.17
+        "p_bar": 5.6137,
+        "p_psi": 81.42
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.3419,
-        "p_psi": 106.49
+        "p_bar": 6.9757,
+        "p_psi": 101.17
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.8975,
-        "p_psi": 100.04
+        "p_bar": 6.5646,
+        "p_psi": 95.21
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 8.5429,
-        "p_psi": 123.9
+        "p_bar": 8.083,
+        "p_psi": 117.23
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.0468,
-        "p_psi": 116.71
+        "p_bar": 7.6262,
+        "p_psi": 110.61
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.8771,
-        "p_psi": 143.26
+        "p_bar": 9.3077,
+        "p_psi": 135.0
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 9.3271,
-        "p_psi": 135.28
+        "p_bar": 8.8034,
+        "p_psi": 127.68
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.3497,
-        "p_psi": 164.61
+        "p_bar": 10.6538,
+        "p_psi": 154.52
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 10.7438,
-        "p_psi": 155.83
+        "p_bar": 10.1006,
+        "p_psi": 146.5
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 12.9652,
-        "p_psi": 188.04
+        "p_bar": 12.1243,
+        "p_psi": 175.85
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 12.3016,
-        "p_psi": 178.42
+        "p_bar": 11.521,
+        "p_psi": 167.1
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 14.7268,
-        "p_psi": 213.59
+        "p_bar": 13.7213,
+        "p_psi": 199.01
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 14.0044,
-        "p_psi": 203.12
+        "p_bar": 13.0672,
+        "p_psi": 189.52
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 16.6369,
-        "p_psi": 241.3
+        "p_bar": 15.4461,
+        "p_psi": 224.03
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 15.8549,
-        "p_psi": 229.96
+        "p_bar": 14.7408,
+        "p_psi": 213.8
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 18.697,
-        "p_psi": 271.18
+        "p_bar": 17.2991,
+        "p_psi": 250.9
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 17.8549,
-        "p_psi": 258.96
+        "p_bar": 16.5425,
+        "p_psi": 239.93
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 20.9075,
-        "p_psi": 303.24
+        "p_bar": 19.2799,
+        "p_psi": 279.63
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 20.0053,
-        "p_psi": 290.15
+        "p_bar": 18.4723,
+        "p_psi": 267.92
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 23.2682,
-        "p_psi": 337.48
+        "p_bar": 21.3875,
+        "p_psi": 310.2
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 22.306,
-        "p_psi": 323.52
+        "p_bar": 20.5294,
+        "p_psi": 297.75
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 25.7782,
-        "p_psi": 373.88
+        "p_bar": 23.6202,
+        "p_psi": 342.58
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 24.7564,
-        "p_psi": 359.06
+        "p_bar": 22.7122,
+        "p_psi": 329.41
       }
     ]
   },
@@ -4540,7 +4540,7 @@
     "ashrae_name": "R-513A",
     "chemical_name": "Mezcla Opteon XP10 (R-134a/1234yf)",
     "chemical_formula": "Mezcla azeotrópica HFC/HFO",
-    "compound_type": "HFO/HFC",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.0,
     "gwp": 573.0,
@@ -4560,302 +4560,302 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.3933,
-        "p_psi": 5.7
+        "p_bar": 0.3824,
+        "p_psi": 5.55
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.3933,
-        "p_psi": 5.7
+        "p_bar": 0.3824,
+        "p_psi": 5.55
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.5101,
-        "p_psi": 7.4
+        "p_bar": 0.4996,
+        "p_psi": 7.25
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.5101,
-        "p_psi": 7.4
+        "p_bar": 0.4996,
+        "p_psi": 7.25
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.6544,
-        "p_psi": 9.49
+        "p_bar": 0.6453,
+        "p_psi": 9.36
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.6544,
-        "p_psi": 9.49
+        "p_bar": 0.6453,
+        "p_psi": 9.36
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.8308,
-        "p_psi": 12.05
+        "p_bar": 0.8247,
+        "p_psi": 11.96
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.8308,
-        "p_psi": 12.05
+        "p_bar": 0.8247,
+        "p_psi": 11.96
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.0442,
-        "p_psi": 15.15
+        "p_bar": 1.0432,
+        "p_psi": 15.13
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.0442,
-        "p_psi": 15.15
+        "p_bar": 1.0432,
+        "p_psi": 15.13
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.3001,
-        "p_psi": 18.86
+        "p_bar": 1.3068,
+        "p_psi": 18.95
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.3001,
-        "p_psi": 18.86
+        "p_bar": 1.3068,
+        "p_psi": 18.95
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.604,
-        "p_psi": 23.26
+        "p_bar": 1.6216,
+        "p_psi": 23.52
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.604,
-        "p_psi": 23.26
+        "p_bar": 1.6216,
+        "p_psi": 23.52
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.9617,
-        "p_psi": 28.45
+        "p_bar": 1.9943,
+        "p_psi": 28.93
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.9617,
-        "p_psi": 28.45
+        "p_bar": 1.9943,
+        "p_psi": 28.93
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.379,
-        "p_psi": 34.5
+        "p_bar": 2.4316,
+        "p_psi": 35.27
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.379,
-        "p_psi": 34.5
+        "p_bar": 2.4316,
+        "p_psi": 35.27
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.8619,
-        "p_psi": 41.51
+        "p_bar": 2.9404,
+        "p_psi": 42.65
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.8619,
-        "p_psi": 41.51
+        "p_bar": 2.9404,
+        "p_psi": 42.65
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.4161,
-        "p_psi": 49.55
+        "p_bar": 3.5274,
+        "p_psi": 51.16
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.4161,
-        "p_psi": 49.55
+        "p_bar": 3.5274,
+        "p_psi": 51.16
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.0473,
-        "p_psi": 58.7
+        "p_bar": 4.1994,
+        "p_psi": 60.91
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.0473,
-        "p_psi": 58.7
+        "p_bar": 4.1994,
+        "p_psi": 60.91
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.7607,
-        "p_psi": 69.05
+        "p_bar": 4.9626,
+        "p_psi": 71.98
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.7607,
-        "p_psi": 69.05
+        "p_bar": 4.9626,
+        "p_psi": 71.98
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.5614,
-        "p_psi": 80.66
+        "p_bar": 5.8233,
+        "p_psi": 84.46
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.5614,
-        "p_psi": 80.66
+        "p_bar": 5.8233,
+        "p_psi": 84.46
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.4535,
-        "p_psi": 93.6
+        "p_bar": 6.7867,
+        "p_psi": 98.43
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.4535,
-        "p_psi": 93.6
+        "p_bar": 6.7867,
+        "p_psi": 98.43
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.4409,
-        "p_psi": 107.92
+        "p_bar": 7.8579,
+        "p_psi": 113.97
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 7.4409,
-        "p_psi": 107.92
+        "p_bar": 7.8579,
+        "p_psi": 113.97
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 8.5266,
-        "p_psi": 123.67
+        "p_bar": 9.041,
+        "p_psi": 131.13
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.5266,
-        "p_psi": 123.67
+        "p_bar": 9.041,
+        "p_psi": 131.13
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.713,
-        "p_psi": 140.87
+        "p_bar": 10.3394,
+        "p_psi": 149.96
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 9.713,
-        "p_psi": 140.87
+        "p_bar": 10.3394,
+        "p_psi": 149.96
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.0016,
-        "p_psi": 159.57
+        "p_bar": 11.7557,
+        "p_psi": 170.5
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 11.0016,
-        "p_psi": 159.57
+        "p_bar": 11.7557,
+        "p_psi": 170.5
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 12.3934,
-        "p_psi": 179.75
+        "p_bar": 13.2916,
+        "p_psi": 192.78
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 12.3934,
-        "p_psi": 179.75
+        "p_bar": 13.2916,
+        "p_psi": 192.78
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 13.8883,
-        "p_psi": 201.43
+        "p_bar": 14.948,
+        "p_psi": 216.8
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 13.8883,
-        "p_psi": 201.43
+        "p_bar": 14.948,
+        "p_psi": 216.8
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 15.4859,
-        "p_psi": 224.61
+        "p_bar": 16.7251,
+        "p_psi": 242.58
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 15.4859,
-        "p_psi": 224.61
+        "p_bar": 16.7251,
+        "p_psi": 242.58
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 17.1851,
-        "p_psi": 249.25
+        "p_bar": 18.6224,
+        "p_psi": 270.1
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 17.1851,
-        "p_psi": 249.25
+        "p_bar": 18.6224,
+        "p_psi": 270.1
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 18.9842,
-        "p_psi": 275.34
+        "p_bar": 20.639,
+        "p_psi": 299.34
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 18.9842,
-        "p_psi": 275.34
+        "p_bar": 20.639,
+        "p_psi": 299.34
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 20.8815,
-        "p_psi": 302.86
+        "p_bar": 22.7734,
+        "p_psi": 330.3
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 20.8815,
-        "p_psi": 302.86
+        "p_bar": 22.7734,
+        "p_psi": 330.3
       }
     ]
   },
@@ -8104,7 +8104,7 @@
     "ashrae_name": "R-448A",
     "chemical_name": "Mezcla Solstice N40",
     "chemical_formula": "Mezcla HFC/HFO",
-    "compound_type": "HFO/HFC",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.0,
     "gwp": 1387.0,
@@ -8124,302 +8124,302 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.865,
-        "p_psi": 12.55
+        "p_bar": 0.8602,
+        "p_psi": 12.48
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.6815,
-        "p_psi": 9.88
+        "p_bar": 0.6733,
+        "p_psi": 9.76
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.103,
-        "p_psi": 16.0
+        "p_bar": 1.1043,
+        "p_psi": 16.02
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.878,
-        "p_psi": 12.73
+        "p_bar": 0.8735,
+        "p_psi": 12.67
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.3917,
-        "p_psi": 20.18
+        "p_bar": 1.4023,
+        "p_psi": 20.34
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.1188,
-        "p_psi": 16.23
+        "p_bar": 1.1206,
+        "p_psi": 16.25
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.7385,
-        "p_psi": 25.21
+        "p_bar": 1.7625,
+        "p_psi": 25.56
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.4108,
-        "p_psi": 20.46
+        "p_bar": 1.4221,
+        "p_psi": 20.63
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.1508,
-        "p_psi": 31.2
+        "p_bar": 2.1934,
+        "p_psi": 31.81
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.7613,
-        "p_psi": 25.55
+        "p_bar": 1.7863,
+        "p_psi": 25.91
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.6367,
-        "p_psi": 38.24
+        "p_bar": 2.7041,
+        "p_psi": 39.22
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.1778,
-        "p_psi": 31.59
+        "p_bar": 2.2217,
+        "p_psi": 32.22
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.2038,
-        "p_psi": 46.47
+        "p_bar": 3.3036,
+        "p_psi": 47.92
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.6683,
-        "p_psi": 38.7
+        "p_bar": 2.7375,
+        "p_psi": 39.7
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.8601,
-        "p_psi": 55.99
+        "p_bar": 4.0012,
+        "p_psi": 58.03
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.2406,
-        "p_psi": 47.0
+        "p_bar": 3.3426,
+        "p_psi": 48.48
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.6131,
-        "p_psi": 66.91
+        "p_bar": 4.8058,
+        "p_psi": 69.7
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.9024,
-        "p_psi": 56.6
+        "p_bar": 4.0464,
+        "p_psi": 58.69
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.47,
-        "p_psi": 79.34
+        "p_bar": 5.7261,
+        "p_psi": 83.05
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.6615,
-        "p_psi": 67.61
+        "p_bar": 4.8577,
+        "p_psi": 70.45
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.4375,
-        "p_psi": 93.37
+        "p_bar": 6.7704,
+        "p_psi": 98.2
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.5249,
-        "p_psi": 80.13
+        "p_bar": 5.7852,
+        "p_psi": 83.91
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.5216,
-        "p_psi": 109.09
+        "p_bar": 7.9461,
+        "p_psi": 115.25
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.4992,
-        "p_psi": 94.26
+        "p_bar": 6.8371,
+        "p_psi": 99.16
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 8.7273,
-        "p_psi": 126.58
+        "p_bar": 9.2598,
+        "p_psi": 134.3
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 7.5904,
-        "p_psi": 110.09
+        "p_bar": 8.0209,
+        "p_psi": 116.33
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 10.0588,
-        "p_psi": 145.89
+        "p_bar": 10.7173,
+        "p_psi": 155.44
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.8036,
-        "p_psi": 127.69
+        "p_bar": 9.3431,
+        "p_psi": 135.51
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.5193,
-        "p_psi": 167.07
+        "p_bar": 12.323,
+        "p_psi": 178.73
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 10.1428,
-        "p_psi": 147.11
+        "p_bar": 10.8094,
+        "p_psi": 156.78
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 13.1107,
-        "p_psi": 190.16
+        "p_bar": 14.0802,
+        "p_psi": 204.22
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 11.6111,
-        "p_psi": 168.4
+        "p_bar": 12.4241,
+        "p_psi": 180.2
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 14.834,
-        "p_psi": 215.15
+        "p_bar": 15.9911,
+        "p_psi": 231.93
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 13.2104,
-        "p_psi": 191.6
+        "p_bar": 14.1905,
+        "p_psi": 205.82
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 16.689,
-        "p_psi": 242.05
+        "p_bar": 18.0565,
+        "p_psi": 261.89
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 14.9416,
-        "p_psi": 216.71
+        "p_bar": 16.1107,
+        "p_psi": 233.67
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 18.6744,
-        "p_psi": 270.85
+        "p_bar": 20.2762,
+        "p_psi": 294.08
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 16.8044,
-        "p_psi": 243.73
+        "p_bar": 18.1854,
+        "p_psi": 263.76
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 20.7882,
-        "p_psi": 301.51
+        "p_bar": 22.6487,
+        "p_psi": 328.49
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 18.7976,
-        "p_psi": 272.64
+        "p_bar": 20.4142,
+        "p_psi": 296.08
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 23.0277,
-        "p_psi": 333.99
+        "p_bar": 25.1719,
+        "p_psi": 365.09
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 20.9191,
-        "p_psi": 303.41
+        "p_bar": 22.7958,
+        "p_psi": 330.63
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 25.3896,
-        "p_psi": 368.25
+        "p_bar": 27.8431,
+        "p_psi": 403.83
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 23.166,
-        "p_psi": 336.0
+        "p_bar": 25.328,
+        "p_psi": 367.35
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 27.8705,
-        "p_psi": 404.23
+        "p_bar": 30.6591,
+        "p_psi": 444.67
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 25.5352,
-        "p_psi": 370.36
+        "p_bar": 28.008,
+        "p_psi": 406.22
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 30.4669,
-        "p_psi": 441.89
+        "p_bar": 33.6169,
+        "p_psi": 487.57
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 28.023,
-        "p_psi": 406.44
+        "p_bar": 30.8326,
+        "p_psi": 447.19
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 33.1761,
-        "p_psi": 481.18
+        "p_bar": 36.7139,
+        "p_psi": 532.49
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 30.6263,
-        "p_psi": 444.2
+        "p_bar": 33.7988,
+        "p_psi": 490.21
       }
     ]
   },
@@ -8428,7 +8428,7 @@
     "ashrae_name": "R-449A",
     "chemical_name": "Mezcla Opteon XP40",
     "chemical_formula": "Mezcla HFC/HFO",
-    "compound_type": "HFO/HFC",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.0,
     "gwp": 1397.0,
@@ -8448,302 +8448,302 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.87,
-        "p_psi": 12.62
+        "p_bar": 0.8653,
+        "p_psi": 12.55
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.689,
-        "p_psi": 9.99
+        "p_bar": 0.6809,
+        "p_psi": 9.88
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.1092,
-        "p_psi": 16.09
+        "p_bar": 1.1107,
+        "p_psi": 16.11
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.8874,
-        "p_psi": 12.87
+        "p_bar": 0.8831,
+        "p_psi": 12.81
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.3994,
-        "p_psi": 20.3
+        "p_bar": 1.4102,
+        "p_psi": 20.45
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.1304,
-        "p_psi": 16.4
+        "p_bar": 1.1325,
+        "p_psi": 16.43
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.7478,
-        "p_psi": 25.35
+        "p_bar": 1.7722,
+        "p_psi": 25.7
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.425,
-        "p_psi": 20.67
+        "p_bar": 1.4368,
+        "p_psi": 20.84
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.162,
-        "p_psi": 31.36
+        "p_bar": 2.2051,
+        "p_psi": 31.98
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.7784,
-        "p_psi": 25.79
+        "p_bar": 1.8041,
+        "p_psi": 26.17
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.6499,
-        "p_psi": 38.43
+        "p_bar": 2.7181,
+        "p_psi": 39.42
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.1982,
-        "p_psi": 31.88
+        "p_bar": 2.2431,
+        "p_psi": 32.53
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.2194,
-        "p_psi": 46.69
+        "p_bar": 3.3201,
+        "p_psi": 48.15
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.6924,
-        "p_psi": 39.05
+        "p_bar": 2.7628,
+        "p_psi": 40.07
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.8781,
-        "p_psi": 56.25
+        "p_bar": 4.0204,
+        "p_psi": 58.31
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.2687,
-        "p_psi": 47.41
+        "p_bar": 3.3724,
+        "p_psi": 48.91
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.6338,
-        "p_psi": 67.21
+        "p_bar": 4.8279,
+        "p_psi": 70.02
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.9349,
-        "p_psi": 57.07
+        "p_bar": 4.0809,
+        "p_psi": 59.19
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.4935,
-        "p_psi": 79.68
+        "p_bar": 5.7513,
+        "p_psi": 83.42
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.6986,
-        "p_psi": 68.15
+        "p_bar": 4.8974,
+        "p_psi": 71.03
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.4639,
-        "p_psi": 93.75
+        "p_bar": 6.7988,
+        "p_psi": 98.61
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.567,
-        "p_psi": 80.74
+        "p_bar": 5.8305,
+        "p_psi": 84.56
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.5508,
-        "p_psi": 109.52
+        "p_bar": 7.9778,
+        "p_psi": 115.71
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.5465,
-        "p_psi": 94.95
+        "p_bar": 6.8882,
+        "p_psi": 99.91
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 8.7594,
-        "p_psi": 127.04
+        "p_bar": 9.2948,
+        "p_psi": 134.81
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 7.6429,
-        "p_psi": 110.85
+        "p_bar": 8.078,
+        "p_psi": 117.16
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 10.0936,
-        "p_psi": 146.4
+        "p_bar": 10.7554,
+        "p_psi": 155.99
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.8614,
-        "p_psi": 128.52
+        "p_bar": 9.4063,
+        "p_psi": 136.43
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.5566,
-        "p_psi": 167.61
+        "p_bar": 12.3641,
+        "p_psi": 179.33
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 10.2059,
-        "p_psi": 148.02
+        "p_bar": 10.8786,
+        "p_psi": 157.78
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 13.1503,
-        "p_psi": 190.73
+        "p_bar": 14.1242,
+        "p_psi": 204.85
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 11.6793,
-        "p_psi": 169.39
+        "p_bar": 12.4993,
+        "p_psi": 181.29
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 14.8755,
-        "p_psi": 215.75
+        "p_bar": 16.0375,
+        "p_psi": 232.6
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 13.2835,
-        "p_psi": 192.66
+        "p_bar": 14.2716,
+        "p_psi": 206.99
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 16.732,
-        "p_psi": 242.68
+        "p_bar": 18.1049,
+        "p_psi": 262.59
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 15.0192,
-        "p_psi": 217.84
+        "p_bar": 16.1972,
+        "p_psi": 234.92
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 18.7186,
-        "p_psi": 271.49
+        "p_bar": 20.3261,
+        "p_psi": 294.81
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 16.8862,
-        "p_psi": 244.91
+        "p_bar": 18.2769,
+        "p_psi": 265.09
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 20.833,
-        "p_psi": 302.16
+        "p_bar": 22.6996,
+        "p_psi": 329.23
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 18.883,
-        "p_psi": 273.88
+        "p_bar": 20.5104,
+        "p_psi": 297.48
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 23.0726,
-        "p_psi": 334.64
+        "p_bar": 25.2233,
+        "p_psi": 365.83
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 21.0076,
-        "p_psi": 304.69
+        "p_bar": 22.896,
+        "p_psi": 332.08
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 25.4341,
-        "p_psi": 368.89
+        "p_bar": 27.8944,
+        "p_psi": 404.57
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 23.2571,
-        "p_psi": 337.32
+        "p_bar": 25.4316,
+        "p_psi": 368.85
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 27.914,
-        "p_psi": 404.86
+        "p_bar": 30.7098,
+        "p_psi": 445.41
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 25.6281,
-        "p_psi": 371.71
+        "p_bar": 28.1143,
+        "p_psi": 407.76
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 30.5091,
-        "p_psi": 442.5
+        "p_bar": 33.6665,
+        "p_psi": 488.29
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 28.1174,
-        "p_psi": 407.81
+        "p_bar": 30.9411,
+        "p_psi": 448.76
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 33.2167,
-        "p_psi": 481.77
+        "p_bar": 36.762,
+        "p_psi": 533.19
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 30.7216,
-        "p_psi": 445.58
+        "p_bar": 33.9091,
+        "p_psi": 491.81
       }
     ]
   },
@@ -8752,7 +8752,7 @@
     "ashrae_name": "R-452A",
     "chemical_name": "Mezcla Opteon XP44",
     "chemical_formula": "Mezcla R-32/125/1234yf",
-    "compound_type": "HFO/HFC",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.0,
     "gwp": 2140.0,
@@ -8772,20 +8772,20 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.9255,
-        "p_psi": 13.42
+        "p_bar": 0.9218,
+        "p_psi": 13.37
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.8377,
-        "p_psi": 12.15
+        "p_bar": 0.832,
+        "p_psi": 12.07
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.1782,
-        "p_psi": 17.09
+        "p_bar": 1.1813,
+        "p_psi": 17.13
       },
       {
         "temp_c": -45.0,
@@ -8796,278 +8796,278 @@
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.484,
-        "p_psi": 21.52
+        "p_bar": 1.4974,
+        "p_psi": 21.72
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.3549,
-        "p_psi": 19.65
+        "p_bar": 1.3637,
+        "p_psi": 19.78
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.8502,
-        "p_psi": 26.83
+        "p_bar": 1.8784,
+        "p_psi": 27.24
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.696,
-        "p_psi": 24.6
+        "p_bar": 1.7177,
+        "p_psi": 24.91
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.2843,
-        "p_psi": 33.13
+        "p_bar": 2.3327,
+        "p_psi": 33.83
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.102,
-        "p_psi": 30.49
+        "p_bar": 2.1416,
+        "p_psi": 31.06
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.794,
-        "p_psi": 40.52
+        "p_bar": 2.8693,
+        "p_psi": 41.62
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.5806,
-        "p_psi": 37.43
+        "p_bar": 2.6442,
+        "p_psi": 38.35
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.387,
-        "p_psi": 49.12
+        "p_bar": 3.4971,
+        "p_psi": 50.72
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.1393,
-        "p_psi": 45.53
+        "p_bar": 3.2345,
+        "p_psi": 46.91
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.0706,
-        "p_psi": 59.04
+        "p_bar": 4.2248,
+        "p_psi": 61.28
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.7858,
-        "p_psi": 54.91
+        "p_bar": 3.9212,
+        "p_psi": 56.87
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.8519,
-        "p_psi": 70.37
+        "p_bar": 5.0609,
+        "p_psi": 73.4
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.5272,
-        "p_psi": 65.66
+        "p_bar": 4.7129,
+        "p_psi": 68.36
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.7375,
-        "p_psi": 83.22
+        "p_bar": 6.0136,
+        "p_psi": 87.22
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.3704,
-        "p_psi": 77.89
+        "p_bar": 5.6181,
+        "p_psi": 81.48
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.7334,
-        "p_psi": 97.66
+        "p_bar": 7.0901,
+        "p_psi": 102.83
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.3215,
-        "p_psi": 91.69
+        "p_bar": 6.6442,
+        "p_psi": 96.37
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.8445,
-        "p_psi": 113.77
+        "p_bar": 8.297,
+        "p_psi": 120.34
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 7.3859,
-        "p_psi": 107.12
+        "p_bar": 7.7982,
+        "p_psi": 113.1
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.0749,
-        "p_psi": 131.62
+        "p_bar": 9.6399,
+        "p_psi": 139.81
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.5682,
-        "p_psi": 124.27
+        "p_bar": 9.0861,
+        "p_psi": 131.78
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 10.428,
-        "p_psi": 151.25
+        "p_bar": 11.1233,
+        "p_psi": 161.33
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 9.8719,
-        "p_psi": 143.18
+        "p_bar": 10.5128,
+        "p_psi": 152.48
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.9056,
-        "p_psi": 172.68
+        "p_bar": 12.7506,
+        "p_psi": 184.93
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 11.2995,
-        "p_psi": 163.89
+        "p_bar": 12.0822,
+        "p_psi": 175.24
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 13.5088,
-        "p_psi": 195.93
+        "p_bar": 14.5238,
+        "p_psi": 210.65
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 12.8524,
-        "p_psi": 186.41
+        "p_bar": 13.7969,
+        "p_psi": 200.11
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 15.2376,
-        "p_psi": 221.0
+        "p_bar": 16.4441,
+        "p_psi": 238.5
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 14.5311,
-        "p_psi": 210.76
+        "p_bar": 15.6583,
+        "p_psi": 227.11
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 17.091,
-        "p_psi": 247.88
+        "p_bar": 18.5113,
+        "p_psi": 268.48
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 16.3348,
-        "p_psi": 236.92
+        "p_bar": 17.6668,
+        "p_psi": 256.24
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 19.0671,
-        "p_psi": 276.55
+        "p_bar": 20.7244,
+        "p_psi": 300.58
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 18.262,
-        "p_psi": 264.87
+        "p_bar": 19.8217,
+        "p_psi": 287.49
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 21.1636,
-        "p_psi": 306.95
+        "p_bar": 23.0816,
+        "p_psi": 334.77
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 20.3107,
-        "p_psi": 294.58
+        "p_bar": 22.1215,
+        "p_psi": 320.85
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 23.3777,
-        "p_psi": 339.07
+        "p_bar": 25.5806,
+        "p_psi": 371.02
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 22.4781,
-        "p_psi": 326.02
+        "p_bar": 24.5641,
+        "p_psi": 356.27
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 25.7066,
-        "p_psi": 372.84
+        "p_bar": 28.2191,
+        "p_psi": 409.28
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 24.7615,
-        "p_psi": 359.14
+        "p_bar": 27.1471,
+        "p_psi": 393.74
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 28.1478,
-        "p_psi": 408.25
+        "p_bar": 30.9949,
+        "p_psi": 449.54
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 27.158,
-        "p_psi": 393.89
+        "p_bar": 29.8682,
+        "p_psi": 433.2
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 30.6992,
-        "p_psi": 445.26
+        "p_bar": 33.9063,
+        "p_psi": 491.77
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 29.6655,
-        "p_psi": 430.26
+        "p_bar": 32.7255,
+        "p_psi": 474.64
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 33.36,
-        "p_psi": 483.85
+        "p_bar": 36.953,
+        "p_psi": 535.96
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 32.2826,
-        "p_psi": 468.22
+        "p_bar": 35.7181,
+        "p_psi": 518.05
       }
     ]
   },
@@ -10372,7 +10372,7 @@
     "ashrae_name": "R-502",
     "chemical_name": "Mezcla azeotrópica (R-22/115)",
     "chemical_formula": "Mezcla azeotrópica CFC/HCFC",
-    "compound_type": "CFC/HCFC",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.25,
     "gwp": 4657.0,
@@ -10392,302 +10392,302 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.8335,
-        "p_psi": 12.09
+        "p_bar": 0.8388,
+        "p_psi": 12.17
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.8335,
-        "p_psi": 12.09
+        "p_bar": 0.8388,
+        "p_psi": 12.17
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.0777,
-        "p_psi": 15.63
+        "p_bar": 1.0773,
+        "p_psi": 15.62
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.0777,
-        "p_psi": 15.63
+        "p_bar": 1.0773,
+        "p_psi": 15.62
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.3781,
-        "p_psi": 19.99
+        "p_bar": 1.3687,
+        "p_psi": 19.85
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.3781,
-        "p_psi": 19.99
+        "p_bar": 1.3687,
+        "p_psi": 19.85
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.7435,
-        "p_psi": 25.29
+        "p_bar": 1.721,
+        "p_psi": 24.96
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.7435,
-        "p_psi": 25.29
+        "p_bar": 1.721,
+        "p_psi": 24.96
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.1835,
-        "p_psi": 31.67
+        "p_bar": 2.1426,
+        "p_psi": 31.08
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.1835,
-        "p_psi": 31.67
+        "p_bar": 2.1426,
+        "p_psi": 31.08
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.708,
-        "p_psi": 39.28
+        "p_bar": 2.6423,
+        "p_psi": 38.32
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.708,
-        "p_psi": 39.28
+        "p_bar": 2.6423,
+        "p_psi": 38.32
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.3273,
-        "p_psi": 48.26
+        "p_bar": 3.229,
+        "p_psi": 46.83
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.3273,
-        "p_psi": 48.26
+        "p_bar": 3.229,
+        "p_psi": 46.83
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.0519,
-        "p_psi": 58.77
+        "p_bar": 3.9117,
+        "p_psi": 56.73
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.0519,
-        "p_psi": 58.77
+        "p_bar": 3.9117,
+        "p_psi": 56.73
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.8921,
-        "p_psi": 70.95
+        "p_bar": 4.6991,
+        "p_psi": 68.15
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.8921,
-        "p_psi": 70.95
+        "p_bar": 4.6991,
+        "p_psi": 68.15
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.858,
-        "p_psi": 84.96
+        "p_bar": 5.5998,
+        "p_psi": 81.22
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.858,
-        "p_psi": 84.96
+        "p_bar": 5.5998,
+        "p_psi": 81.22
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.9594,
-        "p_psi": 100.94
+        "p_bar": 6.6216,
+        "p_psi": 96.04
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.9594,
-        "p_psi": 100.94
+        "p_bar": 6.6216,
+        "p_psi": 96.04
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 8.2053,
-        "p_psi": 119.01
+        "p_bar": 7.772,
+        "p_psi": 112.72
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.2053,
-        "p_psi": 119.01
+        "p_bar": 7.772,
+        "p_psi": 112.72
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.6038,
-        "p_psi": 139.29
+        "p_bar": 9.0572,
+        "p_psi": 131.36
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 9.6038,
-        "p_psi": 139.29
+        "p_bar": 9.0572,
+        "p_psi": 131.36
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.1621,
-        "p_psi": 161.89
+        "p_bar": 10.4829,
+        "p_psi": 152.04
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 11.1621,
-        "p_psi": 161.89
+        "p_bar": 10.4829,
+        "p_psi": 152.04
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 12.8862,
-        "p_psi": 186.9
+        "p_bar": 12.0532,
+        "p_psi": 174.82
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 12.8862,
-        "p_psi": 186.9
+        "p_bar": 12.0532,
+        "p_psi": 174.82
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 14.7808,
-        "p_psi": 214.38
+        "p_bar": 13.7714,
+        "p_psi": 199.74
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 14.7808,
-        "p_psi": 214.38
+        "p_bar": 13.7714,
+        "p_psi": 199.74
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 16.8494,
-        "p_psi": 244.38
+        "p_bar": 15.6394,
+        "p_psi": 226.83
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 16.8494,
-        "p_psi": 244.38
+        "p_bar": 15.6394,
+        "p_psi": 226.83
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 19.094,
-        "p_psi": 276.94
+        "p_bar": 17.6582,
+        "p_psi": 256.11
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 19.094,
-        "p_psi": 276.94
+        "p_bar": 17.6582,
+        "p_psi": 256.11
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 21.5155,
-        "p_psi": 312.06
+        "p_bar": 19.8272,
+        "p_psi": 287.57
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 21.5155,
-        "p_psi": 312.06
+        "p_bar": 19.8272,
+        "p_psi": 287.57
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 24.1136,
-        "p_psi": 349.74
+        "p_bar": 22.1454,
+        "p_psi": 321.19
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 24.1136,
-        "p_psi": 349.74
+        "p_bar": 22.1454,
+        "p_psi": 321.19
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 26.8871,
-        "p_psi": 389.96
+        "p_bar": 24.6105,
+        "p_psi": 356.95
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 26.8871,
-        "p_psi": 389.96
+        "p_bar": 24.6105,
+        "p_psi": 356.95
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 29.834,
-        "p_psi": 432.71
+        "p_bar": 27.22,
+        "p_psi": 394.79
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 29.834,
-        "p_psi": 432.71
+        "p_bar": 27.22,
+        "p_psi": 394.79
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 32.9521,
-        "p_psi": 477.93
+        "p_bar": 29.9711,
+        "p_psi": 434.7
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 32.9521,
-        "p_psi": 477.93
+        "p_bar": 29.9711,
+        "p_psi": 434.7
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 36.2393,
-        "p_psi": 525.61
+        "p_bar": 32.8611,
+        "p_psi": 476.61
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 36.2393,
-        "p_psi": 525.61
+        "p_bar": 32.8611,
+        "p_psi": 476.61
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 39.6938,
-        "p_psi": 575.71
+        "p_bar": 35.8876,
+        "p_psi": 520.51
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 39.6938,
-        "p_psi": 575.71
+        "p_bar": 35.8876,
+        "p_psi": 520.51
       }
     ]
   },
@@ -10696,7 +10696,7 @@
     "ashrae_name": "R-454B",
     "chemical_name": "Mezcla Opteon XL41 (R-32/1234yf)",
     "chemical_formula": "Mezcla HFC/HFO A2L",
-    "compound_type": "HFO/HFC",
+    "compound_type": "Blend",
     "safety_group": "A2L",
     "odp": 0.0,
     "gwp": 466.0,
@@ -10716,302 +10716,302 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.1015,
-        "p_psi": 15.98
+        "p_bar": 1.1029,
+        "p_psi": 16.0
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.9986,
-        "p_psi": 14.48
+        "p_bar": 0.9971,
+        "p_psi": 14.46
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.3971,
-        "p_psi": 20.26
+        "p_bar": 1.4079,
+        "p_psi": 20.42
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.272,
-        "p_psi": 18.45
+        "p_bar": 1.2786,
+        "p_psi": 18.54
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.7534,
-        "p_psi": 25.43
+        "p_bar": 1.7782,
+        "p_psi": 25.79
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.6031,
-        "p_psi": 23.25
+        "p_bar": 1.6217,
+        "p_psi": 23.52
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.1788,
-        "p_psi": 31.6
+        "p_bar": 2.2229,
+        "p_psi": 32.24
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.9998,
-        "p_psi": 29.01
+        "p_bar": 2.0355,
+        "p_psi": 29.52
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.6816,
-        "p_psi": 38.89
+        "p_bar": 2.7516,
+        "p_psi": 39.91
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.4706,
-        "p_psi": 35.83
+        "p_bar": 2.5294,
+        "p_psi": 36.69
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.2703,
-        "p_psi": 47.43
+        "p_bar": 3.3743,
+        "p_psi": 48.94
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.0239,
-        "p_psi": 43.86
+        "p_bar": 3.1133,
+        "p_psi": 45.16
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.9532,
-        "p_psi": 57.34
+        "p_bar": 4.1007,
+        "p_psi": 59.48
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.6682,
-        "p_psi": 53.2
+        "p_bar": 3.7971,
+        "p_psi": 55.07
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.7387,
-        "p_psi": 68.73
+        "p_bar": 4.9406,
+        "p_psi": 71.66
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.4117,
-        "p_psi": 63.99
+        "p_bar": 4.5904,
+        "p_psi": 66.58
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.6343,
-        "p_psi": 81.72
+        "p_bar": 5.9033,
+        "p_psi": 85.62
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.2624,
-        "p_psi": 76.32
+        "p_bar": 5.5029,
+        "p_psi": 79.81
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.6473,
-        "p_psi": 96.41
+        "p_bar": 6.9975,
+        "p_psi": 101.49
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.2276,
-        "p_psi": 90.32
+        "p_bar": 6.5435,
+        "p_psi": 94.91
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.7838,
-        "p_psi": 112.89
+        "p_bar": 8.2314,
+        "p_psi": 119.39
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 7.314,
-        "p_psi": 106.08
+        "p_bar": 7.7206,
+        "p_psi": 111.98
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.0494,
-        "p_psi": 131.25
+        "p_bar": 9.6118,
+        "p_psi": 139.41
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.5274,
-        "p_psi": 123.68
+        "p_bar": 9.0416,
+        "p_psi": 131.14
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 10.4483,
-        "p_psi": 151.54
+        "p_bar": 11.1447,
+        "p_psi": 161.64
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 9.8725,
-        "p_psi": 143.19
+        "p_bar": 10.5129,
+        "p_psi": 152.48
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.9838,
-        "p_psi": 173.81
+        "p_bar": 12.8349,
+        "p_psi": 186.15
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 11.3531,
-        "p_psi": 164.66
+        "p_bar": 12.1397,
+        "p_psi": 176.07
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 13.6577,
-        "p_psi": 198.09
+        "p_bar": 14.6855,
+        "p_psi": 213.0
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 12.9715,
-        "p_psi": 188.14
+        "p_bar": 13.9259,
+        "p_psi": 201.98
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 15.4709,
-        "p_psi": 224.39
+        "p_bar": 16.6987,
+        "p_psi": 242.19
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 14.7289,
-        "p_psi": 213.63
+        "p_bar": 15.8739,
+        "p_psi": 230.23
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 17.4228,
-        "p_psi": 252.7
+        "p_bar": 18.875,
+        "p_psi": 273.76
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 16.6254,
-        "p_psi": 241.13
+        "p_bar": 17.9849,
+        "p_psi": 260.85
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 19.5119,
-        "p_psi": 283.0
+        "p_bar": 21.2138,
+        "p_psi": 307.68
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 18.6599,
-        "p_psi": 270.64
+        "p_bar": 20.2588,
+        "p_psi": 293.83
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 21.7357,
-        "p_psi": 315.25
+        "p_bar": 23.7133,
+        "p_psi": 343.93
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 20.8302,
-        "p_psi": 302.12
+        "p_bar": 22.6944,
+        "p_psi": 329.15
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 24.091,
-        "p_psi": 349.41
+        "p_bar": 26.3711,
+        "p_psi": 382.48
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 23.1333,
-        "p_psi": 335.52
+        "p_bar": 25.2892,
+        "p_psi": 366.79
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 26.5742,
-        "p_psi": 385.43
+        "p_bar": 29.1837,
+        "p_psi": 423.28
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 25.5658,
-        "p_psi": 370.8
+        "p_bar": 28.0403,
+        "p_psi": 406.69
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 29.1814,
-        "p_psi": 423.24
+        "p_bar": 32.1479,
+        "p_psi": 466.27
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 28.1239,
-        "p_psi": 407.9
+        "p_bar": 30.9443,
+        "p_psi": 448.81
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 31.909,
-        "p_psi": 462.8
+        "p_bar": 35.2602,
+        "p_psi": 511.41
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 30.8037,
-        "p_psi": 446.77
+        "p_bar": 33.9977,
+        "p_psi": 493.1
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 34.7542,
-        "p_psi": 504.07
+        "p_bar": 38.5179,
+        "p_psi": 558.66
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 33.6022,
-        "p_psi": 487.36
+        "p_bar": 37.1975,
+        "p_psi": 539.51
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 37.7148,
-        "p_psi": 547.01
+        "p_bar": 41.9195,
+        "p_psi": 607.99
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 36.5168,
-        "p_psi": 529.63
+        "p_bar": 40.5416,
+        "p_psi": 588.01
       }
     ]
   },
@@ -11020,7 +11020,7 @@
     "ashrae_name": "R-454C",
     "chemical_name": "Mezcla Opteon XL20 (R-32/1234yf)",
     "chemical_formula": "Mezcla HFC/HFO A2L",
-    "compound_type": "HFO/HFC",
+    "compound_type": "Blend",
     "safety_group": "A2L",
     "odp": 0.0,
     "gwp": 148.0,
@@ -11040,302 +11040,302 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 0.8499,
-        "p_psi": 12.33
+        "p_bar": 0.8449,
+        "p_psi": 12.25
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.7687,
-        "p_psi": 11.15
+        "p_bar": 0.762,
+        "p_psi": 11.05
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.0841,
-        "p_psi": 15.72
+        "p_bar": 1.085,
+        "p_psi": 15.74
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.9848,
-        "p_psi": 14.28
+        "p_bar": 0.983,
+        "p_psi": 14.26
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.3684,
-        "p_psi": 19.85
+        "p_bar": 1.3783,
+        "p_psi": 19.99
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.2482,
-        "p_psi": 18.1
+        "p_bar": 1.2541,
+        "p_psi": 18.19
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.7102,
-        "p_psi": 24.8
+        "p_bar": 1.7332,
+        "p_psi": 25.14
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.5661,
-        "p_psi": 22.71
+        "p_bar": 1.5833,
+        "p_psi": 22.96
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.1169,
-        "p_psi": 30.7
+        "p_bar": 2.158,
+        "p_psi": 31.3
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.9459,
-        "p_psi": 28.22
+        "p_bar": 1.9791,
+        "p_psi": 28.7
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.5963,
-        "p_psi": 37.66
+        "p_bar": 2.6618,
+        "p_psi": 38.61
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.3953,
-        "p_psi": 34.74
+        "p_bar": 2.4502,
+        "p_psi": 35.54
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.1565,
-        "p_psi": 45.78
+        "p_bar": 3.2537,
+        "p_psi": 47.19
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.9222,
-        "p_psi": 42.38
+        "p_bar": 3.0058,
+        "p_psi": 43.6
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.8052,
-        "p_psi": 55.19
+        "p_bar": 3.943,
+        "p_psi": 57.19
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.5346,
-        "p_psi": 51.27
+        "p_bar": 3.655,
+        "p_psi": 53.01
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.5503,
-        "p_psi": 66.0
+        "p_bar": 4.7387,
+        "p_psi": 68.73
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.2402,
-        "p_psi": 61.5
+        "p_bar": 4.4071,
+        "p_psi": 63.92
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.3989,
-        "p_psi": 78.3
+        "p_bar": 5.6497,
+        "p_psi": 81.94
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.0465,
-        "p_psi": 73.19
+        "p_bar": 5.271,
+        "p_psi": 76.45
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.3579,
-        "p_psi": 92.21
+        "p_bar": 6.6844,
+        "p_psi": 96.95
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.9606,
-        "p_psi": 86.45
+        "p_bar": 6.2552,
+        "p_psi": 90.72
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.4334,
-        "p_psi": 107.81
+        "p_bar": 7.8504,
+        "p_psi": 113.86
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.9888,
-        "p_psi": 101.36
+        "p_bar": 7.3678,
+        "p_psi": 106.86
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 8.6308,
-        "p_psi": 125.18
+        "p_bar": 9.1545,
+        "p_psi": 132.78
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.1369,
-        "p_psi": 118.02
+        "p_bar": 8.6159,
+        "p_psi": 124.96
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.9545,
-        "p_psi": 144.38
+        "p_bar": 10.6028,
+        "p_psi": 153.78
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 9.4096,
-        "p_psi": 136.48
+        "p_bar": 10.0058,
+        "p_psi": 145.12
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 11.4077,
-        "p_psi": 165.46
+        "p_bar": 12.1999,
+        "p_psi": 176.94
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 10.8107,
-        "p_psi": 156.8
+        "p_bar": 11.5429,
+        "p_psi": 167.42
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 12.9929,
-        "p_psi": 188.45
+        "p_bar": 13.9495,
+        "p_psi": 202.32
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 12.3429,
-        "p_psi": 179.02
+        "p_bar": 13.2311,
+        "p_psi": 191.9
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 14.7111,
-        "p_psi": 213.37
+        "p_bar": 15.8539,
+        "p_psi": 229.94
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 14.0078,
-        "p_psi": 203.17
+        "p_bar": 15.0734,
+        "p_psi": 218.62
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 16.5623,
-        "p_psi": 240.22
+        "p_bar": 17.9142,
+        "p_psi": 259.82
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 15.8059,
-        "p_psi": 229.25
+        "p_bar": 17.0714,
+        "p_psi": 247.6
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 18.5456,
-        "p_psi": 268.98
+        "p_bar": 20.1305,
+        "p_psi": 291.97
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 17.7365,
-        "p_psi": 257.25
+        "p_bar": 19.2253,
+        "p_psi": 278.84
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 20.659,
-        "p_psi": 299.63
+        "p_bar": 22.5015,
+        "p_psi": 326.36
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 19.7982,
-        "p_psi": 287.15
+        "p_bar": 21.5346,
+        "p_psi": 312.33
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 22.8998,
-        "p_psi": 332.13
+        "p_bar": 25.0251,
+        "p_psi": 362.96
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 21.9884,
-        "p_psi": 318.92
+        "p_bar": 23.9975,
+        "p_psi": 348.06
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 25.2649,
-        "p_psi": 366.44
+        "p_bar": 27.6987,
+        "p_psi": 401.74
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 24.3042,
-        "p_psi": 352.5
+        "p_bar": 26.6115,
+        "p_psi": 385.97
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 27.7506,
-        "p_psi": 402.49
+        "p_bar": 30.519,
+        "p_psi": 442.64
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 26.742,
-        "p_psi": 387.86
+        "p_bar": 29.3735,
+        "p_psi": 426.03
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 30.3533,
-        "p_psi": 440.24
+        "p_bar": 33.4827,
+        "p_psi": 485.63
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 29.2984,
-        "p_psi": 424.94
+        "p_bar": 32.2802,
+        "p_psi": 468.19
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 33.07,
-        "p_psi": 479.64
+        "p_bar": 36.5869,
+        "p_psi": 530.65
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 31.9699,
-        "p_psi": 463.68
+        "p_bar": 35.3285,
+        "p_psi": 512.4
       }
     ]
   },
@@ -11344,7 +11344,7 @@
     "ashrae_name": "R-455A",
     "chemical_name": "Mezcla Solstice L40X",
     "chemical_formula": "Mezcla R-32/1234yf/CO2",
-    "compound_type": "HFO/HFC",
+    "compound_type": "Blend",
     "safety_group": "A2L",
     "odp": 0.0,
     "gwp": 148.0,
@@ -11364,32 +11364,32 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.1389,
-        "p_psi": 16.52
+        "p_bar": 1.142,
+        "p_psi": 16.56
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.6251,
-        "p_psi": 9.07
+        "p_bar": 0.6162,
+        "p_psi": 8.94
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.4435,
-        "p_psi": 20.94
+        "p_bar": 1.4568,
+        "p_psi": 21.13
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 0.8027,
-        "p_psi": 11.64
+        "p_bar": 0.7971,
+        "p_psi": 11.56
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 1.811,
-        "p_psi": 26.27
+        "p_bar": 1.8391,
+        "p_psi": 26.67
       },
       {
         "temp_c": -40.0,
@@ -11400,266 +11400,266 @@
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.2499,
-        "p_psi": 32.63
+        "p_bar": 2.2986,
+        "p_psi": 33.34
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.3146,
-        "p_psi": 19.07
+        "p_bar": 1.3233,
+        "p_psi": 19.19
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 2.7693,
-        "p_psi": 40.16
+        "p_bar": 2.8455,
+        "p_psi": 41.27
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 1.6559,
-        "p_psi": 24.02
+        "p_bar": 1.6775,
+        "p_psi": 24.33
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 3.3781,
-        "p_psi": 49.0
+        "p_bar": 3.4902,
+        "p_psi": 50.62
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.0652,
-        "p_psi": 29.95
+        "p_bar": 2.1049,
+        "p_psi": 30.53
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.0856,
-        "p_psi": 59.26
+        "p_bar": 4.2435,
+        "p_psi": 61.55
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 2.5513,
-        "p_psi": 37.0
+        "p_bar": 2.6156,
+        "p_psi": 37.94
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 4.9007,
-        "p_psi": 71.08
+        "p_bar": 5.116,
+        "p_psi": 74.2
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.1232,
-        "p_psi": 45.3
+        "p_bar": 3.2199,
+        "p_psi": 46.7
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 5.832,
-        "p_psi": 84.59
+        "p_bar": 6.118,
+        "p_psi": 88.73
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 3.7902,
-        "p_psi": 54.97
+        "p_bar": 3.9285,
+        "p_psi": 56.98
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 6.8876,
-        "p_psi": 99.9
+        "p_bar": 7.2594,
+        "p_psi": 105.29
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 4.5612,
-        "p_psi": 66.15
+        "p_bar": 4.7521,
+        "p_psi": 68.92
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 8.0748,
-        "p_psi": 117.12
+        "p_bar": 8.5494,
+        "p_psi": 124.0
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 5.445,
-        "p_psi": 78.97
+        "p_bar": 5.7011,
+        "p_psi": 82.69
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.4001,
-        "p_psi": 136.34
+        "p_bar": 9.9961,
+        "p_psi": 144.98
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 6.4499,
-        "p_psi": 93.55
+        "p_bar": 6.7856,
+        "p_psi": 98.42
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 10.8689,
-        "p_psi": 157.64
+        "p_bar": 11.6069,
+        "p_psi": 168.34
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 7.5837,
-        "p_psi": 109.99
+        "p_bar": 8.015,
+        "p_psi": 116.25
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 12.4855,
-        "p_psi": 181.09
+        "p_bar": 13.3875,
+        "p_psi": 194.17
       },
       {
         "temp_c": 15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 8.853,
-        "p_psi": 128.4
+        "p_bar": 9.3981,
+        "p_psi": 136.31
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 14.2527,
-        "p_psi": 206.72
+        "p_bar": 15.3425,
+        "p_psi": 222.52
       },
       {
         "temp_c": 20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 10.2639,
-        "p_psi": 148.87
+        "p_bar": 10.9425,
+        "p_psi": 158.71
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 16.1722,
-        "p_psi": 234.56
+        "p_bar": 17.475,
+        "p_psi": 253.45
       },
       {
         "temp_c": 25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 11.8209,
-        "p_psi": 171.45
+        "p_bar": 12.6545,
+        "p_psi": 183.54
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 18.2443,
-        "p_psi": 264.61
+        "p_bar": 19.7865,
+        "p_psi": 286.98
       },
       {
         "temp_c": 30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 13.5276,
-        "p_psi": 196.2
+        "p_bar": 14.5393,
+        "p_psi": 210.88
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 20.468,
-        "p_psi": 296.86
+        "p_bar": 22.2771,
+        "p_psi": 323.1
       },
       {
         "temp_c": 35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 15.3861,
-        "p_psi": 223.16
+        "p_bar": 16.6006,
+        "p_psi": 240.77
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 22.841,
-        "p_psi": 331.28
+        "p_bar": 24.9455,
+        "p_psi": 361.8
       },
       {
         "temp_c": 40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 17.3972,
-        "p_psi": 252.33
+        "p_bar": 18.8404,
+        "p_psi": 273.26
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 25.36,
-        "p_psi": 367.82
+        "p_bar": 27.7889,
+        "p_psi": 403.05
       },
       {
         "temp_c": 45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 19.5605,
-        "p_psi": 283.7
+        "p_bar": 21.2595,
+        "p_psi": 308.34
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 28.0209,
-        "p_psi": 406.41
+        "p_bar": 30.804,
+        "p_psi": 446.77
       },
       {
         "temp_c": 50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 21.874,
-        "p_psi": 317.26
+        "p_bar": 23.8569,
+        "p_psi": 346.02
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 30.8191,
-        "p_psi": 446.99
+        "p_bar": 33.9862,
+        "p_psi": 492.93
       },
       {
         "temp_c": 55.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 24.3351,
-        "p_psi": 352.95
+        "p_bar": 26.6307,
+        "p_psi": 386.25
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 33.7495,
-        "p_psi": 489.5
+        "p_bar": 37.3309,
+        "p_psi": 541.44
       },
       {
         "temp_c": 60.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 26.9398,
-        "p_psi": 390.73
+        "p_bar": 29.5776,
+        "p_psi": 428.99
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 36.8073,
-        "p_psi": 533.85
+        "p_bar": 40.8332,
+        "p_psi": 592.24
       },
       {
         "temp_c": 65.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 29.6836,
-        "p_psi": 430.53
+        "p_bar": 32.6935,
+        "p_psi": 474.18
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 39.9881,
-        "p_psi": 579.98
+        "p_bar": 44.489,
+        "p_psi": 645.26
       },
       {
         "temp_c": 70.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 32.5618,
-        "p_psi": 472.27
+        "p_bar": 35.9738,
+        "p_psi": 521.76
       }
     ]
   },
@@ -11992,7 +11992,7 @@
     "ashrae_name": "R-466A",
     "chemical_name": "Mezcla Solstice N41",
     "chemical_formula": "Mezcla R-32/125/CF3I",
-    "compound_type": "HFC/CF3I",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.0,
     "gwp": 733.0,
@@ -14584,7 +14584,7 @@
     "ashrae_name": "R-508B",
     "chemical_name": "Mezcla Suva 95 (R-23/116)",
     "chemical_formula": "Mezcla azeotrópica",
-    "compound_type": "HFC/PFC",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.0,
     "gwp": 13396.0,
@@ -15232,7 +15232,7 @@
     "ashrae_name": "R-503",
     "chemical_name": "Mezcla azeotrópica (R-13/116)",
     "chemical_formula": "Mezcla azeotrópica CFC/PFC",
-    "compound_type": "CFC/PFC",
+    "compound_type": "Blend",
     "safety_group": "A1",
     "odp": 0.6,
     "gwp": 14560.0,
@@ -15252,158 +15252,158 @@
       {
         "temp_c": -50.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 7.4146,
-        "p_psi": 107.54
+        "p_bar": 6.9263,
+        "p_psi": 100.46
       },
       {
         "temp_c": -50.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 7.4146,
-        "p_psi": 107.54
+        "p_bar": 6.9263,
+        "p_psi": 100.46
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 9.0757,
-        "p_psi": 131.63
+        "p_bar": 8.4167,
+        "p_psi": 122.07
       },
       {
         "temp_c": -45.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 9.0757,
-        "p_psi": 131.63
+        "p_bar": 8.4167,
+        "p_psi": 122.07
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 10.9894,
-        "p_psi": 159.39
+        "p_bar": 10.1207,
+        "p_psi": 146.79
       },
       {
         "temp_c": -40.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 10.9894,
-        "p_psi": 159.39
+        "p_bar": 10.1207,
+        "p_psi": 146.79
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 13.17,
-        "p_psi": 191.02
+        "p_bar": 12.0483,
+        "p_psi": 174.75
       },
       {
         "temp_c": -35.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 13.17,
-        "p_psi": 191.02
+        "p_bar": 12.0483,
+        "p_psi": 174.75
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 15.6293,
-        "p_psi": 226.68
+        "p_bar": 14.207,
+        "p_psi": 206.06
       },
       {
         "temp_c": -30.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 15.6293,
-        "p_psi": 226.68
+        "p_bar": 14.207,
+        "p_psi": 206.06
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 18.3756,
-        "p_psi": 266.52
+        "p_bar": 16.6011,
+        "p_psi": 240.78
       },
       {
         "temp_c": -25.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 18.3756,
-        "p_psi": 266.52
+        "p_bar": 16.6011,
+        "p_psi": 240.78
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 21.4141,
-        "p_psi": 310.59
+        "p_bar": 19.2325,
+        "p_psi": 278.94
       },
       {
         "temp_c": -20.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 21.4141,
-        "p_psi": 310.59
+        "p_bar": 19.2325,
+        "p_psi": 278.94
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 24.7468,
-        "p_psi": 358.92
+        "p_bar": 22.1001,
+        "p_psi": 320.54
       },
       {
         "temp_c": -15.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 24.7468,
-        "p_psi": 358.92
+        "p_bar": 22.1001,
+        "p_psi": 320.54
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 28.3728,
-        "p_psi": 411.51
+        "p_bar": 25.2006,
+        "p_psi": 365.5
       },
       {
         "temp_c": -10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 28.3728,
-        "p_psi": 411.51
+        "p_bar": 25.2006,
+        "p_psi": 365.5
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 32.2892,
-        "p_psi": 468.32
+        "p_bar": 28.529,
+        "p_psi": 413.78
       },
       {
         "temp_c": -5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 32.2892,
-        "p_psi": 468.32
+        "p_bar": 28.529,
+        "p_psi": 413.78
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 36.4913,
-        "p_psi": 529.26
+        "p_bar": 32.0792,
+        "p_psi": 465.27
       },
       {
         "temp_c": 0.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 36.4913,
-        "p_psi": 529.26
+        "p_bar": 32.0792,
+        "p_psi": 465.27
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 40.9744,
-        "p_psi": 594.29
+        "p_bar": 35.8451,
+        "p_psi": 519.89
       },
       {
         "temp_c": 5.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 40.9744,
-        "p_psi": 594.29
+        "p_bar": 35.8451,
+        "p_psi": 519.89
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Liquid (Bubble Point)",
-        "p_bar": 44.0,
-        "p_psi": 638.17
+        "p_bar": 39.8217,
+        "p_psi": 577.57
       },
       {
         "temp_c": 10.0,
         "state": "Saturated Vapor (Dew Point)",
-        "p_bar": 44.0,
-        "p_psi": 638.17
+        "p_bar": 39.8217,
+        "p_psi": 577.57
       },
       {
         "temp_c": 15.0,
