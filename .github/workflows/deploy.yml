@@ -42,7 +42,7 @@ jobs:
 
       - name: 🔄 Verify ETL pipeline runs clean
         run: |
-          python main.py
+          python run_etl.py --validate --report --sustainability
           echo "✅ ETL pipeline verified - safe to deploy"
 
       - name: 📋 Validate Streamlit app syntax

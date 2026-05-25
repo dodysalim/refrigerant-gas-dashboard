@@ -103,7 +103,7 @@ jobs:
 
       - name: 🚀 Run ETL Pipeline
         run: |
-          python main.py
+          python run_etl.py --validate --report --sustainability
           echo "✅ ETL pipeline completed successfully"
 
       - name: 📁 Verify output files
