@@ -241,12 +241,15 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 /* Buscador Principal */
 .search-box {
     position: relative;
-    width: 320px;
+    max-width: 320px;
+    flex: 1;
+    min-width: 200px;
 }
 
 .search-box input {
@@ -285,6 +288,9 @@ body {
     font-weight: 700;
     color: var(--color-accent);
     letter-spacing: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    cursor: pointer;
 }
 
 /* ==========================================================================
