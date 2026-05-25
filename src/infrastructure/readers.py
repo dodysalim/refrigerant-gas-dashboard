@@ -218,7 +218,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 13, "ashrae_name": "R-415B", "chemical_name": "Mezcla de R-22 e R-152a",
-                "chemical_formula": "Mezcla zeotrópica", "compound_type": "HCFC/HFC", "safety_group": "A2",
+                "chemical_formula": "Mezcla zeotrópica", "compound_type": "Blend", "safety_group": "A2",
                 "odp": 0.01, "gwp": 1500.0, "category": "Basic", "primary_oil": "Mineral/AB", "status": "Phased Out",
                 "color_hex": "#F1C40F", "boiling_point_c": -30.0, "critical_temp_c": 102.0, "critical_pressure_bar": 45.0,
                 "description": "Mezcla de transición de escaso uso masivo pero común en áreas de desarrollo para reconversiones rápidas.",
@@ -238,7 +238,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 15, "ashrae_name": "R-513A", "chemical_name": "Mezcla Opteon XP10 (R-134a/1234yf)",
-                "chemical_formula": "Mezcla azeotrópica HFC/HFO", "compound_type": "HFO/HFC", "safety_group": "A1",
+                "chemical_formula": "Mezcla azeotrópica HFC/HFO", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.0, "gwp": 573.0, "category": "Basic", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#5DADE2", "boiling_point_c": -29.2, "critical_temp_c": 96.5, "critical_pressure_bar": 37.6,
                 "description": "Una mezcla azeotrópica diseñada para reemplazar de manera directa al R-134a reduciendo el GWP en un 56%.",
@@ -350,7 +350,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 26, "ashrae_name": "R-448A", "chemical_name": "Mezcla Solstice N40",
-                "chemical_formula": "Mezcla HFC/HFO", "compound_type": "HFO/HFC", "safety_group": "A1",
+                "chemical_formula": "Mezcla HFC/HFO", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.0, "gwp": 1387.0, "category": "Intermediate", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#1F618D", "boiling_point_c": -45.9, "critical_temp_c": 83.7, "critical_pressure_bar": 46.6,
                 "description": "La mezcla ecológica de HFO/HFC de referencia comercial para sustituir al R-404A en supermercados nuevos e instalaciones existentes.",
@@ -360,7 +360,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 27, "ashrae_name": "R-449A", "chemical_name": "Mezcla Opteon XP40",
-                "chemical_formula": "Mezcla HFC/HFO", "compound_type": "HFO/HFC", "safety_group": "A1",
+                "chemical_formula": "Mezcla HFC/HFO", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.0, "gwp": 1397.0, "category": "Intermediate", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#2874A6", "boiling_point_c": -46.0, "critical_temp_c": 83.1, "critical_pressure_bar": 44.5,
                 "description": "Equivalente comercial directo de R-448A fabricado por DuPont/Chemours, ampliamente aceptado en la cadena de frío mundial.",
@@ -370,7 +370,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 28, "ashrae_name": "R-452A", "chemical_name": "Mezcla Opteon XP44",
-                "chemical_formula": "Mezcla R-32/125/1234yf", "compound_type": "HFO/HFC", "safety_group": "A1",
+                "chemical_formula": "Mezcla R-32/125/1234yf", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.0, "gwp": 2140.0, "category": "Intermediate", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#E74C3C", "boiling_point_c": -47.0, "critical_temp_c": 74.9, "critical_pressure_bar": 40.0,
                 "description": "Reemplazo de R-404A optimizado especialmente para refrigeración de transporte (camiones, contenedores) y compresores semi-herméticos.",
@@ -420,7 +420,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 33, "ashrae_name": "R-502", "chemical_name": "Mezcla azeotrópica (R-22/115)",
-                "chemical_formula": "Mezcla azeotrópica CFC/HCFC", "compound_type": "CFC/HCFC", "safety_group": "A1",
+                "chemical_formula": "Mezcla azeotrópica CFC/HCFC", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.25, "gwp": 4657.0, "category": "Intermediate", "primary_oil": "Mineral", "status": "Phased Out",
                 "color_hex": "#CB4335", "boiling_point_c": -45.3, "critical_temp_c": 82.2, "critical_pressure_bar": 40.7,
                 "description": "Clásico compuesto de los años 80 para congelamiento rápido en supermercados. Prohibido formalmente por daño a la capa de ozono.",
@@ -430,7 +430,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 34, "ashrae_name": "R-454B", "chemical_name": "Mezcla Opteon XL41 (R-32/1234yf)",
-                "chemical_formula": "Mezcla HFC/HFO A2L", "compound_type": "HFO/HFC", "safety_group": "A2L",
+                "chemical_formula": "Mezcla HFC/HFO A2L", "compound_type": "Blend", "safety_group": "A2L",
                 "odp": 0.0, "gwp": 466.0, "category": "Intermediate", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#D5F5E3", "boiling_point_c": -50.9, "critical_temp_c": 77.0, "critical_pressure_bar": 52.8,
                 "description": "Una de las alternativas clave a largo plazo para R-410A en grandes sistemas de aire acondicionado y chillers comerciales.",
@@ -440,7 +440,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 35, "ashrae_name": "R-454C", "chemical_name": "Mezcla Opteon XL20 (R-32/1234yf)",
-                "chemical_formula": "Mezcla HFC/HFO A2L", "compound_type": "HFO/HFC", "safety_group": "A2L",
+                "chemical_formula": "Mezcla HFC/HFO A2L", "compound_type": "Blend", "safety_group": "A2L",
                 "odp": 0.0, "gwp": 148.0, "category": "Intermediate", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#ABEBC6", "boiling_point_c": -45.6, "critical_temp_c": 85.7, "critical_pressure_bar": 42.0,
                 "description": "Desarrollado para cumplir con la limitación de GWP < 150 de la Unión Europea para equipos comerciales de refrigeración medianos.",
@@ -450,7 +450,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 36, "ashrae_name": "R-455A", "chemical_name": "Mezcla Solstice L40X",
-                "chemical_formula": "Mezcla R-32/1234yf/CO2", "compound_type": "HFO/HFC", "safety_group": "A2L",
+                "chemical_formula": "Mezcla R-32/1234yf/CO2", "compound_type": "Blend", "safety_group": "A2L",
                 "odp": 0.0, "gwp": 148.0, "category": "Intermediate", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#A2D9CE", "boiling_point_c": -52.0, "critical_temp_c": 85.6, "critical_pressure_bar": 46.5,
                 "description": "Solución innovadora que incluye una pequeña proporción de CO2 para suprimir la inflamabilidad manteniendo un bajo GWP.",
@@ -470,7 +470,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 38, "ashrae_name": "R-466A", "chemical_name": "Mezcla Solstice N41",
-                "chemical_formula": "Mezcla R-32/125/CF3I", "compound_type": "HFC/CF3I", "safety_group": "A1",
+                "chemical_formula": "Mezcla R-32/125/CF3I", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.0, "gwp": 733.0, "category": "Intermediate", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#FADBD8", "boiling_point_c": -51.5, "critical_temp_c": 79.5, "critical_pressure_bar": 54.0,
                 "description": "El primer reemplazo no inflamable (A1) diseñado para sustituir directamente al R-410A en sistemas split residenciales.",
@@ -552,7 +552,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 46, "ashrae_name": "R-508B", "chemical_name": "Mezcla Suva 95 (R-23/116)",
-                "chemical_formula": "Mezcla azeotrópica", "compound_type": "HFC/PFC", "safety_group": "A1",
+                "chemical_formula": "Mezcla azeotrópica", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.0, "gwp": 13396.0, "category": "Industrial", "primary_oil": "POE", "status": "Active",
                 "color_hex": "#A569BD", "boiling_point_c": -87.4, "critical_temp_c": 14.0, "critical_pressure_bar": 39.3,
                 "description": "Utilizado para refrigeración de ultra-baja temperatura (criogenia, liofilización, almacenamiento de vacunas de -80°C).",
@@ -572,7 +572,7 @@ class FallbackStaticDataReader(IDataReader):
             },
             {
                 "key": 48, "ashrae_name": "R-503", "chemical_name": "Mezcla azeotrópica (R-13/116)",
-                "chemical_formula": "Mezcla azeotrópica CFC/PFC", "compound_type": "CFC/PFC", "safety_group": "A1",
+                "chemical_formula": "Mezcla azeotrópica CFC/PFC", "compound_type": "Blend", "safety_group": "A1",
                 "odp": 0.6, "gwp": 14560.0, "category": "Industrial", "primary_oil": "Mineral", "status": "Phased Out",
                 "color_hex": "#CD6155", "boiling_point_c": -88.0, "critical_temp_c": 19.5, "critical_pressure_bar": 44.0,
                 "description": "Compuesto clásico de temperatura ultra baja retirado por el Protocolo de Montreal.",
