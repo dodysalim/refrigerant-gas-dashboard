@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrioMetrics - Analytics & Calculadora de Gases Refrigerantes</title>
+    <!-- Google Fonts: Inter y Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar de Navegación -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h2>Krio<span>Metrics</span></h2>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="#dashboard" class="menu-item active" id="nav-dashboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Dashboard General</span>
+                </a>
+                <a href="#pt-calculator" class="menu-item" id="nav-calculator">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+                    <span>Calculadora P-T</span>
+                </a>
+                <a href="#comparator" class="menu-item" id="nav-comparator">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                    <span>Comparador de Gases</span>
+                </a>
+                <a href="#refrigeration-cycle" class="menu-item" id="nav-cycle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                    <span>Ciclo de Refrigeración</span>
+                </a>
+                <a href="#star-schema" class="menu-item" id="nav-schema">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    <span>Modelo Estrella</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>ETL & SOLID Data Model</p>
+                <div class="version">v1.2.0</div>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <!-- Header superior -->
+            <header class="main-header">
+                <div class="header-title">
+                    <h1 id="page-title">Panel de Control de Refrigeración</h1>
+                    <p id="page-subtitle">Análisis avanzado de 55 gases refrigerantes básicos, intermedios e industriales.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="global-search" placeholder="Buscar R-134a, R-717, R-290, fórmula...">
+                    </div>
+                    <div class="theme-badge">MODO OSCURO</div>
+                </div>
+            </header>
+
+            <!-- Sección 1: DASHBOARD GENERAL -->
+            <section id="sec-dashboard" class="content-section active">
+                <!-- Tarjetas de Métricas -->
+                <div class="metrics-grid">
+                    <div class="metric-card card-total">
+                        <div class="metric-info">
+                            <span class="metric-label">Gases Analizados</span>
+                            <h3 class="metric-value" id="metric-total-gases">55</h3>
+                        </div>
+                        <div class="metric-icon green">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                    </div>
+                    <div class="metric-card card-gwp">
+                        <div class="metric-info">
+                            <span class="metric-label">GWP Promedio</span>
+                            <h3 class="metric-value" id="metric-avg-gwp">2,342</h3>
+                            <span class="metric-sub text-warning" id="metric-avg-gwp-sub">Reduciendo bajo Enmienda Kigali</span>
+                        </div>
+                        <div class="metric-icon orange">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        </div>
+                    </div>
+                    <div class="metric-card card-ozono">
+                        <div class="metric-info">
+                            <span class="metric-label">Seguridad de Ozono (ODP = 0)</span>
+                            <h3 class="metric-value" id="metric-pct-odp">81.8%</h3>
+                            <span class="metric-sub text-success">Libres de Cloro destructivo</span>
+                        </div>
+                        <div class="metric-icon blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="metric-card card-natural">
+                        <div class="metric-info">
+                            <span class="metric-label">Refrigerantes Naturales</span>
+                            <h3 class="metric-value" id="metric-natural-count">8</h3>
+                            <span class="metric-sub text-success">GWP = 0-6 (Sostenibles)</span>
+                        </div>
+                        <div class="metric-icon purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor del Dashboard: Filtros y Tabla -->
+                <div class="dashboard-layout">
+                    <!-- Barra lateral de filtros avanzados -->
+                    <div class="filter-panel glass">
+                        <div class="filter-panel-header">
+                            <h3>Filtros Avanzados</h3>
+                            <button id="btn-clear-filters" class="btn-text">Limpiar todo</button>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label class="filter-label">Nivel de Aplicación</label>
+                            <div class="category-filters">
+                                <button class="cat-btn active" data-category="all">Todos</button>
+                                <button class="cat-btn" data-category="Basic" style="--accent-color: #2ecc71;">Básica</button>
+                                <button class="cat-btn" data-category="Intermediate" style="--accent-color: #3498db;">Intermedia</button>
+                                <button class="cat-btn" data-category="Industrial" style="--accent-color: #9b59b6;">Industrial</button>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filter-type" class="filter-label">Tipo de Compuesto</label>
+                            <select id="filter-type" class="filter-select">
+                                <option value="all">Todos los compuestos</option>
+                                <option value="CFC">CFC (Clorofluorocarbonos)</option>
+                                <option value="HCFC">HCFC (Hidroclorofluorocarbonos)</option>
+                                <option value="HFC">HFC (Hidrofluorocarbonos)</option>
+                                <option value="HFO">HFO (Hidrofluoroolefinas)</option>
+                                <option value="HFO/HFC">Mezclas HFO/HFC</option>
+                                <option value="HC">HC (Hidrocarburos)</option>
+                                <option value="Natural">Naturales (CO2, NH3, H2O, etc.)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="filter-safety" class="filter-label">Seguridad ASHRAE</label>
+                            <select id="filter-safety" class="filter-select">
+                                <option value="all">Todos los grupos</option>
+                                <option value="A1">A1 (Seguridad Máxima)</option>
+                                <option value="A2L">A2L (Ligeramente Inflamable)</option>
+                                <option value="A2">A2 (Moderadamente Inflamable)</option>
+                                <option value="A3">A3 (Altamente Inflamable)</option>
+                                <option value="B1">B1 (Tóxico No Inflamable)</option>
+                                <option value="B2L">B2L (Tóxico Levemente Inflamable)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="slider-header">
+                                <label class="filter-label">GWP Máximo</label>
+                                <span class="slider-val" id="gwp-val-display">Cualquiera</span>
+                            </div>
+                            <input type="range" id="filter-gwp" min="0" max="15000" step="100" value="15000" class="filter-slider">
+                            <div class="slider-labels">
+                                <span>0</span>
+                                <span>15,000</span>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <div class="slider-header">
+                                <label class="filter-label">Punto Ebullición Máx (°C)</label>
+                                <span class="slider-val" id="bp-val-display">Cualquiera</span>
+                            </div>
+                            <input type="range" id="filter-bp" min="-200" max="100" step="5" value="100" class="filter-slider">
+                            <div class="slider-labels">
+                                <span>-200°C</span>
+                                <span>+100°C</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabla de resultados -->
+                    <div class="table-container glass">
+                        <div class="table-header">
+                            <h3>Base de Datos de Gases</h3>
+                            <span id="results-count" class="badge">Mostrando 55 gases</span>
+                        </div>
+                        <div class="table-wrapper">
+                            <table class="data-table" id="refrigerants-table">
+                                <thead>
+                                    <tr>
+                                        <th>Gas ASHRAE</th>
+                                        <th>Fórmula Química</th>
+                                        <th>Clasificación</th>
+                                        <th>GWP</th>
+                                        <th>ODP</th>
+                                        <th>Seguridad</th>
+                                        <th>Ebullición</th>
+                                        <th>Aceite Primario</th>
+                                        <th>Sustituto Recomendado</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                    <!-- Las filas se insertarán dinámicamente mediante JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Visualización y Gráficos del Dashboard -->
+                <div class="charts-row">
+                    <div class="chart-card glass">
+                        <div class="chart-card-header">
+                            <h3>Curvas de Ebullición vs Temperatura Crítica</h3>
+                            <p class="chart-subtitle">Análisis del dominio operativo de los gases activos</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="scatterChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card glass">
+                        <div class="chart-card-header">
+                            <h3>Tipos de Compuestos Químicos</h3>
+                            <p class="chart-subtitle">Distribución porcentual en el dataset</p>
+                        </div>
+                        <div class="chart-wrapper donut-wrapper">
+                            <canvas id="donutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 2: CALCULADORA P-T -->
+            <section id="sec-pt-calculator" class="content-section">
+                <div class="calculator-grid">
+                    <div class="calc-control-panel glass">
+                        <h2 class="section-title">Parámetros del Sistema</h2>
+                        <p class="section-desc">Seleccione el gas y la temperatura para calcular dinámicamente las presiones de saturación aplicando ecuaciones de estado.</p>
+                        
+                        <div class="form-group">
+                            <label for="calc-gas-select" class="filter-label">Gas Refrigerante</label>
+                            <select id="calc-gas-select" class="filter-select">
+                                <!-- Llenado por JS -->
+                            </select>
+                        </div>
+
+                        <!-- Panel de información rápida del gas seleccionado en la calculadora -->
+                        <div id="calc-gas-summary" class="gas-summary-card" style="display: grid; grid-template-columns: 1fr 90px; gap: 1rem; align-items: center; padding: 1.2rem;">
+                            <div>
+                                <div class="summary-header">
+                                    <span class="gas-badge" id="calc-summary-badge">R-134a</span>
+                                    <h4 id="calc-summary-name">1,1,1,2-Tetrafluoroetano</h4>
+                                </div>
+                                <div class="summary-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Fórmula:</span>
+                                        <span class="detail-val" id="calc-summary-formula">CF3CH2F</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">T. Crítica:</span>
+                                        <span class="detail-val" id="calc-summary-crit-temp">101.1 °C</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">P. Crítica:</span>
+                                        <span class="detail-val" id="calc-summary-crit-pres">40.6 bar</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Deslizamiento (Glide):</span>
+                                        <span class="detail-val" id="calc-summary-glide">0.0 °C</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Contenedor dinámico de imagen/SVG de cilindro -->
+                            <div class="calc-cylinder-visual" id="calc-cylinder-visual" style="height: 110px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border-color); background-color: rgba(7, 9, 12, 0.4); overflow: hidden; padding: 0.2rem; transition: all 0.3s ease;">
+                                <!-- Llenado por JS -->
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 2rem;">
+                            <div class="slider-header">
+                                <label class="filter-label">Temperatura de Evaporación / Condensación</label>
+                                <span class="slider-val" id="calc-temp-display">5.0 °C</span>
+                            </div>
+                            <input type="range" id="calc-temp-slider" min="-50" max="70" step="1" value="5" class="filter-slider temp-slider">
+                            <div class="slider-labels">
+                                <span>-50°C (Baja)</span>
+                                <span>0°C</span>
+                                <span>70°C (Alta)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Resultados de Presión -->
+                    <div class="calc-results-panel glass">
+                        <h2 class="section-title">Valores de Saturación</h2>
+                        
+                        <div class="results-container">
+                            <div class="result-block bubble-block">
+                                <div class="result-block-header">
+                                    <span class="indicator-dot bubble"></span>
+                                    <h4>Punto de Burbuja (Saturated Liquid)</h4>
+                                </div>
+                                <p class="result-sub">Temperatura a la cual comienza la ebullición del refrigerante líquido.</p>
+                                <div class="pressure-values">
+                                    <div class="p-val-box">
+                                        <span class="p-num" id="calc-press-bubble-bar">2.93</span>
+                                        <span class="p-unit">bar absoluto</span>
+                                    </div>
+                                    <div class="p-val-box">
+                                        <span class="p-num" id="calc-press-bubble-psi">42.5</span>
+                                        <span class="p-unit">psi absoluto</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="result-block dew-block" id="calc-dew-container">
+                                <div class="result-block-header">
+                                    <span class="indicator-dot dew"></span>
+                                    <h4>Punto de Rocío (Saturated Vapor)</h4>
+                                </div>
+                                <p class="result-sub">Temperatura a la cual condensa la primera gota de vapor de refrigerante.</p>
+                                <div class="pressure-values">
+                                    <div class="p-val-box">
+                                        <span class="p-num" id="calc-press-dew-bar">2.93</span>
+                                        <span class="p-unit">bar absoluto</span>
+                                    </div>
+                                    <div class="p-val-box">
+                                        <span class="p-num" id="calc-press-dew-psi">42.5</span>
+                                        <span class="p-unit">psi absoluto</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alerta sobre supercrítico -->
+                        <div id="calc-supercritical-alert" class="warning-alert hide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            <div>
+                                <strong>Fluido Supercrítico:</strong> La temperatura seleccionada supera el punto crítico del refrigerante. El gas ya no puede condensarse a fase líquida sin importar la presión aplicada.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-chart-row" style="margin-top: 2rem;">
+                    <div class="chart-card glass">
+                        <div class="chart-card-header">
+                            <h3>Curva de Presión vs Temperatura</h3>
+                            <p class="chart-subtitle" id="calc-chart-title">Curva de saturación de R-134a</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="calcPTChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 3: COMPARADOR DE GASES -->
+            <section id="sec-comparator" class="content-section">
+                <div class="comparator-setup glass">
+                    <h2 class="section-title">Análisis Comparativo de Sustitutos</h2>
+                    <p class="section-desc">Seleccione hasta 3 gases refrigerantes para contrastar directamente sus curvas P-T y analizar la viabilidad técnica como drop-in.</p>
+                    
+                    <div class="compare-selector-row">
+                        <div class="select-col">
+                            <label for="compare-gas-1" class="filter-label">Refrigerante Base / Clásico</label>
+                            <select id="compare-gas-1" class="filter-select select-compare-gas">
+                                <!-- JS items -->
+                            </select>
+                        </div>
+                        <div class="select-col">
+                            <label for="compare-gas-2" class="filter-label">Opción Sustituto 1</label>
+                            <select id="compare-gas-2" class="filter-select select-compare-gas">
+                                <!-- JS items -->
+                            </select>
+                        </div>
+                        <div class="select-col">
+                            <label for="compare-gas-3" class="filter-label">Opción Sustituto 2</label>
+                            <select id="compare-gas-3" class="filter-select select-compare-gas">
+                                <!-- JS items -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparator-grid" style="margin-top: 2rem;">
+                    <!-- Tabla comparativa de propiedades fijas -->
+                    <div class="compare-table-panel glass">
+                        <div class="table-header">
+                            <h3>Especificaciones Técnicas Comparadas</h3>
+                        </div>
+                        <table class="data-table compare-data-table">
+                            <thead>
+                                <tr>
+                                    <th>Propiedad</th>
+                                    <th id="comp-h-gas1">Gas 1</th>
+                                    <th id="comp-h-gas2">Gas 2</th>
+                                    <th id="comp-h-gas3">Gas 3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fórmula Química</td>
+                                    <td id="comp-formula-gas1">-</td>
+                                    <td id="comp-formula-gas2">-</td>
+                                    <td id="comp-formula-gas3">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo Compuesto</td>
+                                    <td id="comp-type-gas1">-</td>
+                                    <td id="comp-type-gas2">-</td>
+                                    <td id="comp-type-gas3">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Sustituto Recomendado</td>
+                                    <td id="comp-replacement-gas1" style="font-weight: bold; color: var(--color-accent);">-</td>
+                                    <td id="comp-replacement-gas2" style="font-weight: bold; color: var(--color-accent);">-</td>
+                                    <td id="comp-replacement-gas3" style="font-weight: bold; color: var(--color-accent);">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Grupo Seguridad</td>
+                                    <td id="comp-safety-gas1">-</td>
+                                    <td id="comp-safety-gas2">-</td>
+                                    <td id="comp-safety-gas3">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Lubricante Primario</td>
+                                    <td id="comp-oil-gas1">-</td>
+                                    <td id="comp-oil-gas2">-</td>
+                                    <td id="comp-oil-gas3">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Punto Ebullición (1 atm)</td>
+                                    <td id="comp-bp-gas1">-</td>
+                                    <td id="comp-bp-gas2">-</td>
+                                    <td id="comp-bp-gas3">-</td>
+                                </tr>
+                                <tr>
+                                    <td>Temperatura Crítica</td>
+                                    <td id="comp-ct-gas1">-</td>
+                                    <td id="comp-ct-gas2">-</td>
+                                    <td id="comp-ct-gas3">-</td>
+                                </tr>
+                                <tr>
+                                    <td>ODP (Ozono)</td>
+                                    <td id="comp-odp-gas1">-</td>
+                                    <td id="comp-odp-gas2">-</td>
+                                    <td id="comp-odp-gas3">-</td>
+                                </tr>
+                                <tr>
+                                    <td>GWP (Clima)</td>
+                                    <td id="comp-gwp-gas1">-</td>
+                                    <td id="comp-gwp-gas2">-</td>
+                                    <td id="comp-gwp-gas3">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Gráfico P-T superpuesto -->
+                    <div class="compare-chart-panel glass">
+                        <div class="chart-card-header">
+                            <h3>Superposición de Curvas de Presión de Burbuja</h3>
+                            <p class="chart-subtitle">Visualización del deslizamiento de presión y compatibilidad operativa</p>
+                        </div>
+                        <div class="chart-wrapper">
+                            <canvas id="compareChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 4: CICLO DE REFRIGERACIÓN -->
+            <section id="sec-refrigeration-cycle" class="content-section">
+                <div class="cycle-layout">
+                    <!-- Controles y datos en tiempo real -->
+                    <div class="cycle-controls glass">
+                        <h2 class="section-title">Monitoreo de Ciclo de Compresión</h2>
+                        <p class="section-desc">Visualice cómo se distribuyen las presiones en un ciclo termodinámico estándar de 4 etapas utilizando el gas y la temperatura seleccionados.</p>
+                        
+                        <div class="form-group">
+                            <label for="cycle-gas-select" class="filter-label">Gas Refrigerante</label>
+                            <select id="cycle-gas-select" class="filter-select">
+                                <!-- JS items -->
+                            </select>
+                        </div>
+
+                        <div class="temperatures-control-box">
+                            <div class="form-group">
+                                <div class="slider-header">
+                                    <label class="filter-label">Evaporador (Baja)</label>
+                                    <span class="slider-val text-blue" id="cycle-evap-temp-display">-15 °C</span>
+                                </div>
+                                <input type="range" id="cycle-evap-temp" min="-50" max="10" step="1" value="-15" class="filter-slider">
+                            </div>
+                            <div class="form-group" style="margin-top: 1.5rem;">
+                                <div class="slider-header">
+                                    <label class="filter-label">Condensador (Alta)</label>
+                                    <span class="slider-val text-red" id="cycle-cond-temp-display">35 °C</span>
+                                </div>
+                                <input type="range" id="cycle-cond-temp" min="20" max="70" step="1" value="35" class="filter-slider">
+                            </div>
+                        </div>
+
+                        <!-- Datos del ciclo calculados -->
+                        <div class="cycle-calculated-stats">
+                            <h4>Parámetros de Operación</h4>
+                            <div class="stats-row">
+                                <div class="stat-box">
+                                    <span class="stat-name text-blue">Presión de Baja</span>
+                                    <strong class="stat-value" id="cycle-p-low">1.6 bar</strong>
+                                    <span class="stat-sub" id="cycle-p-low-psi">23.2 psi</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-name text-red">Presión de Alta</span>
+                                    <strong class="stat-value" id="cycle-p-high">8.9 bar</strong>
+                                    <span class="stat-sub" id="cycle-p-high-psi">129.1 psi</span>
+                                </div>
+                            </div>
+                            <div class="stats-row" style="margin-top: 1rem;">
+                                <div class="stat-box-large">
+                                    <span class="stat-name">Relación de Compresión (P_high / P_low)</span>
+                                    <strong class="stat-value text-warning" id="cycle-comp-ratio">5.56</strong>
+                                    <p class="stat-desc">Una relación inferior a 6.0 es recomendable para proteger la vida útil del compresor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animación/Esquema del Ciclo Físico -->
+                    <div class="cycle-viewer glass">
+                        <div class="viewer-header">
+                            <h3>Diagrama del Sistema de Compresión</h3>
+                            <span class="badge" id="cycle-active-gas-badge">Activo: R-134a</span>
+                        </div>
+                        
+                        <div class="cycle-diagram-container">
+                            <!-- Compresor (1 -> 2) -->
+                            <div class="component node-compressor">
+                                <div class="component-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="c-svg"><circle cx="12" cy="12" r="10"/><path d="M5.5 12h13M12 5.5v13"/></svg>
+                                </div>
+                                <h4>Compresor</h4>
+                                <span class="comp-metric text-warning" id="diag-comp-ratio">RC: 5.56</span>
+                            </div>
+
+                            <!-- Condensador (2 -> 3) -->
+                            <div class="component node-condenser">
+                                <div class="component-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="c-svg"><path d="M3 12c3 0 3-4 6-4s3 8 6 8 3-4 9-4"/></svg>
+                                </div>
+                                <h4>Condensador</h4>
+                                <span class="comp-metric text-red" id="diag-cond-pres">8.9 bar</span>
+                                <span class="comp-temp" id="diag-cond-temp">35.0 °C</span>
+                            </div>
+
+                            <!-- Válvula de Expansión (3 -> 4) -->
+                            <div class="component node-valve">
+                                <div class="component-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="c-svg"><path d="M3 6h18M3 18h18M12 6v12"/></svg>
+                                </div>
+                                <h4>Expansión</h4>
+                                <span class="comp-metric">Caída de Presión</span>
+                            </div>
+
+                            <!-- Evaporador (4 -> 1) -->
+                            <div class="component node-evaporator">
+                                <div class="component-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="c-svg"><path d="M3 12c3 0 3 4 6 4s3-8 6-8 3 4 9 4"/></svg>
+                                </div>
+                                <h4>Evaporador</h4>
+                                <span class="comp-metric text-blue" id="diag-evap-pres">1.6 bar</span>
+                                <span class="comp-temp" id="diag-evap-temp">-15.0 °C</span>
+                            </div>
+
+                            <!-- Conectores / Cañerías animados -->
+                            <div class="pipe pipe-discharge flow-hot">
+                                <span class="pipe-label">Descarga (Vapor Alta)</span>
+                                <div class="flow-particles"></div>
+                            </div>
+                            <div class="pipe pipe-liquid flow-warm">
+                                <span class="pipe-label">Líquido de Alta</span>
+                                <div class="flow-particles"></div>
+                            </div>
+                            <div class="pipe pipe-mixture flow-cold">
+                                <span class="pipe-label">Baja Presión Mezcla</span>
+                                <div class="flow-particles"></div>
+                            </div>
+                            <div class="pipe pipe-suction flow-cool">
+                                <span class="pipe-label">Succión (Vapor Baja)</span>
+                                <div class="flow-particles"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 5: MODELO ESTRELLA -->
+            <section id="sec-star-schema" class="content-section">
+                <div class="schema-layout glass">
+                    <h2 class="section-title">Esquema Estrella de Base de Datos</h2>
+                    <p class="section-desc">Estructuración relacional para optimización analítica de gases y curvas termodinámicas.</p>
+                    
+                    <div class="schema-visualization">
+                        <div class="schema-diagram">
+                            <!-- DimRefrigerante (Dimension) -->
+                            <div class="schema-node table-dim" style="grid-area: dim-ref;">
+                                <div class="table-node-header">DIM_REFRIGERANT</div>
+                                <div class="table-node-body">
+                                    <ul>
+                                        <li><strong class="pk">refrigerant_key [PK]</strong></li>
+                                        <li>ashrae_name</li>
+                                        <li>chemical_name</li>
+                                        <li>chemical_formula</li>
+                                        <li>compound_type</li>
+                                        <li>safety_group</li>
+                                        <li>odp</li>
+                                        <li>gwp</li>
+                                        <li>category</li>
+                                        <li>primary_oil</li>
+                                        <li>status</li>
+                                        <li>boiling_point_c</li>
+                                        <li>critical_temp_c</li>
+                                        <li>critical_pressure_bar</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- FactPressureTemperature (Fact Table) -->
+                            <div class="schema-node table-fact" style="grid-area: fact-pt;">
+                                <div class="table-node-header">FACT_PRESSURE_TEMPERATURE</div>
+                                <div class="table-node-body">
+                                    <ul>
+                                        <li><strong class="fk">refrigerant_key [FK]</strong></li>
+                                        <li><strong class="fk">temperature_key [FK]</strong></li>
+                                        <li><strong class="fk">state_key [FK]</strong></li>
+                                        <li>pressure_bar</li>
+                                        <li>pressure_psi</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- DimTemperature (Dimension) -->
+                            <div class="schema-node table-dim" style="grid-area: dim-temp;">
+                                <div class="table-node-header">DIM_TEMPERATURE</div>
+                                <div class="table-node-body">
+                                    <ul>
+                                        <li><strong class="pk">temperature_key [PK]</strong></li>
+                                        <li>temperature_c</li>
+                                        <li>temperature_f</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- DimState (Dimension) -->
+                            <div class="schema-node table-dim" style="grid-area: dim-state;">
+                                <div class="table-node-header">DIM_STATE</div>
+                                <div class="table-node-body">
+                                    <ul>
+                                        <li><strong class="pk">state_key [PK]</strong></li>
+                                        <li>state_name</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Conectores visuales relacionales SVG -->
+                            <svg class="relation-lines" viewBox="0 0 800 600" preserveAspectRatio="none" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; pointer-events:none;">
+                                <defs>
+                                    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00e1d9" stop-opacity="0.8" />
+                                        <stop offset="100%" stop-color="#3498db" stop-opacity="0.8" />
+                                    </linearGradient>
+                                    <filter id="neon-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="4" result="blur" />
+                                        <feMerge>
+                                            <feMergeNode in="blur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#00e1d9" />
+                                    </marker>
+                                    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6">
+                                        <circle cx="5" cy="5" r="3" fill="#f59e0b" />
+                                    </marker>
+                                </defs>
+                                <!-- Relación: DIM_REFRIGERANT -> FACT_PRESSURE_TEMPERATURE -->
+                                <path d="M 240 160 C 270 160, 290 260, 320 260" fill="none" stroke="url(#cyan-glow)" stroke-width="2.5" marker-start="url(#dot)" marker-end="url(#arrow)" filter="url(#neon-glow-filter)" />
+                                <!-- Relación: DIM_TEMPERATURE -> FACT_PRESSURE_TEMPERATURE -->
+                                <path d="M 560 100 C 530 100, 470 260, 440 260" fill="none" stroke="url(#cyan-glow)" stroke-width="2.5" marker-start="url(#dot)" marker-end="url(#arrow)" filter="url(#neon-glow-filter)" />
+                                <!-- Relación: DIM_STATE -> FACT_PRESSURE_TEMPERATURE -->
+                                <path d="M 240 420 C 270 420, 290 320, 320 320" fill="none" stroke="url(#cyan-glow)" stroke-width="2.5" marker-start="url(#dot)" marker-end="url(#arrow)" filter="url(#neon-glow-filter)" />
+                            </svg>
+                        </div>
+
+                        <div class="schema-documentation">
+                            <h3>Documentación del Modelo de Datos</h3>
+                            <div class="doc-card">
+                                <h5>1. Hechos vs Dimensiones</h5>
+                                <p>Este diseño separa las métricas operativas de alta cardinalidad (las presiones en bar y psi medidas a múltiples temperaturas, que suman <strong>2,750 filas de hechos</strong>) de las características descriptivas fijas de los refrigerantes (<strong>55 registros en la dimensión refrigerantes</strong>).</p>
+                            </div>
+                            <div class="doc-card" style="margin-top: 1rem;">
+                                <h5>2. Optimización Analytical / OLAP</h5>
+                                <p>En lugar de realizar costosos cálculos químicos e integrales numéricas en caliente, el Modelo Estrella precalcula y guarda los hechos P-T mediante el script ETL en Python. Esto permite que el cliente realice consultas instantáneas con coste de búsqueda O(1) cruzando llaves surrogadas enteras.</p>
+                            </div>
+                            <div class="doc-card" style="margin-top: 1rem;">
+                                <h5>3. Integridad Referencial y Claves</h5>
+                                <p>La tabla de hechos combina una clave primaria compuesta por las llaves ajenas <code>refrigerant_key</code>, <code>temperature_key</code> y <code>state_key</code>, garantizando que no existan registros redundantes para un mismo punto operativo y fase.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL DE DETALLES DEL GAS -->
+    <div id="gas-details-modal" class="modal-overlay hide">
+        <div class="modal-box glass">
+            <div class="modal-header-banner" id="modal-banner">
+                <span class="modal-category" id="modal-category-badge">BASIC REFRIGERATION</span>
+                <button class="close-btn" id="modal-close-btn">&times;</button>
+                <div class="modal-gas-title">
+                    <h2 id="modal-ashrae-name">R-134a</h2>
+                    <p id="modal-chemical-name">1,1,1,2-Tetrafluoroetano</p>
+                </div>
+            </div>
+            
+            <div class="modal-body-content">
+                <!-- Contenedor Flex para imagen y métricas -->
+                <div class="modal-top-section" style="display: grid; grid-template-columns: 200px 1fr; gap: 1.5rem; align-items: center;">
+                    <!-- Imagen del Cilindro del Gas -->
+                    <div class="modal-image-card" id="modal-cylinder-visual" style="width: 200px; height: 160px; border-radius: 12px; border: 1px solid var(--border-color); background-color: var(--bg-sidebar); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: all 0.3s ease;">
+                        <img id="modal-gas-image" src="images/r134a.png" alt="Cilindro de Gas" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    
+                    <div class="modal-summary-panel" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; background-color: rgba(7, 9, 12, 0.4); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.2rem; height: 160px; align-content: center;">
+                        <div class="m-metric" style="border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <span class="m-lbl" style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Fórmula</span>
+                            <strong class="m-val" id="modal-formula" style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-top: 0.2rem;">CF3CH2F</strong>
+                        </div>
+                        <div class="m-metric" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <span class="m-lbl" style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">GWP (PCG)</span>
+                            <strong class="m-val" id="modal-gwp" style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-top: 0.2rem;">1430</strong>
+                        </div>
+                        <div class="m-metric" style="border-right: 1px solid var(--border-color); padding-top: 0.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <span class="m-lbl" style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">ODP (PAO)</span>
+                            <strong class="m-val" id="modal-odp" style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-top: 0.2rem;">0</strong>
+                        </div>
+                        <div class="m-metric" style="padding-top: 0.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <span class="m-lbl" style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Seguridad</span>
+                            <strong class="m-val" id="modal-safety" style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-top: 0.2rem;">A1</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-details-tabs">
+                    <div class="modal-tab-desc">
+                         <h4>Descripción General</h4>
+                         <p id="modal-description">Cargando...</p>
+                    </div>
+
+                    <!-- Tarjeta premium de Sustituto Oficial Recomendado -->
+                    <div class="modal-replacement-glow-card" style="background: linear-gradient(135deg, rgba(0, 225, 217, 0.15) 0%, rgba(52, 152, 219, 0.05) 100%); border: 1px solid var(--color-accent); padding: 1rem; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 0 15px var(--color-accent-glow); margin-bottom: 0.5rem;">
+                        <div>
+                            <h5 style="color: var(--color-accent); font-family: var(--font-heading); font-size: 0.85rem; text-transform: uppercase; margin: 0; letter-spacing: 0.5px;">🔄 Sustituto Oficial Recomendado</h5>
+                            <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 0.2rem 0 0 0;">Reemplazo ecológico/operativo directo de alta eficiencia:</p>
+                        </div>
+                        <span id="modal-true-replacement" style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: #ffffff; text-shadow: 0 0 8px var(--color-accent-glow); background-color: var(--bg-sidebar); padding: 0.4rem 1rem; border-radius: 8px; border: 1px solid var(--border-color);">Cargando...</span>
+                    </div>
+
+                    <div class="modal-split-pros-cons">
+                        <div class="pros-column">
+                            <h5>Ventajas / Pros</h5>
+                            <ul class="pros-list" id="modal-pros-list">
+                                <!-- Items -->
+                            </ul>
+                        </div>
+                        <div class="cons-column">
+                            <h5>Desventajas / Contras</h5>
+                            <ul class="cons-list" id="modal-cons-list">
+                                <!-- Items -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal-bottom-specs">
+                        <div class="spec-block">
+                            <span class="spec-lbl">Punto Ebullición (1 atm)</span>
+                            <span class="spec-val" id="modal-bp">-26.3 °C</span>
+                        </div>
+                        <div class="spec-block">
+                            <span class="spec-lbl">Temperatura Crítica</span>
+                            <span class="spec-val" id="modal-ct">101.1 °C</span>
+                        </div>
+                        <div class="spec-block">
+                            <span class="spec-lbl">Lubricante Recomendado</span>
+                            <span class="spec-val" id="modal-oil">POE</span>
+                        </div>
+                        <div class="spec-block">
+                            <span class="spec-lbl">Estatus Regulatorio</span>
+                            <span class="spec-val" id="modal-status">Phasing Down</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-replacements">
+                        <h5>Sustitutos / Alternativas de Reemplazo</h5>
+                        <p id="modal-alternatives">R-1234yf, R-513A</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script principal de frontend -->
+    <script src="data/refrigerants_dashboard_data.js"></script>
+    <script src="data/refrigerants_images_map.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

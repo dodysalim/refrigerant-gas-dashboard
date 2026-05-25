@@ -1,0 +1,1705 @@
+/* ==========================================================================
+   GasRef Pro - Premium Design System (CSS Vanilla)
+   Estética "Deep Space" con efectos Glassmorphic, acentos Neón y animaciones
+   ========================================================================== */
+
+/* Variables del Sistema de Diseño */
+:root {
+    --bg-main: #0d0f14;
+    --bg-sidebar: #07090c;
+    --bg-card: rgba(20, 23, 34, 0.65);
+    --bg-card-hover: rgba(29, 34, 50, 0.85);
+    --border-color: rgba(43, 51, 75, 0.5);
+    --border-color-hover: rgba(74, 87, 126, 0.8);
+    
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    
+    /* Colores Temáticos por Categoría de Refrigerante */
+    --color-basic: #2ecc71;
+    --color-intermediate: #3498db;
+    --color-industrial: #9b59b6;
+    
+    /* Estados y Acentos */
+    --color-accent: #00e1d9;
+    --color-accent-glow: rgba(0, 225, 217, 0.2);
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+    --color-success: #10b981;
+    
+    /* Fuentes */
+    --font-heading: 'Outfit', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Sombras y Filtros */
+    --glass-blur: blur(12px);
+    --shadow-main: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --transition-fast: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   Estilos Base y Reseteo
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* Scrollbar Personalizado */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+/* Contenedor Principal App */
+.app-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Sidebar de Navegación Lateral
+   ========================================================================== */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    padding: 0 0.5rem;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #1e3c72 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px var(--color-accent-glow);
+}
+
+.logo-icon {
+    width: 22px;
+    height: 22px;
+    color: white;
+}
+
+.sidebar-brand h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.sidebar-brand h2 span {
+    background: linear-gradient(to right, var(--color-accent), #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: var(--transition-fast);
+    border: 1px solid transparent;
+}
+
+.menu-item svg {
+    transition: var(--transition-fast);
+    opacity: 0.8;
+}
+
+.menu-item:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    padding-left: 1.4rem;
+}
+
+.menu-item.active {
+    color: var(--bg-main);
+    background: linear-gradient(90deg, var(--color-accent) 0%, #3498db 100%);
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 225, 217, 0.3);
+}
+
+.menu-item.active svg {
+    color: var(--bg-main);
+    opacity: 1;
+}
+
+.sidebar-footer {
+    padding: 1.5rem 0.5rem 0 0.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-footer p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.sidebar-footer .version {
+    font-size: 0.75rem;
+    background-color: var(--border-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Contenido Principal y Cabecera
+   ========================================================================== */
+.main-content {
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    background-image: radial-gradient(circle at 80% 20%, rgba(20, 27, 47, 0.4) 0%, rgba(13, 15, 20, 0) 60%);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-title h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.header-title p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Buscador Principal */
+.search-box {
+    position: relative;
+    width: 320px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.8rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: var(--transition-fast);
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent-glow);
+    background-color: var(--bg-card-hover);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.theme-badge {
+    padding: 0.5rem 0.9rem;
+    background: linear-gradient(135deg, rgba(0, 225, 217, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
+    border: 1px solid var(--color-accent);
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Secciones y Paneles Glass
+   ========================================================================== */
+.content-section {
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.content-section.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efecto Vidrio Templado (Glassmorphism) */
+.glass {
+    background-color: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-main);
+    transition: var(--transition-fast);
+}
+
+.glass:hover {
+    border-color: var(--border-color-hover);
+}
+
+/* ==========================================================================
+   Tarjetas de Métricas (Dashboard)
+   ========================================================================== */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.metric-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-main);
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.metric-card.card-total::before { background-color: var(--color-success); }
+.metric-card.card-gwp::before { background-color: var(--color-danger); }
+.metric-card.card-ozono::before { background-color: var(--color-intermediate); }
+.metric-card.card-natural::before { background-color: var(--color-industrial); }
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-color-hover);
+}
+
+.metric-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.metric-value {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 0.25rem;
+    letter-spacing: -1px;
+}
+
+.metric-sub {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric-icon.green { background-color: rgba(46, 204, 113, 0.15); color: #2ecc71; }
+.metric-icon.orange { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; }
+.metric-icon.blue { background-color: rgba(52, 152, 219, 0.15); color: #3498db; }
+.metric-icon.purple { background-color: rgba(155, 89, 182, 0.15); color: #9b59b6; }
+
+/* ==========================================================================
+   Filtros Avanzados (Dashboard Layout)
+   ========================================================================== */
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.filter-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 1rem;
+}
+
+.filter-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-panel-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.btn-text:hover {
+    text-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.filter-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.category-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.cat-btn {
+    padding: 0.6rem 0.4rem;
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.cat-btn:hover {
+    border-color: var(--border-color-hover);
+    color: var(--text-primary);
+}
+
+.cat-btn.active {
+    background-color: var(--bg-card-hover);
+    border-color: var(--accent-color, var(--color-accent));
+    color: var(--text-primary);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.filter-select {
+    padding: 0.75rem;
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: var(--transition-fast);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-val {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+/* Controles de Rango (Range Inputs) */
+.filter-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.filter-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--color-accent-glow);
+    transition: var(--transition-fast);
+}
+
+.filter-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Tabla de Datos (Dashboard)
+   ========================================================================== */
+.table-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.badge {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    background-color: rgba(7, 9, 12, 0.7);
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+}
+
+.data-table tbody tr {
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--bg-card-hover);
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Gas Badge y Colores de Categorías */
+.gas-row-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dot-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.gas-row-formula {
+    font-family: monospace;
+    color: var(--text-secondary);
+}
+
+.btn-pill {
+    padding: 0.25rem 0.6rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-pill.cat-basic { background-color: rgba(46, 204, 113, 0.15); color: var(--color-basic); border: 1px solid rgba(46, 204, 113, 0.3); }
+.btn-pill.cat-intermediate { background-color: rgba(52, 152, 219, 0.15); color: var(--color-intermediate); border: 1px solid rgba(52, 152, 219, 0.3); }
+.btn-pill.cat-industrial { background-color: rgba(155, 89, 182, 0.15); color: var(--color-industrial); border: 1px solid rgba(155, 89, 182, 0.3); }
+
+.safety-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    display: inline-block;
+}
+
+.safety-badge.safety-a1 { background-color: rgba(16, 185, 129, 0.15); color: var(--color-success); border: 1px solid rgba(16, 185, 129, 0.3); }
+.safety-badge.safety-a2l { background-color: rgba(245, 158, 11, 0.15); color: var(--color-warning); border: 1px solid rgba(245, 158, 11, 0.3); }
+.safety-badge.safety-a3 { background-color: rgba(239, 68, 68, 0.15); color: var(--color-danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+.safety-badge.safety-tox { background-color: rgba(155, 89, 182, 0.15); color: var(--color-industrial); border: 1px solid rgba(155, 89, 182, 0.3); }
+
+.btn-action-view {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--border-color);
+    border: 1px solid transparent;
+    color: var(--text-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.btn-action-view:hover {
+    background-color: var(--color-accent);
+    color: var(--bg-main);
+    box-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+/* ==========================================================================
+   Gráficos Analíticos
+   ========================================================================== */
+.charts-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.chart-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chart-card-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.chart-card-header .chart-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.1rem;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.donut-wrapper {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Calculadora Presión-Temperatura (P-T)
+   ========================================================================== */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.calc-control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.section-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: -0.8rem;
+}
+
+.gas-summary-card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary-header h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.gas-badge {
+    background-color: var(--color-accent);
+    color: var(--bg-main);
+    font-weight: 800;
+    padding: 0.25rem 0.6rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
+
+.summary-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.detail-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.detail-val {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.temp-slider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3498db 0%, #bdc3c7 50%, #e74c3c 100%);
+    height: 6px;
+    border-radius: 3px;
+}
+
+.text-blue { color: var(--color-intermediate); }
+.text-red { color: var(--color-danger); }
+.text-warning { color: var(--color-warning); }
+.text-success { color: var(--color-success); }
+
+/* Panel de Hechos/Resultados de Presión */
+.calc-results-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    flex-grow: 1;
+}
+
+.result-block {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.result-block:hover {
+    border-color: var(--border-color-hover);
+    transform: translateX(4px);
+}
+
+.result-block-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.result-block-header h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.indicator-dot.bubble { background-color: var(--color-success); box-shadow: 0 0 10px rgba(16, 185, 129, 0.8); }
+.indicator-dot.dew { background-color: var(--color-accent); box-shadow: 0 0 10px rgba(0, 225, 217, 0.8); }
+
+.result-sub {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.pressure-values {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.p-val-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-num {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.p-unit {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+}
+
+.warning-alert {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(245, 158, 11, 0.1);
+    border: 1px solid var(--color-warning);
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--color-warning);
+    line-height: 1.4;
+}
+
+.warning-alert.hide { display: none; }
+
+.single-chart-row {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Comparador de Gases
+   ========================================================================== */
+.comparator-setup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.compare-selector-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.select-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.comparator-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 1.5rem;
+}
+
+.compare-table-panel {
+    overflow: hidden;
+}
+
+.compare-data-table td {
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+}
+
+.compare-data-table tr td:first-child {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.compare-chart-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ==========================================================================
+   Ciclo de Refrigeración (Wow Animation Factor!)
+   ========================================================================== */
+.cycle-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 1.5rem;
+}
+
+.cycle-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.temperatures-control-box {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem;
+}
+
+.cycle-calculated-stats h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.stats-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-box {
+    flex: 1;
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-box-large {
+    width: 100%;
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.8rem;
+}
+
+.stat-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-top: 0.2rem;
+}
+
+.stat-sub {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.stat-desc {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.cycle-viewer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 500px;
+    justify-content: space-between;
+}
+
+.viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+/* Diagrama Físico del Ciclo */
+.cycle-diagram-container {
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 1rem;
+}
+
+/* Componentes del Ciclo */
+.component {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: var(--bg-sidebar);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-fast);
+}
+
+.component:hover {
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.component h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.4rem;
+    text-align: center;
+}
+
+.component-icon {
+    width: 36px;
+    height: 36px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-svg {
+    width: 28px;
+    height: 28px;
+}
+
+.comp-metric {
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 0.2rem;
+}
+
+.comp-temp {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+/* Posicionamiento de Componentes (Compresor a la derecha, Válvula a la izquierda según estándar Kosner) */
+.node-compressor { right: 10%; left: auto; top: 38%; }
+.node-condenser  { left: 42%; top: 8%; }
+.node-valve      { left: 10%; right: auto; top: 38%; }
+.node-evaporator { left: 42%; top: 68%; }
+
+/* Cañerías (Pipes) y Animación de Flujo */
+.pipe {
+    position: absolute;
+    border: 6px solid #2b334b;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.pipe-label {
+    position: absolute;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: var(--bg-main);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+/* Línea de Descarga (Compresor a Condensador - Derecha a Arriba) */
+.pipe-discharge {
+    right: 20%;
+    left: auto;
+    top: 18%;
+    width: 28%;
+    height: 25%;
+    border-bottom: none;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.pipe-discharge .pipe-label { right: 35%; left: auto; top: -14px; }
+
+/* Línea de Líquido (Condensador a Válvula - Arriba a Izquierda) */
+.pipe-liquid {
+    left: 20%;
+    right: auto;
+    top: 18%;
+    width: 28%;
+    height: 25%;
+    border-bottom: none;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.pipe-liquid .pipe-label { left: 35%; right: auto; top: -14px; }
+
+/* Línea de Expansión/Mezcla (Válvula a Evaporador - Izquierda a Abajo) */
+.pipe-mixture {
+    left: 20%;
+    right: auto;
+    bottom: 18%;
+    width: 28%;
+    height: 25%;
+    border-top: none;
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.pipe-mixture .pipe-label { left: 35%; right: auto; bottom: -14px; }
+
+/* Línea de Succión (Evaporador a Compresor - Abajo a Derecha) */
+.pipe-suction {
+    right: 20%;
+    left: auto;
+    bottom: 18%;
+    width: 28%;
+    height: 25%;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.pipe-suction .pipe-label { right: 35%; left: auto; bottom: -14px; }
+
+/* Partículas del Flujo de Refrigerante */
+.flow-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -6px;
+    left: -6px;
+}
+
+.flow-particles::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px currentColor;
+}
+
+/* Colores de Tuberías según su Fase */
+.flow-hot { border-color: #ef4444 !important; color: #ef4444; }
+.flow-warm { border-color: #f59e0b !important; color: #f59e0b; }
+.flow-cold { border-color: #00e1d9 !important; color: #00e1d9; }
+.flow-cool { border-color: #3498db !important; color: #3498db; }
+
+/* Animaciones de Partículas a lo largo de las cañerías */
+.pipe-discharge .flow-particles::before {
+    animation: flowAroundRight 2s linear infinite;
+}
+.pipe-liquid .flow-particles::before {
+    animation: flowAroundDown 2s linear infinite;
+}
+.pipe-mixture .flow-particles::before {
+    animation: flowAroundLeft 2s linear infinite;
+}
+.pipe-suction .flow-particles::before {
+    animation: flowAroundUp 2s linear infinite;
+}
+
+/* Animaciones del ciclo reconfiguradas en sentido horario para Compresor a la Derecha */
+@keyframes flowAroundRight {
+    0% { left: 100%; top: 100%; }     /* Compresor (derecha) */
+    40% { left: 100%; top: 0%; }      /* Esquina superior derecha */
+    100% { left: 0%; top: 0%; }       /* Condensador (arriba) */
+}
+
+@keyframes flowAroundDown {
+    0% { left: 100%; top: 0%; }       /* Condensador (arriba) */
+    60% { left: 0%; top: 0%; }        /* Esquina superior izquierda */
+    100% { left: 0%; top: 100%; }     /* Válvula (izquierda) */
+}
+
+@keyframes flowAroundLeft {
+    0% { left: 0%; top: 0%; }         /* Válvula (izquierda) */
+    40% { left: 0%; top: 100%; }      /* Esquina inferior izquierda */
+    100% { left: 100%; top: 100%; }   /* Evaporador (abajo) */
+}
+
+@keyframes flowAroundUp {
+    0% { left: 0%; top: 100%; }       /* Evaporador (abajo) */
+    60% { left: 100%; top: 100%; }     /* Esquina inferior derecha */
+    100% { left: 100%; top: 0%; }     /* Compresor (derecha) */
+}
+
+/* ==========================================================================
+   Esquema Estrella (Tablas Relacionales)
+   ========================================================================== */
+.schema-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.schema-visualization {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 2rem;
+}
+
+.schema-diagram {
+    display: grid;
+    grid-template-areas: 
+        "dim-ref . dim-temp"
+        ". fact-pt ."
+        "dim-state . .";
+    grid-template-columns: 240px 1fr 240px;
+    grid-template-rows: auto 1fr auto;
+    gap: 3rem 1.5rem;
+    position: relative;
+    padding: 2rem;
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.schema-node {
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    transition: var(--transition-fast);
+}
+
+.schema-node:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.table-node-header {
+    background-color: var(--border-color);
+    padding: 0.6rem 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+}
+
+.table-fact .table-node-header {
+    background: linear-gradient(135deg, rgba(0, 225, 217, 0.2) 0%, rgba(52, 152, 219, 0.2) 100%);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.table-node-body {
+    padding: 0.8rem 1rem;
+}
+
+.table-node-body ul {
+    list-style: none;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.table-node-body li {
+    color: var(--text-secondary);
+}
+
+.pk { color: var(--color-warning) !important; }
+.fk { color: var(--color-accent) !important; }
+
+/* SVG Relational lines connecting nodes */
+.relation-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.schema-documentation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.doc-card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.doc-card h5 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.4rem;
+}
+
+.doc-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   Modal de Detalles del Gas (Glassmorphism Modal Overlay)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(7, 9, 12, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: var(--transition-slow);
+}
+
+.modal-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-box {
+    width: 760px;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 20px;
+    overflow-y: auto;
+    animation: modalSlideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes modalSlideUp {
+    from { transform: translateY(40px) scale(0.95); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.modal-header-banner {
+    padding: 2.5rem 2rem 2rem 2rem;
+    position: relative;
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.7) 0%, rgba(42, 82, 152, 0.7) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-category {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.close-btn {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.close-btn:hover {
+    background-color: var(--color-danger);
+    transform: rotate(90deg);
+}
+
+.modal-gas-title h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.modal-gas-title p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+.modal-body-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.modal-summary-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(7, 9, 12, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem;
+}
+
+.m-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--border-color);
+}
+
+.m-metric:last-child {
+    border-right: none;
+}
+
+.m-lbl {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.m-val {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-top: 0.2rem;
+}
+
+.modal-details-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-tab-desc h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+.modal-tab-desc p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.modal-split-pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.pros-column h5,
+.cons-column h5 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.pros-column h5 { color: var(--color-success); }
+.cons-column h5 { color: var(--color-danger); }
+
+.pros-list,
+.cons-list {
+    list-style: none;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.pros-list li::before {
+    content: "✓  ";
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.cons-list li::before {
+    content: "✗  ";
+    color: var(--color-danger);
+    font-weight: bold;
+}
+
+.pros-list li,
+.cons-list li {
+    color: var(--text-secondary);
+}
+
+.modal-bottom-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem 0;
+}
+
+.spec-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.spec-lbl {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.spec-val {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.modal-replacements h5 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.4rem;
+}
+
+.modal-replacements p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Media Queries (Responsividad)
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+    .filter-panel {
+        position: relative;
+        top: 0;
+    }
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+    .comparator-grid {
+        grid-template-columns: 1fr;
+    }
+    .cycle-layout {
+        grid-template-columns: 1fr;
+    }
+    .schema-visualization {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sidebar-brand {
+        margin-bottom: 0;
+    }
+    .sidebar-menu {
+        display: none; /* Sería ideal un menú móvil */
+    }
+    .main-content {
+        padding: 1rem;
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .search-box {
+        width: 100%;
+    }
+    .compare-selector-row {
+        grid-template-columns: 1fr;
+    }
+    .modal-summary-panel {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .modal-bottom-specs {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .modal-split-pros-cons {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,6 @@
+# Dependencias de Python para el pipeline de Gases Refrigerantes
+# Se recomiendan estas dependencias para ejecutar análisis adicionales o visualización estática opcional
+pandas>=1.5.0
+requests>=2.28.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
