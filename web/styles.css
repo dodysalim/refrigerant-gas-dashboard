@@ -1709,3 +1709,23 @@ body {
         grid-template-columns: 1fr;
     }
 }
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+@media (max-width: 768px) {
+    .mobile-menu-btn { display: block; }
+    .sidebar { flex-direction: column; align-items: stretch; height: auto; }
+    .sidebar-brand { display: flex; justify-content: space-between; width: 100%; margin-bottom: 0; }
+    .sidebar-menu { display: none; flex-direction: column; width: 100%; margin-top: 1rem; }
+    .sidebar-menu.active { display: flex; }
+    .sidebar-footer { display: none; }
+    .modal-top-section { grid-template-columns: 1fr !important; }
+    .modal-image-card { width: 100% !important; height: 120px !important; }
+    .modal-split-pros-cons { grid-template-columns: 1fr !important; }
+    .modal-summary-panel { grid-template-columns: 1fr !important; height: auto !important; }
+}
