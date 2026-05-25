@@ -331,7 +331,7 @@ MIT License — Ver [LICENSE](LICENSE) para detalles.
 
 <div align="center">
 
-**KrioMetrics** · Desarrollado con ❄️ por [dodysalim](https://github.com/dodysalim)
+**KrioMetrics** · Desarrollado con ❄️ por [Dody Due�as](https://github.com/dodysalim)
 
 *Pipeline ETL · Clean Architecture · Machine Learning · Streamlit · 55 Gases Refrigerantes*
 

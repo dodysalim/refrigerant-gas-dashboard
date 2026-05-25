@@ -133,4 +133,4 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
-*Mantenido por [dodysalim](https://github.com/dodysalim)*
+*Mantenido por [Dody Dueñas](https://github.com/dodysalim)*

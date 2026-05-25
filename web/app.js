@@ -398,6 +398,30 @@ document.addEventListener("DOMContentLoaded", () => {
             
             tableBody.appendChild(tr);
         });
+
+        // --- ACTUALIZACIÓN DINÁMICA DE MÉTRICAS ---
+        const metricTotalGases = document.getElementById("metric-total-gases");
+        const metricAvgGwp = document.getElementById("metric-avg-gwp");
+        const metricPctOdp = document.getElementById("metric-pct-odp");
+        const metricNaturalCount = document.getElementById("metric-natural-count");
+
+        if (filtered.length > 0) {
+            metricTotalGases.textContent = filtered.length;
+            
+            const avgGwp = filtered.reduce((acc, curr) => acc + curr.gwp, 0) / filtered.length;
+            metricAvgGwp.textContent = Math.round(avgGwp).toLocaleString();
+
+            const zeroOdpCount = filtered.filter(g => g.odp === 0).length;
+            const pctOdp = (zeroOdpCount / filtered.length) * 100;
+            metricPctOdp.textContent = pctOdp.toFixed(1) + "%";
+
+            const naturalCount = filtered.filter(g => g.compound_type === "Natural").length;
+            metricNaturalCount.textContent = naturalCount;
+        } else {
+            metricAvgGwp.textContent = "0";
+            metricPctOdp.textContent = "0%";
+            metricNaturalCount.textContent = "0";
+        }
     }
 
     // --- DYNAMIC CYLINDER VISUALIZER ---

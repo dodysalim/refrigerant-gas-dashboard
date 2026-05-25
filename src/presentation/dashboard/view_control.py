@@ -41,7 +41,7 @@ def render(df_ref):
     with col1:
         st.markdown(f"""
         <div class='krio-metric-card m-green'>
-            <div class='krio-metric-label'>Gases Coincidentes</div>
+            <div class='krio-metric-label'>Gases Analizados</div>
             <div class='krio-metric-value'>{df_filtered.shape[0]}</div>
             <div class='krio-metric-sub text-green'>De catálogo de {df_ref.shape[0]} gases</div>
         </div>
@@ -51,26 +51,26 @@ def render(df_ref):
         st.markdown(f"""
         <div class='krio-metric-card m-red'>
             <div class='krio-metric-label'>GWP Promedio</div>
-            <div class='krio-metric-value'>{avg_gwp:.1f}</div>
-            <div class='krio-metric-sub text-red'>CO2 eq. promedio</div>
+            <div class='krio-metric-value'>{int(round(avg_gwp)):,}</div>
+            <div class='krio-metric-sub text-warning'>Reduciendo bajo Enmienda Kigali</div>
         </div>
         """, unsafe_allow_html=True)
     with col3:
         pct_zero_odp = (df_filtered[df_filtered["odp"] == 0].shape[0] / df_filtered.shape[0] * 100) if not df_filtered.empty else 0
         st.markdown(f"""
         <div class='krio-metric-card m-blue'>
-            <div class='krio-metric-label'>Libres de Ozono</div>
+            <div class='krio-metric-label'>Seguridad de Ozono (ODP = 0)</div>
             <div class='krio-metric-value'>{pct_zero_odp:.1f}%</div>
-            <div class='krio-metric-sub text-blue'>ODP = 0 (Seguridad Ozono)</div>
+            <div class='krio-metric-sub text-green'>Libres de Cloro destructivo</div>
         </div>
         """, unsafe_allow_html=True)
     with col4:
         natural_count = df_filtered[df_filtered["compound_type"] == "Natural"].shape[0]
         st.markdown(f"""
         <div class='krio-metric-card m-purple'>
-            <div class='krio-metric-label'>Fluidos Naturales</div>
+            <div class='krio-metric-label'>Refrigerantes Naturales</div>
             <div class='krio-metric-value'>{natural_count}</div>
-            <div class='krio-metric-sub text-purple'>CO2, NH3, Agua, Aire</div>
+            <div class='krio-metric-sub text-green'>GWP = 0-6 (Sostenibles)</div>
         </div>
         """, unsafe_allow_html=True)
         
