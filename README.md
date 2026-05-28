@@ -17,7 +17,11 @@
 
 Una plataforma completa de **analítica e ingeniería de datos termodinámicos** enfocada en el estudio de **55 gases refrigerantes** clasificados en refrigeración **Básica**, **Intermedia** e **Industrial**.
 
-Integra una tubería de procesamiento de datos (**ETL**) en Python bajo principios **SOLID** y patrones de diseño, un **Modelo Estrella** en **SQLite**, **4 notebooks Jupyter** de análisis científico con **ML Pipeline completo**, validación de datos con **54 tests unitarios**, y dos **Dashboards Interactivos Premium** (HTML5 + Streamlit).
+Integra una tubería de procesamiento de datos (**ETL**) en Python bajo principios **SOLID** y patrones de diseño, un **Modelo Estrella** en **SQLite**, **4 notebooks Jupyter** de análisis científico con **ML Pipeline completo**, validación de datos con **54 tests unitarios**, y dos **Dashboards Interactivos Premium**:
+
+🚀 **Acceso Directo a los Dashboards:**
+*   🌐 **[Dashboard HTML (SPA Premium)](https://dodysalim.github.io/refrigerant-gas-dashboard/)** — Desplegado en GitHub Pages
+*   🐍 **[Dashboard Streamlit (Científico)](https://refrigerant-explorer.streamlit.app/)** — Desplegado en Streamlit Community Cloud
 
 ---
 
@@ -291,6 +295,8 @@ streamlit run dashboard.py
 
 ### 🌐 Dashboard HTML (SPA Premium)
 
+🚀 **Demo en Vivo:** **[dodysalim.github.io/refrigerant-gas-dashboard](https://dodysalim.github.io/refrigerant-gas-dashboard/)**
+
 Archivo: `web/index.html`
 
 - Visualizador de cilindros fotorrealistas con colores reales por normativa
@@ -299,6 +305,8 @@ Archivo: `web/index.html`
 - Tabla de propiedades completa con búsqueda
 
 ### 🐍 Dashboard Streamlit (5 vistas científicas)
+
+🚀 **Demo en Vivo:** **[refrigerant-explorer.streamlit.app](https://refrigerant-explorer.streamlit.app/)**
 
 Comando: `streamlit run dashboard.py`
 
