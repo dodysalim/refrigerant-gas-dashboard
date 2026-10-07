@@ -3,11 +3,11 @@
   "name": "kpi2",
   "position": {
     "x": 650,
-    "y": 30,
+    "y": 142,
     "width": 290,
-    "height": 130,
-    "z": 2,
-    "tabOrder": 2
+    "height": 98,
+    "z": 10,
+    "tabOrder": 10
   },
   "visual": {
     "visualType": "card",
@@ -26,7 +26,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ODPPromedio'"
+                  "Value": "'ODP promedio'"
                 }
               }
             },
@@ -157,9 +157,10 @@
                 }
               },
               "queryRef": "Analytics.KPI_ODPPromedio",
-              "nativeQueryRef": "ODPPromedio",
-              "displayName": "ODPPromedio",
-              "format": "#,0"
+              "nativeQueryRef": "KPI_ODPPromedio",
+              "displayName": "ODP promedio",
+              "active": true,
+              "format": "0.000"
             }
           ]
         }
@@ -197,7 +198,7 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "3D"
                 }
               }
             }

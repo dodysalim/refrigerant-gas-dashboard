@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "kpi1",
+  "name": "footer",
   "position": {
-    "x": 340,
-    "y": 142,
-    "width": 290,
-    "height": 98,
+    "x": 30,
+    "y": 848,
+    "width": 1220,
+    "height": 26,
     "z": 10,
     "tabOrder": 10
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "textbox",
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
@@ -19,14 +19,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'GWP promedio'"
+                  "Value": "''"
                 }
               }
             },
@@ -80,7 +80,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#F3F6FA'"
                     }
                   }
                 }
@@ -141,80 +141,24 @@
         }
       ]
     },
-    "query": {
-      "queryState": {
-        "Values": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Analytics"
-                    }
-                  },
-                  "Property": "KPI_GWPPromedio"
-                }
-              },
-              "queryRef": "Analytics.KPI_GWPPromedio",
-              "nativeQueryRef": "KPI_GWPPromedio",
-              "displayName": "GWP promedio",
-              "active": true,
-              "format": "#,0.00"
-            }
-          ]
-        }
-      }
-    },
     "objects": {
-      "labels": [
+      "general": [
         {
           "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#102A43'"
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "GWP y ODP son propiedades del catálogo, no emisiones realizadas. Selecciona barras y filtros. Consulta el catálogo en la segunda página.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "color": "#52677D"
                     }
                   }
-                }
+                ]
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "34D"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
+            ]
           }
         }
       ]

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "detail",
+  "name": "catalogue",
   "position": {
     "x": 30,
-    "y": 190,
+    "y": 80,
     "width": 1220,
-    "height": 660,
-    "z": 5,
-    "tabOrder": 5
+    "height": 750,
+    "z": 10,
+    "tabOrder": 10
   },
   "visual": {
     "visualType": "tableEx",
