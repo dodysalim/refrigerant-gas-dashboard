@@ -157,7 +157,7 @@
                 }
               },
               "queryRef": "Analytics.KPI_ODPPromedio",
-              "nativeQueryRef": "KPI_ODPPromedio",
+              "nativeQueryRef": "ODP promedio",
               "displayName": "ODP promedio",
               "active": true,
               "format": "0.000"

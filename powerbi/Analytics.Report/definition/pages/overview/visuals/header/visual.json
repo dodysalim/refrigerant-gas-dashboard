@@ -19,23 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "KRIOMETRICS  |  Comparación ambiental y seguridad",
-                    "textStyle": {
-                      "fontFamily": "Segoe UI",
-                      "fontSize": "11pt",
-                      "color": "#73dbd2"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "KRIOMETRICS  |  Comparación ambiental y seguridad",
+                    "value": "KrioMetrics | Ambiente y seguridad",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI",
-                      "fontSize": "26pt",
+                      "fontSize": "22pt",
                       "color": "#ffffff"
                     }
                   }

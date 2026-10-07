@@ -47,8 +47,8 @@
                 }
               },
               "queryRef": "Analytics.KPI_ODPPromedio",
-              "nativeQueryRef": "KPI_ODPPromedio",
-              "displayName": "KPI_ODPPromedio",
+              "nativeQueryRef": "ODP promedio",
+              "displayName": "ODP promedio",
               "active": true
             }
           ]

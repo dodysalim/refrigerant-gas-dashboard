@@ -47,8 +47,8 @@
                 }
               },
               "queryRef": "Analytics.KPI_Refrigerantes",
-              "nativeQueryRef": "KPI_Refrigerantes",
-              "displayName": "KPI_Refrigerantes",
+              "nativeQueryRef": "Refrigerantes",
+              "displayName": "Refrigerantes",
               "active": true
             }
           ]

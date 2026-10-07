@@ -47,8 +47,8 @@
                 }
               },
               "queryRef": "Analytics.KPI_GWPPromedio",
-              "nativeQueryRef": "KPI_GWPPromedio",
-              "displayName": "KPI_GWPPromedio",
+              "nativeQueryRef": "GWP promedio",
+              "displayName": "GWP promedio",
               "active": true
             }
           ]
