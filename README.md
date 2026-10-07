@@ -1,3 +1,26 @@
+# KrioMetrics · Analítica de refrigerantes
+
+Proyecto de datos y visualización de propiedades de refrigerantes.
+
+**Para revisar:** `dashboard.py, requirements.txt, notebooks`.
+
+**Contexto:** Los resultados se interpretan según las fuentes y las hipótesis físicas. La validación de código no certifica un cálculo de ingeniería.
+
+## Inicio
+
+Desde la raíz del repositorio, en un entorno virtual con sus datos disponibles:
+
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run dashboard.py
+```
+
+Consulta [el caso de proyecto](docs/PORTFOLIO_CASE.md) para el alcance y los criterios de revisión.
+
+---
+
+## Documentación detallada existente
+
 # KrioMetrics — Pipeline ETL & Ecosistema Analítico de Refrigeración
 
 <div align="center">
