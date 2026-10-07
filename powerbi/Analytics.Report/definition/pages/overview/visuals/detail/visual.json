@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "detail",
+  "position": {
+    "x": 30,
+    "y": 190,
+    "width": 1220,
+    "height": 660,
+    "z": 5,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Analytics"
+                    }
+                  },
+                  "Property": "Refrigerante"
+                }
+              },
+              "queryRef": "Analytics.Refrigerante",
+              "nativeQueryRef": "Refrigerante"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Analytics"
+                    }
+                  },
+                  "Property": "Compuesto"
+                }
+              },
+              "queryRef": "Analytics.Compuesto",
+              "nativeQueryRef": "Compuesto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Analytics"
+                    }
+                  },
+                  "Property": "Seguridad"
+                }
+              },
+              "queryRef": "Analytics.Seguridad",
+              "nativeQueryRef": "Seguridad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Analytics"
+                    }
+                  },
+                  "Property": "GWP"
+                }
+              },
+              "queryRef": "Analytics.GWP",
+              "nativeQueryRef": "GWP"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Analytics"
+                    }
+                  },
+                  "Property": "ODP"
+                }
+              },
+              "queryRef": "Analytics.ODP",
+              "nativeQueryRef": "ODP"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Analytics"
+                    }
+                  },
+                  "Property": "Estado"
+                }
+              },
+              "queryRef": "Analytics.Estado",
+              "nativeQueryRef": "Estado"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

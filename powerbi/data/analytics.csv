@@ -1,0 +1,56 @@
+Refrigerante,Compuesto,Seguridad,GWP,ODP,Estado
+R-134a,HFC,A1,1430.0,0.0,Phasing Down
+R-600a,HC,A3,3.0,0.0,Active
+R-290,HC,A3,3.0,0.0,Active
+R-12,CFC,A1,10900.0,1.0,Phased Out
+R-401A,HCFC,A1,1182.0,0.03,Phased Out
+R-401B,HCFC,A1,1288.0,0.035,Phased Out
+R-409A,HCFC,A1,1585.0,0.048,Phased Out
+R-413A,HFC,A2,2053.0,0.0,Phasing Down
+R-426A,HFC,A1,1508.0,0.0,Active
+R-437A,HFC,A1,1805.0,0.0,Active
+R-600,HC,A3,4.0,0.0,Active
+R-1234yf,HFO,A2L,1.0,0.0,Active
+R-415B,Blend,A2,1500.0,0.01,Phased Out
+R-424A,HFC,A1,2440.0,0.0,Phasing Down
+R-513A,Blend,A1,573.0,0.0,Active
+R-22,HCFC,A1,1810.0,0.055,Phased Out
+R-410A,HFC,A1,2088.0,0.0,Phasing Down
+R-404A,HFC,A1,3922.0,0.0,Phasing Down
+R-407C,HFC,A1,1774.0,0.0,Phasing Down
+R-507A,HFC,A1,3985.0,0.0,Phasing Down
+R-32,HFC,A2L,675.0,0.0,Active
+R-407A,HFC,A1,2107.0,0.0,Phasing Down
+R-407F,HFC,A1,1825.0,0.0,Phasing Down
+R-422D,HFC,A1,2729.0,0.0,Phasing Down
+R-427A,HFC,A1,2138.0,0.0,Active
+R-448A,Blend,A1,1387.0,0.0,Active
+R-449A,Blend,A1,1397.0,0.0,Active
+R-452A,Blend,A1,2140.0,0.0,Active
+R-417A,HFC,A1,2346.0,0.0,Phasing Down
+R-422A,HFC,A1,3143.0,0.0,Phasing Down
+R-438A,HFC,A1,2264.0,0.0,Active
+R-453A,HFC,A1,1765.0,0.0,Active
+R-502,Blend,A1,4657.0,0.25,Phased Out
+R-454B,Blend,A2L,466.0,0.0,Active
+R-454C,Blend,A2L,148.0,0.0,Active
+R-455A,Blend,A2L,148.0,0.0,Active
+R-458A,HFC,A1,1650.0,0.0,Active
+R-466A,Blend,A1,733.0,0.0,Active
+R-407B,HFC,A1,2800.0,0.0,Phasing Down
+R-717,Natural,B2L,0.0,0.0,Active
+R-744,Natural,A1,1.0,0.0,Active
+R-123,HCFC,B1,77.0,0.02,Phased Out
+R-124,HCFC,A1,609.0,0.02,Phased Out
+R-1233zd,HFO,A1,1.0,0.0003,Active
+R-1234ze,HFO,A2L,1.0,0.0,Active
+R-508B,Blend,A1,13396.0,0.0,Active
+R-23,HFC,A1,14800.0,0.0,Phasing Down
+R-503,Blend,A1,14560.0,0.6,Phased Out
+R-718,Natural,A1,0.0,0.0,Active
+R-729,Natural,A1,0.0,0.0,Active
+R-1150,Natural,A3,4.0,0.0,Active
+R-1270,Natural,A3,2.0,0.0,Active
+R-170,Natural,A3,6.0,0.0,Active
+R-11,CFC,A1,4750.0,1.0,Phased Out
+R-113,CFC,A1,6130.0,0.8,Phased Out
