@@ -30,15 +30,15 @@ table Analytics
 		summarizeBy: none
 		sourceColumn: Estado
 
-	measure Refrigerantes = COUNTROWS(Analytics)
+	measure KPI_Refrigerantes = COUNTROWS(Analytics)
 		formatString: #,0.00
 		displayFolder: KPIs
 
-	measure GWPPromedio = AVERAGE(Analytics[GWP])
+	measure KPI_GWPPromedio = AVERAGE(Analytics[GWP])
 		formatString: #,0.00
 		displayFolder: KPIs
 
-	measure ODPPromedio = AVERAGE(Analytics[ODP])
+	measure KPI_ODPPromedio = AVERAGE(Analytics[ODP])
 		formatString: #,0.00
 		displayFolder: KPIs
 

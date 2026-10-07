@@ -153,10 +153,10 @@
                       "Entity": "Analytics"
                     }
                   },
-                  "Property": "ODPPromedio"
+                  "Property": "KPI_ODPPromedio"
                 }
               },
-              "queryRef": "Analytics.ODPPromedio",
+              "queryRef": "Analytics.KPI_ODPPromedio",
               "nativeQueryRef": "ODPPromedio",
               "displayName": "ODPPromedio",
               "format": "#,0"

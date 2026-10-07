@@ -153,10 +153,10 @@
                       "Entity": "Analytics"
                     }
                   },
-                  "Property": "GWPPromedio"
+                  "Property": "KPI_GWPPromedio"
                 }
               },
-              "queryRef": "Analytics.GWPPromedio",
+              "queryRef": "Analytics.KPI_GWPPromedio",
               "nativeQueryRef": "GWPPromedio",
               "displayName": "GWPPromedio",
               "format": "#,0"

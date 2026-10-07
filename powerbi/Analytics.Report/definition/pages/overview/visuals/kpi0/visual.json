@@ -153,10 +153,10 @@
                       "Entity": "Analytics"
                     }
                   },
-                  "Property": "Refrigerantes"
+                  "Property": "KPI_Refrigerantes"
                 }
               },
-              "queryRef": "Analytics.Refrigerantes",
+              "queryRef": "Analytics.KPI_Refrigerantes",
               "nativeQueryRef": "Refrigerantes",
               "displayName": "Refrigerantes",
               "format": "#,0"
