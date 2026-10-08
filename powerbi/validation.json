@@ -1,0 +1,12 @@
+{
+  "repo": "refrigerant-gas-dashboard",
+  "pages": 5,
+  "visuals": 46,
+  "tables": {
+    "Gases": 55,
+    "Curvas": 13310,
+    "Ciclos": 7865,
+    "Almacen": 2750
+  },
+  "status": "55 gases · curvas del motor original · estimaciones conceptuales, no tablas certificadas"
+}

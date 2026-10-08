@@ -1,0 +1,35 @@
+table Curvas
+
+	column 'Refrigerante'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Refrigerante
+
+	column 'Temperatura_C'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Temperatura_C
+
+	column 'Fase'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Fase
+
+	column 'Presion_bar'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Presion_bar
+
+	measure KPI_Presion = AVERAGE(Curvas[Presion_bar])
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	partition Curvas = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "Curvas.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Refrigerante", type text}, {"Temperatura_C", type number}, {"Fase", type text}, {"Presion_bar", type number}}, "en-US")
+				in
+				    Typed

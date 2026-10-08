@@ -3,5 +3,8 @@ model Model
 	defaultPowerBIDataSourceVersion: powerBI_V3
 	sourceQueryCulture: en-US
 
-ref table Analytics
+ref table Gases
+ref table Curvas
+ref table Ciclos
+ref table Almacen
 ref expression DataFolder

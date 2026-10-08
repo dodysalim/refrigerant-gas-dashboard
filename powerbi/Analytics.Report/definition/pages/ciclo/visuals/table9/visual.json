@@ -1,0 +1,281 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "table9",
+  "position": {
+    "x": 30,
+    "y": 280,
+    "z": 10,
+    "height": 330,
+    "width": 1220,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Refrigerante"
+                }
+              },
+              "queryRef": "Ciclos.Refrigerante",
+              "nativeQueryRef": "Refrigerante",
+              "displayName": "Refrigerante",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Evaporacion_C"
+                }
+              },
+              "queryRef": "Ciclos.Evaporacion_C",
+              "nativeQueryRef": "Evaporacion_C",
+              "displayName": "Evaporacion_C",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Condensacion_C"
+                }
+              },
+              "queryRef": "Ciclos.Condensacion_C",
+              "nativeQueryRef": "Condensacion_C",
+              "displayName": "Condensacion_C",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Baja_bar"
+                }
+              },
+              "queryRef": "Ciclos.Baja_bar",
+              "nativeQueryRef": "Baja_bar",
+              "displayName": "Baja_bar",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Alta_bar"
+                }
+              },
+              "queryRef": "Ciclos.Alta_bar",
+              "nativeQueryRef": "Alta_bar",
+              "displayName": "Alta_bar",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Relacion"
+                }
+              },
+              "queryRef": "Ciclos.Relacion",
+              "nativeQueryRef": "Relacion",
+              "displayName": "Relacion",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Succion_barg"
+                }
+              },
+              "queryRef": "Ciclos.Succion_barg",
+              "nativeQueryRef": "Succion_barg",
+              "displayName": "Succion_barg",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ciclos"
+                    }
+                  },
+                  "Property": "Descarga_barg"
+                }
+              },
+              "queryRef": "Ciclos.Descarga_barg",
+              "nativeQueryRef": "Descarga_barg",
+              "displayName": "Descarga_barg",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Presiones y relación de compresión · escenarios del motor original'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#183047'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E1E8F0'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

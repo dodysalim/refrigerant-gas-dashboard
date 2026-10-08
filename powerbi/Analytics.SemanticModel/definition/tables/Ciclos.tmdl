@@ -1,0 +1,67 @@
+table Ciclos
+
+	column 'Refrigerante'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Refrigerante
+
+	column 'Evaporacion_C'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Evaporacion_C
+
+	column 'Condensacion_C'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Condensacion_C
+
+	column 'Baja_bar'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Baja_bar
+
+	column 'Alta_bar'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Alta_bar
+
+	column 'Relacion'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Relacion
+
+	column 'Succion_barg'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Succion_barg
+
+	column 'Descarga_barg'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Descarga_barg
+
+	measure KPI_Baja = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Baja_bar]), BLANK())
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	measure KPI_Alta = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Alta_bar]), BLANK())
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	measure KPI_Compresion = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Relacion]), BLANK())
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	measure KPI_Succion = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Succion_barg]), BLANK())
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	partition Ciclos = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "Ciclos.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Refrigerante", type text}, {"Evaporacion_C", type number}, {"Condensacion_C", type number}, {"Baja_bar", type number}, {"Alta_bar", type number}, {"Relacion", type number}, {"Succion_barg", type number}, {"Descarga_barg", type number}}, "en-US")
+				in
+				    Typed

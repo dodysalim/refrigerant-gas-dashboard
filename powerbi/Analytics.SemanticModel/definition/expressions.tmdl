@@ -1,4 +1,2 @@
-expression DataFolder = "C:\Data\refrigerant-gas-dashboard\powerbi\data\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression DataFolder = "C:\Dody-PowerBI\refrigerant-gas-dashboard\powerbi\data\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	kind: m
-
-	annotation PBI_ResultType = Text
