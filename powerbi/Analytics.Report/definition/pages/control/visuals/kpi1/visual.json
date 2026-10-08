@@ -3,9 +3,9 @@
   "name": "kpi1",
   "position": {
     "x": 340,
-    "y": 160,
+    "y": 180,
     "z": 7,
-    "height": 90,
+    "height": 104,
     "width": 300,
     "tabOrder": 7
   },
@@ -169,35 +169,24 @@
       "labels": [
         {
           "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#102A43'"
-                    }
-                  }
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "34D"
+                  "Value": "24D"
                 }
               }
             },
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             },
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "2D"
                 }
               }
             }

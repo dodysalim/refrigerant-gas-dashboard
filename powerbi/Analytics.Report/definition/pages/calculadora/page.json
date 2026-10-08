@@ -3,7 +3,7 @@
   "name": "calculadora",
   "displayName": "02 · Calculadora P-T",
   "displayOption": "FitToPage",
-  "height": 900,
+  "height": 1040,
   "width": 1280,
   "objects": {
     "background": [

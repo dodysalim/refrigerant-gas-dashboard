@@ -3,9 +3,9 @@
   "name": "f1",
   "position": {
     "x": 340,
-    "y": 78,
+    "y": 88,
     "z": 4,
-    "height": 65,
+    "height": 76,
     "width": 300,
     "tabOrder": 4
   },
@@ -73,6 +73,26 @@
         {
           "properties": {}
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compuesto'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -82,7 +102,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

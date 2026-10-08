@@ -40,19 +40,19 @@ table Ciclos
 		summarizeBy: none
 		sourceColumn: Descarga_barg
 
-	measure KPI_Baja = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Baja_bar]), BLANK())
+	measure KPI_Baja = IF(COUNTROWS(Ciclos)=1, FORMAT(MAX(Ciclos[Baja_bar]), "0.00"), "Selecciona escenario")
 		formatString: #,0.00
 		displayFolder: Indicadores
 
-	measure KPI_Alta = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Alta_bar]), BLANK())
+	measure KPI_Alta = IF(COUNTROWS(Ciclos)=1, FORMAT(MAX(Ciclos[Alta_bar]), "0.00"), "Selecciona escenario")
 		formatString: #,0.00
 		displayFolder: Indicadores
 
-	measure KPI_Compresion = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Relacion]), BLANK())
+	measure KPI_Compresion = IF(COUNTROWS(Ciclos)=1, FORMAT(MAX(Ciclos[Relacion]), "0.00"), "Selecciona escenario")
 		formatString: #,0.00
 		displayFolder: Indicadores
 
-	measure KPI_Succion = IF(COUNTROWS(Ciclos)=1, MAX(Ciclos[Succion_barg]), BLANK())
+	measure KPI_Succion = IF(COUNTROWS(Ciclos)=1, FORMAT(MAX(Ciclos[Succion_barg]), "0.00"), "Selecciona escenario")
 		formatString: #,0.00
 		displayFolder: Indicadores
 
