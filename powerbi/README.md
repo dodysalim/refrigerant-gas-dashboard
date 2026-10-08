@@ -28,9 +28,9 @@ Para regenerar los CSV y el informe desde las fuentes del repositorio: `python p
 
 ## Presentación y selección
 
-Lienzo ampliado a 1280×1040, tarjetas sin abreviación automática, filtros con su propio encabezado y tablas con más espacio. El ciclo muestra «Selecciona escenario» hasta elegir un único gas, temperatura de evaporación y condensación. Los proyectos sin datos muestran «Datos pendientes»; no se sustituyen datos desconocidos por ceros.
+Lienzo A4 horizontal de 1123×794 a tamaño real (100 %), tarjetas sin abreviación automática, filtros con su propio encabezado y tablas con más espacio. El ciclo muestra «Selecciona escenario» hasta elegir un único gas, temperatura de evaporación y condensación. Los proyectos sin datos muestran «Datos pendientes»; no se sustituyen datos desconocidos por ceros.
 
-Después de regenerar el informe, ejecuta `python powerbi/polish_report.py` para aplicar los ajustes de presentación.
+Después de regenerar el informe, ejecuta `python powerbi/polish_report.py` desde la raíz del repositorio para aplicar la presentación A4 y móvil.
 
 Para abrir en Windows sin rutas fijas ni Python: cierra el informe y haz doble clic en `powerbi/Abrir-PowerBI.bat`. Configura DataFolder con la carpeta extraída; después pulsa Actualizar en Power BI.
 
@@ -40,4 +40,4 @@ PC: hoja A4 horizontal (297×210 mm, lienzo 1123×794 a 96 ppp), vista Tamaño r
 
 Móvil: diseño nativo de Power BI de 323 puntos de ancho, con tarjetas, filtros y gráficos apilados, tablas amplias y desplazamiento vertical. Se adapta al teléfono; el tamaño físico de una hoja A4 y el zoom 100% no equivalen en pantallas de distintos tamaños. Consulta Vista > Diseño móvil en Desktop y usa la aplicación Power BI para verlo en el teléfono tras publicar.
 
-Tras reconstruir el informe, ejecuta `python polish_report.py` para recuperar ambas presentaciones. El ajuste es idempotente y conserva medidas, consultas y datos.
+Tras reconstruir el informe, ejecuta `python powerbi/polish_report.py` desde la raíz del repositorio para recuperar ambas presentaciones. El ajuste es idempotente y conserva medidas, consultas y datos.
