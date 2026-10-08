@@ -1,56 +1,42 @@
 from pathlib import Path
-import json,re,copy
-roots=[Path(__file__).resolve().parent]
-changed={}
-if all(json.loads(f.read_text()).get('height')==1040 for root in roots for f in (root/'Analytics.Report/definition/pages').rglob('page.json')):
- print('La presentación ya está ajustada.');raise SystemExit(0)
-for root in roots:
- fs=[]
- for f in (root/'Analytics.Report/definition/pages').rglob('*.json'):
-  if f.name=='page.json' and json.loads(f.read_text()).get('height')==1040: continue
-  v=json.loads(f.read_text())
-  if f.name=='page.json':v['height']=1040
-  elif f.name=='visual.json':
-   p=v['position'];typ=v['visual']['visualType'];o=v['visual'].setdefault('objects',{})
-   if v['name']=='header':p.update(y=12,height=60)
-   elif v['name']=='footer':p.update(y=990,height=42)
-   elif typ=='slicer':p.update(y=88,height=76)
-   else:p.update(y=round(180+(p['y']-160)*1.16),height=round(p['height']*1.16))
+import json,copy
+W,H=1123,794
+MS='https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.4.0/schema.json'
+def write(p,d):p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def apply(root):
+ changed=[]
+ for pf in (root/'Analytics.Report/definition/pages').glob('*/page.json'):
+  page=json.loads(pf.read_text());ow,oh=page['width'],page['height'];page.update(width=W,height=H,displayOption='ActualSize');write(pf,page);changed.append(pf)
+  visuals=[]
+  for f in (pf.parent/'visuals').glob('*/visual.json'):
+   v=json.loads(f.read_text());p=v['position'];typ=v['visual']['visualType'];name=v['name'];o=v['visual'].setdefault('objects',{})
+   if (ow,oh)!=(W,H):
+    p.update(x=round(p['x']*W/ow),width=round(p['width']*W/ow),y=round(p['y']*H/oh),height=round(p['height']*H/oh))
    if typ=='card':
-    o['labels']=[{'properties':{'fontSize':{'expr':{'Literal':{'Value':'24D'}}},'labelDisplayUnits':{'expr':{'Literal':{'Value':'1D'}}},'labelPrecision':{'expr':{'Literal':{'Value':'2D'}}}}}]
-    o['categoryLabels']=[{'properties':{'show':{'expr':{'Literal':{'Value':'false'}}}}}]
-   if typ=='slicer':
-    col=v['visual']['query']['queryState']['Values']['projections'][0]['nativeQueryRef']
-    o['header']=[{'properties':{'show':{'expr':{'Literal':{'Value':'true'}}},'text':{'expr':{'Literal':{'Value':"'"+col.replace('_',' ')+"'"}}}}}]
-    cont=v['visual'].get('visualContainerObjects',{})
-    if 'title' in cont:cont['title'][0]['properties']['show']['expr']['Literal']['Value']='false'
-   if typ=='tableEx':
-    o['grid']=[{'properties':{'rowPadding':{'expr':{'Literal':{'Value':'6D'}}}}}]
+    o['labels'][0]['properties']['fontSize']['expr']['Literal']['Value']='16D' if pf.parent.name=='ciclo' else '21D'
    if typ=='textbox':
     for para in o.get('general',[{}])[0].get('properties',{}).get('paragraphs',[]):
-     for run in para.get('textRuns',[]):run['textStyle']['fontSize']='19pt' if v['name']=='header' else '10pt'
-   assert p['x']+p['width']<=1280 and p['y']+p['height']<=1040,(f,p)
-  f.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n');fs.append(f)
- # Explicit unavailable status replaces blanks in cards only, preserving numeric measures and charts.
- defs=root/'Analytics.SemanticModel/definition/tables'
- for f in defs.glob('*.tmdl'):
-  s=f.read_text()
-  if root.parent.name=='refrigerant-gas-dashboard' and f.stem=='Ciclos':
-   for name,col in [('Baja','Baja_bar'),('Alta','Alta_bar'),('Compresion','Relacion'),('Succion','Succion_barg')]:
-    s=re.sub(r'(\tmeasure KPI_'+name+r' = )[^\n]+',lambda m:m.group(1)+f'IF(COUNTROWS(Ciclos)=1, FORMAT(MAX(Ciclos[{col}]), "0.00"), "Selecciona escenario")',s)
-   f.write_text(s);fs.append(f)
-  if root.parent.name in ['FleetLogix-Master','Proyecto-No-Country','S02-26-E45-Data_Science_EquineLead']:
-   # Card-specific text measures; charts keep numeric measures. Missing data is not zero.
-   cards=[]
-   for vf in (root/'Analytics.Report/definition/pages').rglob('visual.json'):
-    v=json.loads(vf.read_text())
-    if v['visual']['visualType']=='card':
-     pr=v['visual']['query']['queryState']['Values']['projections'][0];m=pr['field']['Measure']
-     if m['Expression']['SourceRef']['Entity']==f.stem:
-      name=m['Property'];cards.append(name);m['Property']=name+'_Estado';pr['queryRef']=f.stem+'.'+name+'_Estado';pr['nativeQueryRef']='Estado de datos';vf.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n')
-   for name in set(cards):
-    s=s.replace('\tpartition ',f'\tmeasure {name}_Estado = IF(COUNTROWS({f.stem})=0, "Datos pendientes", FORMAT([{name}], "#,0.00"))\n\t\tformatString: General\n\n\tpartition ',1)
-   if cards:f.write_text(s);fs.append(f)
- readme=root/'README.md';readme.write_text(readme.read_text()+'\n## Presentación y selección\n\nLienzo ampliado a 1280×1040, tarjetas sin abreviación automática, filtros con su propio encabezado y tablas con más espacio. El ciclo muestra «Selecciona escenario» hasta elegir un único gas, temperatura de evaporación y condensación. Los proyectos sin datos muestran «Datos pendientes»; no se sustituyen datos desconocidos por ceros.\n');fs.append(readme)
- changed[root.parent.name]=[{'path':str(f.relative_to(root.parent)),'mode':'100644','type':'blob','content':f.read_text()} for f in fs]
-print('Presentación actualizada')
+     for run in para.get('textRuns',[]):run['textStyle']['fontSize']='17pt' if name=='header' else '9pt'
+   assert p['x']>=0 and p['y']>=0 and p['x']+p['width']<=W and p['y']+p['height']<=H,(f,p)
+   write(f,v);changed.append(f);visuals.append((f,v))
+  ordered=sorted(visuals,key=lambda fv:(0 if fv[1]['name']=='header' else 4 if fv[1]['name']=='footer' else 1 if fv[1]['visual']['visualType']=='slicer' else 2 if fv[1]['visual']['visualType']=='card' else 3,fv[1]['position']['y'],fv[1]['position']['x']))
+  y=0
+  for i,(f,v) in enumerate(ordered):
+   typ=v['visual']['visualType'];name=v['name'];height=100 if typ=='card' else 76 if typ=='slicer' else 360 if typ=='tableEx' else 320
+   if typ=='textbox':height=110 if name=='header' else 140
+   mobile={'$schema':MS,'position':{'x':0,'y':y,'z':i,'width':323,'height':height,'tabOrder':i}}
+   if typ=='textbox':
+    mobile['objects']=copy.deepcopy(v['visual']['objects'])
+    for para in mobile['objects'].get('general',[{}])[0].get('properties',{}).get('paragraphs',[]):
+     for run in para.get('textRuns',[]):run['textStyle']['fontSize']='16pt' if name=='header' else '10pt'
+   if typ=='card':
+    mobile['objects']={'labels':copy.deepcopy(v['visual']['objects']['labels'])};mobile['objects']['labels'][0]['properties']['fontSize']['expr']['Literal']['Value']='22D'
+   write(f.parent/'mobile.json',mobile);changed.append(f.parent/'mobile.json');y+=height+10
+  assert y<10000,(pf,y)
+  for i,(_,a) in enumerate(visuals):
+   for _,b in visuals[i+1:]:
+    p,q=a['position'],b['position'];assert not (p['x']<q['x']+q['width'] and q['x']<p['x']+p['width'] and p['y']<q['y']+q['height'] and q['y']<p['y']+p['height']),(pf,a['name'],b['name'])
+ return changed
+if __name__=='__main__':
+ apply(Path(__file__).resolve().parent)
+ print('A4 1123 x 794, 100%, mobile layout regenerated.')

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "footer",
   "position": {
-    "x": 30,
-    "y": 990,
+    "x": 26,
+    "y": 756,
     "z": 2,
-    "height": 42,
-    "width": 1220,
+    "height": 32,
+    "width": 1070,
     "tabOrder": 2
   },
   "visual": {
@@ -152,7 +152,7 @@
                     "value": "55 gases · curvas del motor original · estimaciones conceptuales, no tablas certificadas",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "10pt",
+                      "fontSize": "9pt",
                       "color": "#52677D"
                     }
                   }
