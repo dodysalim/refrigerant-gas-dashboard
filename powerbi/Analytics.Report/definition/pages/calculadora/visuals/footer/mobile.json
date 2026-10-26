@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.4.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 1448,
+    "z": 7,
+    "width": 323,
+    "height": 140,
+    "tabOrder": 7
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Selecciona un gas y temperatura. Presión absoluta estimada con el mismo motor de Streamlit; no usar para dimensionamiento.",
+                  "textStyle": {
+                    "fontFamily": "Segoe UI",
+                    "fontSize": "10pt",
+                    "color": "#52677D"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

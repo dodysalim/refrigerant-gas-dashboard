@@ -1,0 +1,36 @@
+table Almacen
+
+	column 'Refrigerante'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Refrigerante
+
+	column 'temperature_c'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: temperature_c
+
+	column 'state_name'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: state_name
+
+	column 'pressure_bar'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: pressure_bar
+
+	column 'pressure_psi'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: pressure_psi
+
+	partition Almacen = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "Almacen.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Refrigerante", type text}, {"temperature_c", type number}, {"state_name", type text}, {"pressure_bar", type number}, {"pressure_psi", type number}}, "en-US")
+				in
+				    Typed

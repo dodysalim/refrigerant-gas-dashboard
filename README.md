@@ -1,24 +1,42 @@
-![KrioMetrics](docs/cover.svg)
+<p align="center"><img src="https://dodysalim.github.io/assets/project-covers/kriometrics.webp" alt="KrioMetrics" width="100%"></p>
 
-# KrioMetrics
+<h1 align="center">KrioMetrics</h1>
 
-**Un catálogo de refrigerantes convertido en análisis, comparación y visualización interactiva.**
+<p align="center"><b>Un catálogo de 55 refrigerantes convertido en análisis, comparación y visualización interactiva.</b></p>
 
-PERSONAL · ANALÍTICA DE REFRIGERANTES · Python · SQLite · Plotly · Streamlit
+<p align="center">
+<img src="https://img.shields.io/badge/Proyecto_personal-75E6CE?style=for-the-badge&labelColor=0b1222" alt="Proyecto personal">
+</p>
 
-[Portafolio](https://dodysalim.github.io/) · [Caso y alcance](docs/PORTFOLIO_CASE.md) · [Verificación](docs/VALIDATION.md)
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite"> <img src="https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly"> <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"> <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logoColor=black" alt="Power BI">
+</p>
 
-## La pregunta
+<p align="center"><a href="https://dodysalim.github.io/"><b>🌐 Portafolio</b></a> · <a href="docs/PORTFOLIO_CASE.md"><b>📄 Caso de estudio</b></a> · <a href="docs/VALIDATION.md"><b>✅ Verificación</b></a></p>
+
+---
+
+## 📌 Resumen en 30 segundos
+
+| | |
+| --- | --- |
+| **🎯 Problema** | Comparar propiedades, seguridad e impacto ambiental de gases refrigerantes con hipótesis claras. |
+| **🛠️ Solución** | ETL y almacén SQLite con arquitectura por capas (dominio, aplicación, presentación). |
+| **📈 Entregables** | 5 vistas Streamlit (cálculo, comparación, ciclo, consulta SQL) y Power BI con curvas y escenarios. |
+| **🧪 Calidad** | 54 pruebas automatizadas aprobadas. |
+| **👤 Autor** | Dody Dueñas Remache. |
+
+## ❓ La pregunta de negocio
 
 ¿Cómo comparar propiedades, seguridad e impacto ambiental manteniendo claras las hipótesis de los cálculos?
 
-## Qué puedes revisar
+## ✨ Qué incluye
 
 - ETL y almacén SQLite para gases y propiedades P-T.
 - Cinco vistas de control, cálculo, comparación, ciclo y consulta SQL.
 - Power BI con curvas, escenarios y tablas relacionadas.
 
-## Inicio local
+## 🚀 Cómo ejecutarlo
 
 Usa Python 3.11 o 3.12 en un entorno independiente. Desde la raíz:
 
@@ -36,15 +54,15 @@ Después de configurar los datos:
 python -m streamlit run dashboard.py
 ```
 
-## Datos y configuración
+## 🗂️ Datos y configuración
 
 Datos incluidos: catálogo de 55 refrigerantes. El ciclo Power BI pide un solo gas y un escenario de temperaturas para evitar promediar condiciones físicas diferentes.
 
-## Power BI · PC y móvil
+## 📊 Power BI · PC y móvil
 
 [Archivos e instrucciones](powerbi/README.md). Descarga el repositorio completo y abre `powerbi/Abrir-PowerBI.bat` en Windows; después pulsa **Actualizar**. Incluye A4 horizontal a tamaño real (100 %) y diseño móvil vertical. El archivo `.pbip` necesita sus carpetas Report, SemanticModel y data.
 
-## Recorrido por el código
+## 🧭 Estructura del repositorio
 
 | Ruta | Qué contiene |
 | --- | --- |
@@ -53,7 +71,7 @@ Datos incluidos: catálogo de 55 refrigerantes. El ciclo Power BI pide un solo g
 | [src/presentation/dashboard/](src/presentation/dashboard/) | Cinco vistas analíticas |
 | [tests/](tests/) | Pruebas de dominio y sostenibilidad |
 
-## Comprobación y alcance
+## ✅ Calidad y alcance
 
 54 pruebas aprobadas; cinco vistas Streamlit probadas sin excepciones. KrioMetrics Power BI abrió con datos en el PC durante la entrega anterior.
 
@@ -65,8 +83,15 @@ Para repetir las pruebas desde la raíz:
 python -m pytest tests -q
 ```
 
-## Autoría
+## 👥 Autoría
 
 Proyecto personal. Dody Salim Dueñas Remache.
 
 [Documentación anterior](docs/ORIGINAL_README.md), conservada como referencia histórica.
+
+---
+
+<p align="center">
+<b>Dody Dueñas Remache</b> · Analista de Datos / Data Scientist<br>
+<a href="https://dodysalim.github.io/">Portafolio</a> · <a href="https://github.com/dodysalim">GitHub</a> · <a href="https://www.linkedin.com/in/dody-duenas/">LinkedIn</a> · <a href="mailto:dodydurema67@gmail.com">dodydurema67@gmail.com</a>
+</p>

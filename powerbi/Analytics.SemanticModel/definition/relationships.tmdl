@@ -1,0 +1,11 @@
+relationship e4222563-3bbf-56f3-aa3b-330f4331fcc2
+	fromColumn: Curvas.'Refrigerante'
+	toColumn: Gases.'Refrigerante'
+
+relationship 03e005e3-c13f-5c59-a5e7-2a6c68087148
+	fromColumn: Ciclos.'Refrigerante'
+	toColumn: Gases.'Refrigerante'
+
+relationship 1a8a4c55-79fd-5da6-8251-72ee1c9926ae
+	fromColumn: Almacen.'Refrigerante'
+	toColumn: Gases.'Refrigerante'

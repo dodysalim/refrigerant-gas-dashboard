@@ -1,0 +1,97 @@
+table Gases
+
+	column 'Refrigerante'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Refrigerante
+
+	column 'Compuesto'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Compuesto
+
+	column 'Seguridad'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Seguridad
+
+	column 'GWP'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: GWP
+
+	column 'ODP'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: ODP
+
+	column 'Estado'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Estado
+
+	column 'Ebullicion_C'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Ebullicion_C
+
+	column 'Critica_C'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Critica_C
+
+	column 'Critica_bar'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Critica_bar
+
+	column 'Sustituto'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Sustituto
+
+	column 'Aceite'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Aceite
+
+	column 'Descripcion'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+	column 'Ventajas'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Ventajas
+
+	column 'Precauciones'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Precauciones
+
+	measure KPI_Gases = COUNTROWS(Gases)
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	measure KPI_GWP = AVERAGE(Gases[GWP])
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	measure KPI_ODP = AVERAGE(Gases[ODP])
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	measure KPI_SinODP = CALCULATE(COUNTROWS(Gases), Gases[ODP]=0)
+		formatString: #,0.00
+		displayFolder: Indicadores
+
+	partition Gases = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "Gases.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Refrigerante", type text}, {"Compuesto", type text}, {"Seguridad", type text}, {"GWP", type number}, {"ODP", type number}, {"Estado", type text}, {"Ebullicion_C", type number}, {"Critica_C", type number}, {"Critica_bar", type number}, {"Sustituto", type text}, {"Aceite", type text}, {"Descripcion", type text}, {"Ventajas", type text}, {"Precauciones", type text}}, "en-US")
+				in
+				    Typed

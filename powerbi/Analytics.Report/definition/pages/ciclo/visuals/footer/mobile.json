@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.4.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 1558,
+    "z": 10,
+    "width": 323,
+    "height": 140,
+    "tabOrder": 10
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "Escenarios cada 5 °C. Selecciona un único gas y par de temperaturas para mostrar KPIs. La entalpía del original es conceptual.",
+                  "textStyle": {
+                    "fontFamily": "Segoe UI",
+                    "fontSize": "10pt",
+                    "color": "#52677D"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

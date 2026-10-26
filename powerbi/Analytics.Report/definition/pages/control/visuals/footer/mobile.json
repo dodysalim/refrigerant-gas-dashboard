@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.4.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 2138,
+    "z": 12,
+    "width": 323,
+    "height": 140,
+    "tabOrder": 12
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "55 gases · curvas del motor original · estimaciones conceptuales, no tablas certificadas",
+                  "textStyle": {
+                    "fontFamily": "Segoe UI",
+                    "fontSize": "10pt",
+                    "color": "#52677D"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

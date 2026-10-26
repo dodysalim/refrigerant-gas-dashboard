@@ -1,0 +1,332 @@
+window.REFRIGERANTS_IMAGES_MAP = {
+  "R-1234yf": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_1234yf_HFO_Plateado_con_Franja_Roja/7_Refrigerant_for_Automotive_Air_Conditioning.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_1234yf_HFO_Plateado_con_Franja_Roja/7_Refrigerant_for_Automotive_Air_Conditioning.png",
+    "folder": "R_1234yf_HFO_Plateado_con_Franja_Roja",
+    "img_name": "7_Refrigerant_for_Automotive_Air_Conditioning.png"
+  },
+  "R-12": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_12_CFC_Rojo_brillante/3_Banned_R12_still_being_traded_Cooling.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_12_CFC_Rojo_brillante/3_Banned_R12_still_being_traded_Cooling.png",
+    "folder": "R_12_CFC_Rojo_brillante",
+    "img_name": "3_Banned_R12_still_being_traded_Cooling.png"
+  },
+  "R-134a": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_134a_HFC_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_134a_HFC_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "folder": "R_134a_HFC_Celeste_Claro",
+    "img_name": "4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png"
+  },
+  "R-290": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_290_HC_Verde_Oscuro/10_Ametron_R290_Refillable_Cylinder.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_290_HC_Verde_Oscuro/10_Ametron_R290_Refillable_Cylinder.png",
+    "folder": "R_290_HC_Verde_Oscuro",
+    "img_name": "10_Ametron_R290_Refillable_Cylinder.png"
+  },
+  "R-401A": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_401A_HCFC_Verde_Claro/1_HCFC_R401a_Refrigerant_Gas_Packaging.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_401A_HCFC_Verde_Claro/1_HCFC_R401a_Refrigerant_Gas_Packaging.png",
+    "folder": "R_401A_HCFC_Verde_Claro",
+    "img_name": "1_HCFC_R401a_Refrigerant_Gas_Packaging.png"
+  },
+  "R-401B": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_401B_HCFC_Verde_Claro/1_HCFC_R401a_Refrigerant_Gas_Packaging.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_401B_HCFC_Verde_Claro/1_HCFC_R401a_Refrigerant_Gas_Packaging.png",
+    "folder": "R_401B_HCFC_Verde_Claro",
+    "img_name": "1_HCFC_R401a_Refrigerant_Gas_Packaging.png"
+  },
+  "R-409A": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_409A_HCFC_Verde_Claro/6_HCFC_R401a_Refrigerant_Gas_Packaging.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_409A_HCFC_Verde_Claro/6_HCFC_R401a_Refrigerant_Gas_Packaging.png",
+    "folder": "R_409A_HCFC_Verde_Claro",
+    "img_name": "6_HCFC_R401a_Refrigerant_Gas_Packaging.png"
+  },
+  "R-413A": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_413A_HFC_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_413A_HFC_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "folder": "R_413A_HFC_Celeste_Claro",
+    "img_name": "4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png"
+  },
+  "R-415B": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_415B_Mezcla_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_415B_Mezcla_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "folder": "R_415B_Mezcla_Celeste_Claro",
+    "img_name": "4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png"
+  },
+  "R-424A": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_424A_HFC_Marron_Medio/8_R424A_National_Refrigerants_Ltd.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_424A_HFC_Marron_Medio/8_R424A_National_Refrigerants_Ltd.png",
+    "folder": "R_424A_HFC_Marron_Medio",
+    "img_name": "8_R424A_National_Refrigerants_Ltd.png"
+  },
+  "R-426A": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_426A_HFC_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_426A_HFC_Celeste_Claro/4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png",
+    "folder": "R_426A_HFC_Celeste_Claro",
+    "img_name": "4_Refrigerant_R_134A_30_lb_Blue_Cylinder.png"
+  },
+  "R-437A": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_437A_HFC_Celeste_Claro/5_R134A_Cylinder_60_0_kg_BW_AFROX_Industrial.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_437A_HFC_Celeste_Claro/5_R134A_Cylinder_60_0_kg_BW_AFROX_Industrial.png",
+    "folder": "R_437A_HFC_Celeste_Claro",
+    "img_name": "5_R134A_Cylinder_60_0_kg_BW_AFROX_Industrial.png"
+  },
+  "R-513A": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_513A_Mezcla_Plateado_con_Franja_Roja/5_Refrigerant_R1234ze_Kaltra.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_513A_Mezcla_Plateado_con_Franja_Roja/5_Refrigerant_R1234ze_Kaltra.png",
+    "folder": "R_513A_Mezcla_Plateado_con_Franja_Roja",
+    "img_name": "5_Refrigerant_R1234ze_Kaltra.png"
+  },
+  "R-600a": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_600a_HC_Verde_Oscuro/7_REPORSHOP_1_R600_refrigerant_gas.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_600a_HC_Verde_Oscuro/7_REPORSHOP_1_R600_refrigerant_gas.png",
+    "folder": "R_600a_HC_Verde_Oscuro",
+    "img_name": "7_REPORSHOP_1_R600_refrigerant_gas.png"
+  },
+  "R-600": {
+    "streamlit": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_600_HC_Verde_Oscuro/10_r600_refrigerant_gas_High_Purity.png",
+    "web": "images/Gases_Refrigerantes/01_Refrigeracion_Domestica/R_600_HC_Verde_Oscuro/10_r600_refrigerant_gas_High_Purity.png",
+    "folder": "R_600_HC_Verde_Oscuro",
+    "img_name": "10_r600_refrigerant_gas_High_Purity.png"
+  },
+  "R-22": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_22_HCFC_Verde_Claro/10_Popular_Selling_Hcfc_Refrigerant.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_22_HCFC_Verde_Claro/10_Popular_Selling_Hcfc_Refrigerant.png",
+    "folder": "R_22_HCFC_Verde_Claro",
+    "img_name": "10_Popular_Selling_Hcfc_Refrigerant.png"
+  },
+  "R-32": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_32_HFC_Rosa_Fucsia/3_R_32_Refrigerant_20lbs_cylinder_JJ.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_32_HFC_Rosa_Fucsia/3_R_32_Refrigerant_20lbs_cylinder_JJ.png",
+    "folder": "R_32_HFC_Rosa_Fucsia",
+    "img_name": "3_R_32_Refrigerant_20lbs_cylinder_JJ.png"
+  },
+  "R-404A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_404A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_404A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "folder": "R_404A_HFC_Naranja",
+    "img_name": "3_R_404A_Refrigerant_24lb_California.png"
+  },
+  "R-407A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407A_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407A_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "folder": "R_407A_HFC_Marron_Medio",
+    "img_name": "1_HFC_Refrigerant_R_407C_25_lb_Brown.png"
+  },
+  "R-407B": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407B_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407B_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "folder": "R_407B_HFC_Marron_Medio",
+    "img_name": "1_HFC_Refrigerant_R_407C_25_lb_Brown.png"
+  },
+  "R-407C": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407C_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407C_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "folder": "R_407C_HFC_Marron_Medio",
+    "img_name": "1_HFC_Refrigerant_R_407C_25_lb_Brown.png"
+  },
+  "R-407F": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407F_HFC_Marron_Medio/6_Locke_Supply_Co_Products_L1241_Freon.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_407F_HFC_Marron_Medio/6_Locke_Supply_Co_Products_L1241_Freon.png",
+    "folder": "R_407F_HFC_Marron_Medio",
+    "img_name": "6_Locke_Supply_Co_Products_L1241_Freon.png"
+  },
+  "R-410A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_410A_HFC_Rosa_Fucsia/2_R_410A_25_lb_HFC_Refrigerant_Cylinder.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_410A_HFC_Rosa_Fucsia/2_R_410A_25_lb_HFC_Refrigerant_Cylinder.png",
+    "folder": "R_410A_HFC_Rosa_Fucsia",
+    "img_name": "2_R_410A_25_lb_HFC_Refrigerant_Cylinder.png"
+  },
+  "R-417A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_417A_HFC_Verde_Claro/8_FORANE_R_22_HCFC_Refrigerant_2W198.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_417A_HFC_Verde_Claro/8_FORANE_R_22_HCFC_Refrigerant_2W198.png",
+    "folder": "R_417A_HFC_Verde_Claro",
+    "img_name": "8_FORANE_R_22_HCFC_Refrigerant_2W198.png"
+  },
+  "R-422A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_422A_HFC_Naranja/9_Locke_Supply_Co_Products_L1388_Forane.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_422A_HFC_Naranja/9_Locke_Supply_Co_Products_L1388_Forane.png",
+    "folder": "R_422A_HFC_Naranja",
+    "img_name": "9_Locke_Supply_Co_Products_L1388_Forane.png"
+  },
+  "R-422D": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_422D_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_422D_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "folder": "R_422D_HFC_Naranja",
+    "img_name": "3_R_404A_Refrigerant_24lb_California.png"
+  },
+  "R-427A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_427A_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_427A_HFC_Marron_Medio/1_HFC_Refrigerant_R_407C_25_lb_Brown.png",
+    "folder": "R_427A_HFC_Marron_Medio",
+    "img_name": "1_HFC_Refrigerant_R_407C_25_lb_Brown.png"
+  },
+  "R-438A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_438A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_438A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "folder": "R_438A_HFC_Naranja",
+    "img_name": "3_R_404A_Refrigerant_24lb_California.png"
+  },
+  "R-448A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_448A_HFO-HFC_Plateado_Franja_Roja/10_Semi_Automatic_R_448A_Refrigerant.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_448A_HFO-HFC_Plateado_Franja_Roja/10_Semi_Automatic_R_448A_Refrigerant.png",
+    "folder": "R_448A_HFO-HFC_Plateado_Franja_Roja",
+    "img_name": "10_Semi_Automatic_R_448A_Refrigerant.png"
+  },
+  "R-449A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_449A_HFO-HFC_Plateado_Franja_Roja/4_UK_BOC_Gases_Opteon_trade_XP40_R.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_449A_HFO-HFC_Plateado_Franja_Roja/4_UK_BOC_Gases_Opteon_trade_XP40_R.png",
+    "folder": "R_449A_HFO-HFC_Plateado_Franja_Roja",
+    "img_name": "4_UK_BOC_Gases_Opteon_trade_XP40_R.png"
+  },
+  "R-452A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_452A_HFO-HFC_Plateado_Franja_Roja/4_UK_BOC_Gases_Opteon_trade_XP40_R.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_452A_HFO-HFC_Plateado_Franja_Roja/4_UK_BOC_Gases_Opteon_trade_XP40_R.png",
+    "folder": "R_452A_HFO-HFC_Plateado_Franja_Roja",
+    "img_name": "4_UK_BOC_Gases_Opteon_trade_XP40_R.png"
+  },
+  "R-453A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_453A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_453A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "folder": "R_453A_HFC_Naranja",
+    "img_name": "3_R_404A_Refrigerant_24lb_California.png"
+  },
+  "R-454B": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_454B_HFO-HFC_Plateado_Franja_Roja/2_Chemours_Opteon_XL41_20LB_R_454B.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_454B_HFO-HFC_Plateado_Franja_Roja/2_Chemours_Opteon_XL41_20LB_R_454B.png",
+    "folder": "R_454B_HFO-HFC_Plateado_Franja_Roja",
+    "img_name": "2_Chemours_Opteon_XL41_20LB_R_454B.png"
+  },
+  "R-454C": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_454C_HFO-HFC_Plateado_Franja_Roja/2_Chemours_Opteon_XL41_20LB_R_454B.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_454C_HFO-HFC_Plateado_Franja_Roja/2_Chemours_Opteon_XL41_20LB_R_454B.png",
+    "folder": "R_454C_HFO-HFC_Plateado_Franja_Roja",
+    "img_name": "2_Chemours_Opteon_XL41_20LB_R_454B.png"
+  },
+  "R-455A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_455A_HFO-HFC_Plateado_Franja_Roja/2_Chemours_Opteon_XL41_20LB_R_454B.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_455A_HFO-HFC_Plateado_Franja_Roja/2_Chemours_Opteon_XL41_20LB_R_454B.png",
+    "folder": "R_455A_HFO-HFC_Plateado_Franja_Roja",
+    "img_name": "2_Chemours_Opteon_XL41_20LB_R_454B.png"
+  },
+  "R-458A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_458A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_458A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "folder": "R_458A_HFC_Naranja",
+    "img_name": "3_R_404A_Refrigerant_24lb_California.png"
+  },
+  "R-466A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_466A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_466A_HFC_Naranja/3_R_404A_Refrigerant_24lb_California.png",
+    "folder": "R_466A_HFC_Naranja",
+    "img_name": "3_R_404A_Refrigerant_24lb_California.png"
+  },
+  "R-502": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_502_CFC-HCFC_Rojo_brillante/8_What_is_Refrigerant_12_.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_502_CFC-HCFC_Rojo_brillante/8_What_is_Refrigerant_12_.png",
+    "folder": "R_502_CFC-HCFC_Rojo_brillante",
+    "img_name": "8_What_is_Refrigerant_12_.png"
+  },
+  "R-507A": {
+    "streamlit": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_507A_HFC_Turquesa_Teal/3_R507A_HFC_blend_Refrigerant_Gas_Supplier.png",
+    "web": "images/Gases_Refrigerantes/02_Refrigeracion_Intermedia/R_507A_HFC_Turquesa_Teal/3_R507A_HFC_blend_Refrigerant_Gas_Supplier.png",
+    "folder": "R_507A_HFC_Turquesa_Teal",
+    "img_name": "3_R507A_HFC_blend_Refrigerant_Gas_Supplier.png"
+  },
+  "R-113": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_113_CFC_Rojo_brillante/10_Fluoro_trichloro_methane_Freon_11.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_113_CFC_Rojo_brillante/10_Fluoro_trichloro_methane_Freon_11.png",
+    "folder": "R_113_CFC_Rojo_brillante",
+    "img_name": "10_Fluoro_trichloro_methane_Freon_11.png"
+  },
+  "R-1150": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1150_Natural_Verde_Oscuro/2_HC_Refrigerant_Gas_R290_Manufacturer.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1150_Natural_Verde_Oscuro/2_HC_Refrigerant_Gas_R290_Manufacturer.png",
+    "folder": "R_1150_Natural_Verde_Oscuro",
+    "img_name": "2_HC_Refrigerant_Gas_R290_Manufacturer.png"
+  },
+  "R-11": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_11_CFC_Rojo_brillante/10_Fluoro_trichloro_methane_Freon_11.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_11_CFC_Rojo_brillante/10_Fluoro_trichloro_methane_Freon_11.png",
+    "folder": "R_11_CFC_Rojo_brillante",
+    "img_name": "10_Fluoro_trichloro_methane_Freon_11.png"
+  },
+  "R-1233zd": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1233zd_HFO_Plateado_Franja_Roja/5_Refrigerant_R1234ze_Kaltra.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1233zd_HFO_Plateado_Franja_Roja/5_Refrigerant_R1234ze_Kaltra.png",
+    "folder": "R_1233zd_HFO_Plateado_Franja_Roja",
+    "img_name": "5_Refrigerant_R1234ze_Kaltra.png"
+  },
+  "R-1234ze": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1234ze_HFO_Plateado_Franja_Roja/5_Refrigerant_R1234ze_Kaltra.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1234ze_HFO_Plateado_Franja_Roja/5_Refrigerant_R1234ze_Kaltra.png",
+    "folder": "R_1234ze_HFO_Plateado_Franja_Roja",
+    "img_name": "5_Refrigerant_R1234ze_Kaltra.png"
+  },
+  "R-123": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_123_HCFC_Verde_Claro/7_Freon_Make_Hfc_32_Refrigerent_at.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_123_HCFC_Verde_Claro/7_Freon_Make_Hfc_32_Refrigerent_at.png",
+    "folder": "R_123_HCFC_Verde_Claro",
+    "img_name": "7_Freon_Make_Hfc_32_Refrigerent_at.png"
+  },
+  "R-124": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_124_HCFC_Verde_Claro/8_FORANE_R_22_HCFC_Refrigerant_2W198.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_124_HCFC_Verde_Claro/8_FORANE_R_22_HCFC_Refrigerant_2W198.png",
+    "folder": "R_124_HCFC_Verde_Claro",
+    "img_name": "8_FORANE_R_22_HCFC_Refrigerant_2W198.png"
+  },
+  "R-1270": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1270_Natural_Verde_Oscuro/10_Ametron_R290_Refillable_Cylinder.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_1270_Natural_Verde_Oscuro/10_Ametron_R290_Refillable_Cylinder.png",
+    "folder": "R_1270_Natural_Verde_Oscuro",
+    "img_name": "10_Ametron_R290_Refillable_Cylinder.png"
+  },
+  "R-170": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_170_Natural_Verde_Oscuro/7_R290_Propane_Refrigerant_Gas_Supplier.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_170_Natural_Verde_Oscuro/7_R290_Propane_Refrigerant_Gas_Supplier.png",
+    "folder": "R_170_Natural_Verde_Oscuro",
+    "img_name": "7_R290_Propane_Refrigerant_Gas_Supplier.png"
+  },
+  "R-23": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_23_HFC_Turquesa_Teal/3_R23_Refrigerant_Cylinders_Efficient.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_23_HFC_Turquesa_Teal/3_R23_Refrigerant_Cylinders_Efficient.png",
+    "folder": "R_23_HFC_Turquesa_Teal",
+    "img_name": "3_R23_Refrigerant_Cylinders_Efficient.png"
+  },
+  "R-503": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_503_CFC-PFC_Rojo_brillante/5_R11_CFC_11_.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_503_CFC-PFC_Rojo_brillante/5_R11_CFC_11_.png",
+    "folder": "R_503_CFC-PFC_Rojo_brillante",
+    "img_name": "5_R11_CFC_11_.png"
+  },
+  "R-508B": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_508B_Mezcla_Turquesa_Teal/1_R508B_Refrigerant_Gas_Supplier_AC.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_508B_Mezcla_Turquesa_Teal/1_R508B_Refrigerant_Gas_Supplier_AC.png",
+    "folder": "R_508B_Mezcla_Turquesa_Teal",
+    "img_name": "1_R508B_Refrigerant_Gas_Supplier_AC.png"
+  },
+  "R-717": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_717_Natural_Acero_Plateado/6_R717_Ammonia_Climalife_UK.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_717_Natural_Acero_Plateado/6_R717_Ammonia_Climalife_UK.png",
+    "folder": "R_717_Natural_Acero_Plateado",
+    "img_name": "6_R717_Ammonia_Climalife_UK.png"
+  },
+  "R-718": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_718_Natural_Acero_Plateado/6_R717_Ammonia_Climalife_UK.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_718_Natural_Acero_Plateado/6_R717_Ammonia_Climalife_UK.png",
+    "folder": "R_718_Natural_Acero_Plateado",
+    "img_name": "6_R717_Ammonia_Climalife_UK.png"
+  },
+  "R-729": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_729_Natural_Acero_Plateado/6_R717_Ammonia_Climalife_UK.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_729_Natural_Acero_Plateado/6_R717_Ammonia_Climalife_UK.png",
+    "folder": "R_729_Natural_Acero_Plateado",
+    "img_name": "6_R717_Ammonia_Climalife_UK.png"
+  },
+  "R-744": {
+    "streamlit": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_744_Natural_Negro_Alta_Presion/4_R_744_Carbon_Dioxide_Ref_3195_Smb.png",
+    "web": "images/Gases_Refrigerantes/03_Refrigeracion_Industrial/R_744_Natural_Negro_Alta_Presion/4_R_744_Carbon_Dioxide_Ref_3195_Smb.png",
+    "folder": "R_744_Natural_Negro_Alta_Presion",
+    "img_name": "4_R_744_Carbon_Dioxide_Ref_3195_Smb.png"
+  }
+};
