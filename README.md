@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/dodysalim/refrigerant-gas-dashboard/actions"><img src="https://github.com/dodysalim/refrigerant-gas-dashboard/actions/workflows/ci.yml/badge.svg" alt="CI"></a> <img src="https://img.shields.io/badge/versión-2.2.0-8F7BFF?style=flat-square" alt="Versión 2.2.0"> <img src="https://img.shields.io/badge/licencia-MIT-30405B?style=flat-square" alt="Licencia MIT">
+<a href="https://github.com/dodysalim/refrigerant-gas-dashboard/actions"><img src="https://github.com/dodysalim/refrigerant-gas-dashboard/actions/workflows/ci.yml/badge.svg" alt="CI"></a> <img src="https://img.shields.io/badge/versión-2.3.0-8F7BFF?style=flat-square" alt="Versión 2.3.0"> <img src="https://img.shields.io/badge/licencia-MIT-30405B?style=flat-square" alt="Licencia MIT">
 </p>
 
 <p align="center"><a href="https://dodysalim.github.io/"><b>🌐 Portafolio</b></a> · <a href="docs/PORTFOLIO_CASE.md"><b>📄 Caso de estudio</b></a> · <a href="docs/VALIDATION.md"><b>✅ Verificación</b></a></p>
@@ -27,7 +27,7 @@
 | **🎯 Problema** | Comparar propiedades, seguridad e impacto ambiental de gases refrigerantes con hipótesis claras. |
 | **🛠️ Solución** | ETL y almacén SQLite con arquitectura por capas (dominio, aplicación, presentación). |
 | **📈 Entregables** | 5 vistas Streamlit (cálculo, comparación, ciclo, consulta SQL) y Power BI con curvas y escenarios. |
-| **🧪 Calidad** | 54 pruebas automatizadas aprobadas. |
+| **🧪 Calidad** | 59 pruebas automatizadas; arquitectura por capas (dominio, aplicación, infraestructura, presentación). |
 | **👤 Autor** | Dody Dueñas Remache. |
 
 ## ❓ La pregunta de negocio
@@ -72,12 +72,13 @@ Datos incluidos: catálogo de 55 refrigerantes. El ciclo Power BI pide un solo g
 | --- | --- |
 | [src/domain/](src/domain/) | Entidades y reglas de dominio |
 | [src/application/](src/application/) | Pipeline y reportes |
+| [src/infrastructure/](src/infrastructure/) | Catálogo JSON, motor termodinámico y lectores intercambiables |
 | [src/presentation/dashboard/](src/presentation/dashboard/) | Cinco vistas analíticas |
 | [tests/](tests/) | Pruebas de dominio y sostenibilidad |
 
 ## ✅ Calidad y alcance
 
-54 pruebas aprobadas; cinco vistas Streamlit probadas sin excepciones. KrioMetrics Power BI abrió con datos en el PC durante la entrega anterior.
+59 pruebas aprobadas; cinco vistas Streamlit probadas sin excepciones. KrioMetrics Power BI abrió con datos en el PC durante la entrega anterior.
 
 Las curvas y ciclos son estimaciones del modelo usado en la aplicación, no tablas certificadas para ingeniería. La malla de ciclos de Power BI usa intervalos de 5 °C.
 

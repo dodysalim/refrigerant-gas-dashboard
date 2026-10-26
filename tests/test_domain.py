@@ -329,3 +329,49 @@ class TestValidationResult(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+# --- Infraestructura: catálogo, motor termodinámico y fábrica ---
+from src.infrastructure.readers import (IDataReader, JsonCatalogReader, RefrigerantDataReaderFactory,
+                                        generate_pt_facts)
+from src.infrastructure.thermodynamics import ThermodynamicEngine as _Engine, glide, trouton_factor
+
+
+def test_catalog_loads_55_unique_refrigerants():
+    refs = JsonCatalogReader().read_refrigerants()
+    assert len(refs) == 55
+    assert len({r.ashrae_name for r in refs}) == 55
+
+
+def test_trouton_and_glide_tables():
+    by_name = {r.ashrae_name: r for r in JsonCatalogReader().read_refrigerants()}
+    assert trouton_factor(by_name["R-717"]) == 12.8
+    assert trouton_factor(by_name["R-12"]) == 10.9          # CFC
+    assert glide(by_name["R-407C"]) == 5.0 and glide(by_name["R-134a"]) == 0.0
+
+
+def test_pressure_increases_with_temperature_and_caps_at_critical():
+    r = JsonCatalogReader().read_refrigerants()[0]
+    temps = [-40, -10, 20, 50]
+    pressures = [_Engine.calculate_vapor_pressure(r, t) for t in temps]
+    assert pressures == sorted(pressures)
+    assert _Engine.calculate_vapor_pressure(r, r.critical_temp_c + 10) == r.critical_pressure_bar
+
+
+def test_dew_pressure_below_bubble_for_zeotropic_blend():
+    refs = [r for r in JsonCatalogReader().read_refrigerants() if r.ashrae_name == "R-407C"]
+    facts = generate_pt_facts(refs, temperatures=[0])
+    bubble, dew = (f.pressure_bar for f in facts)
+    assert dew < bubble
+
+
+def test_factory_registry_is_extensible():
+    class Stub(IDataReader):
+        def read_refrigerants(self): return []
+        def read_pressure_temperature_points(self, refrigerants): return []
+
+    RefrigerantDataReaderFactory.register("stub", Stub)
+    assert isinstance(RefrigerantDataReaderFactory.get_reader("stub"), Stub)
+    import pytest
+    with pytest.raises(ValueError):
+        RefrigerantDataReaderFactory.get_reader("pdf")

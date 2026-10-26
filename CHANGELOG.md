@@ -7,6 +7,16 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [2.3.0] - 2026-10-26
+
+### 🔧 Mantenimiento
+
+- **Arquitectura:** `src/infrastructure/readers.py` (763 líneas) separado en tres responsabilidades: el catálogo de 55 gases pasa a `catalog/refrigerants.json` (datos fuera del código), el motor termodinámico a `thermodynamics.py` y los lectores quedan en `readers.py` (≈90 líneas).
+- **SOLID:** los factores de Trouton y el *glide* de las mezclas están en tablas en lugar de cadenas de `if/elif` (abierto/cerrado); la fábrica de lectores usa un registro extensible con `register()`.
+- Compatibilidad: `FallbackStaticDataReader` y las importaciones existentes siguen funcionando.
+- Verificación: la salida del catálogo y de las 2.750 curvas P-T es idéntica byte a byte a la versión anterior; las 5 vistas abren sin excepciones en un entorno limpio.
+- 5 pruebas nuevas de infraestructura (59 en total).
+
 ## [2.2.0] - 2026-10-26
 
 ### 🔧 Mantenimiento
