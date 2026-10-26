@@ -66,6 +66,27 @@ Datos incluidos: catálogo de 55 refrigerantes. El ciclo Power BI pide un solo g
 
 [Archivos e instrucciones](powerbi/README.md). Descarga el repositorio completo y abre `powerbi/Abrir-PowerBI.bat` en Windows; después pulsa **Actualizar**. Incluye A4 horizontal a tamaño real (100 %) y diseño móvil vertical. El archivo `.pbip` necesita sus carpetas Report, SemanticModel y data.
 
+## 🏗️ Arquitectura
+
+```mermaid
+flowchart TB
+    subgraph infrastructure
+        CAT[(catalog/refrigerants.json<br/>55 gases)] --> RD["JsonCatalogReader<br/><i>implementa IDataReader</i>"]
+        TH["ThermodynamicEngine<br/>Clausius-Clapeyron + Riedel"] --> RD
+        EXP[StarSchemaExporter]
+    end
+    subgraph domain
+        ENT["Entidades y validadores"]
+    end
+    subgraph application
+        PIPE["Pipeline ETL"] --> REP["Reportes"]
+    end
+    RD --> PIPE --> EXP --> DB[(SQLite + CSV<br/>esquema estrella)]
+    ENT -.-> RD & PIPE
+    DB --> UI["presentation/dashboard<br/>5 vistas"] --> ST([Streamlit])
+    DB --> PBI([Power BI])
+```
+
 ## 🧭 Estructura del repositorio
 
 | Ruta | Qué contiene |
