@@ -7,6 +7,15 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
+## [2.2.0] - 2026-10-26
+
+### 🔧 Mantenimiento
+
+- README renovado con portada, resumen para reclutadores e insignias de CI, versión y licencia.
+- Licencia MIT añadida.
+- Verificación: 54 pruebas aprobadas y las 5 vistas de Streamlit abren sin excepciones.
+- `.gitignore` ampliado para cachés de pruebas.
+
 ## [2.1.0] - 2026-05-25
 
 ### ✨ Añadido
@@ -133,4 +142,4 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/lang/es/).
 
 ---
 
-*Mantenido por [Dody Due�as](https://github.com/dodysalim)*
+*Mantenido por [Dody Dueñas](https://github.com/dodysalim)*

@@ -22,3 +22,7 @@ Thumbs.db
 # Temporary or system generated logs
 .system_generated/
 *.log
+
+# Mantenimiento
+*.py[cod]
+.pytest_cache/
