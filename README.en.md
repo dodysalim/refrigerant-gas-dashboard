@@ -4,6 +4,8 @@
 
 <p align="center"><b>A catalog of 55 refrigerants turned into analysis, comparison and interactive visualization.</b></p>
 
+<p align="center"><a href="https://refrigerant-explorer.streamlit.app/"><b>Live demo ↗</b></a></p>
+
 <p align="center"><img src="https://img.shields.io/badge/Personal_project-75E6CE?style=for-the-badge&labelColor=0b1222" alt="Personal project"></p>
 
 <p align="center">
