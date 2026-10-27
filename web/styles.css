@@ -240,16 +240,18 @@ body {
 .header-actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 1.5rem;
     flex-wrap: wrap;
+    min-width: 0;
 }
 
 /* Buscador Principal */
 .search-box {
     position: relative;
     max-width: 320px;
-    flex: 1;
-    min-width: 200px;
+    flex: 1 1 200px;
+    min-width: 0;
 }
 
 .search-box input {
